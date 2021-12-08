@@ -1,0 +1,43 @@
+:root {
+  --green: #8BC5AC;
+  --orange: #EF7E0B;
+  --red: #E84A24;
+  --grey: #666666;
+}
+
+div.navbar {
+  margin-top: 9px;
+  box-shadow: 0 -3px 0 0px var(--red),
+              0 -6px 0 0px var(--orange),
+              0 -9px 0 0px var(--grey);
+}
+
+.hex {
+  float: right; 
+  width:150px; 
+  margin:0px 20px;
+}
+
+.level:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column-left {
+    float: left;
+    width: 15%;
+}
+
+.column-right {
+    float: left;
+    width: 85%;
+}
+
+.column-left img {
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    min-width: 50px;
+    margin-right: 10px;
+}
