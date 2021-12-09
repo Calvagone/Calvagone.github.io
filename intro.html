@@ -29,8 +29,8 @@
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <meta property="og:title" content="CAMPSIS">
-<meta property="og:description" content="An open-source PK/PD model simulation platform.">
-<meta property="og:image" content="https://calvagone.github.io/images/campsis_logo.png">
+<meta property="og:description" content="An open-source PK/PD simulation platform">
+<meta property="og:image" content="https://calvagone.github.io/images/campsis_og_image.png">
 <meta property="og:url" content="https://calvagone.github.io/">
 <meta property="twitter:card" content="summary_large_image">
 
@@ -464,12 +464,12 @@ div.tocify {
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Infusion</span>(<span class="at">time=</span><span class="dv">0</span>, <span class="at">amount=</span><span class="dv">100</span>, <span class="at">compartment=</span><span class="dv">1</span>, <span class="at">duration=</span><span class="dv">10</span>)) <span class="sc">%&gt;%</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Observations</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">24</span>))</span></code></pre></div>
 <p>We can now simulate this very simple model and dataset.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(<span class="at">dataset=</span>dataset)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(<span class="at">dataset=</span>dataset, <span class="at">seed=</span><span class="dv">0</span>)</span></code></pre></div>
 <p>Eventually, we can use <code>ggplot2</code> to plot these results.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(results, <span class="fu">aes</span>(<span class="at">x=</span>TIME, <span class="at">y=</span>CP, <span class="at">group=</span>ID)) <span class="sc">+</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">colour=</span><span class="st">&quot;gray39&quot;</span>, <span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span></code></pre></div>
-<p><img src="intro_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="intro_files/figure-html/campsis_a_letter_plot-1.png" width="576" /></p>
 <p>Well done, you just drew the <code>A</code> letter of our CAMPSIS logo.</p>
 </div>
 <div id="going-further" class="section level2">
