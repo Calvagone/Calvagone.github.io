@@ -400,7 +400,7 @@ div.tocify {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="./intro.html">What's CAMPSIS</a>
+  <a href="./intro.html">What is CAMPSIS</a>
 </li>
 <li>
   <a href="./install.html">Installation</a>
@@ -472,7 +472,7 @@ div.tocify {
 </div>
 <div id="simulate-arms" class="section level2">
 <h2>Simulate arms</h2>
-<p>The dataset can contain more than one treatment arm. In the example below, we explicitly create 2 arms. The first arm receives a dose of 1000 mg QD, while the second arm receives twice this dose.</p>
+<p>The dataset can contain more than one treatment arm. In the example below, we explicitly create two arms. The first arm receives a dose of 1000 mg QD, while the second arm receives twice this dose amount.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>arm1 <span class="ot">&lt;-</span> <span class="fu">Arm</span>(<span class="at">subjects=</span><span class="dv">50</span>, <span class="at">label=</span><span class="st">&quot;1000 mg QD&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Bolus</span>(<span class="at">time=</span><span class="dv">0</span>, <span class="at">amount=</span><span class="dv">1000</span>, <span class="at">ii=</span><span class="dv">24</span>, <span class="at">addl=</span><span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Observations</span>(<span class="at">times=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">72</span>))</span>
@@ -490,7 +490,7 @@ div.tocify {
 </div>
 <div id="derive-from-base-model" class="section level2">
 <h2>Derive from base model</h2>
-<p>Scenarios derived from the based model or/and dataset can be easily implemented. Below, we’d like to see what happens if the clearance of this model is multiplied by two.</p>
+<p>Scenarios derived from the base model and/or dataset can be easily implemented. Below, we’d like to see what happens if the clearance of this model is multiplied by two.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>scenarios <span class="ot">&lt;-</span> <span class="fu">Scenarios</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Scenario</span>(<span class="st">&quot;Base model&quot;</span>)) <span class="sc">%&gt;%</span> <span class="co"># Original CL is 5</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Scenario</span>(<span class="st">&quot;Increased clearance&quot;</span>, <span class="at">model=</span><span class="sc">~</span>.x <span class="sc">%&gt;%</span> <span class="fu">replace</span>(<span class="fu">Theta</span>(<span class="at">name=</span><span class="st">&quot;CL&quot;</span>, <span class="at">value=</span><span class="dv">10</span>))))</span>
