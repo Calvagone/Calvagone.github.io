@@ -439,12 +439,12 @@ div.tocify {
 
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>CAMPSIS is a open-source PK/PD simulation platform built on top of the open-source simulation packages <a href="https://github.com/nlmixrdevelopment/RxODE">RxODE</a> and <a href="https://github.com/metrumresearchgroup/mrgsolve">mrgsolve</a>. It provides an abstraction layer over the underlying processes of writing a model, assembling a dataset and running, in the background, a simulation with these packages.</p>
+<p>CAMPSIS is a open-source PK/PD simulation platform built on top of the open-source simulation packages <a href="https://github.com/nlmixrdevelopment/RxODE"><code>RxODE</code></a> and <a href="https://github.com/metrumresearchgroup/mrgsolve"><code>mrgsolve</code></a>. It provides an abstraction layer over the underlying processes of writing a model, assembling a dataset and running, in the background, a simulation with these packages.</p>
 <p>CAMPSIS is developed by software engineers working at <a href="http://www.calvagone.com/">Calvagone</a> and designed for pharmacometricians who are looking for an easy and intuitive way to run model-based simulations. The packages are developed in R, which makes it possible to integrate your simulation(s) into an R workflow (e.g. standard R script, <code>Rmarkdown</code>, <code>Shiny</code> app, etc.).</p>
 </div>
 <div id="brief-overview" class="section level2">
 <h2>Brief overview</h2>
-<p>As shown in the schematic below, CAMPSIS comprises two inter-connected R packages: <a href="https://github.com/Calvagone/campsismod">campsismod</a> and <a href="https://github.com/Calvagone/campsis">campsis</a>. The first package allows the user to assemble, read, write or manipulate a PK/PD model. It also provides useful utilities to export the model to RxODE or mrgsolve. The second package allows the user to assemble the dataset in a very intuitive manner. Once the user’s dataset is ready, the package is in charge of preparing the simulation, calling RxODE or mrgsolve and returning the results, for a given model, dataset and desired simulation settings.</p>
+<p>As shown in the schematic below, CAMPSIS comprises two inter-connected R packages: <a href="https://github.com/Calvagone/campsismod"><code>campsismod</code></a> and <a href="https://github.com/Calvagone/campsis"><code>campsis</code></a>. The first package allows the user to assemble, read, write or manipulate a PK/PD model. It also provides useful utilities to export the model to RxODE or mrgsolve. The second package allows the user to assemble the dataset in a very intuitive manner. Once the user’s dataset is ready, the package is in charge of preparing the simulation, calling RxODE or mrgsolve and returning the results, for a given model, dataset and desired simulation settings.</p>
 <p><img src="images/overview.png" /></p>
 </div>
 <div id="a-quick-example" class="section level2">
@@ -477,8 +477,8 @@ div.tocify {
 <p>If you haven’t installed CAMPSIS, please visit the <a href="./install.html">installation</a> section.</p>
 <p>If you are looking for some more examples, please check out our documentation websites:</p>
 <ul>
-<li>Package <a href="https://calvagone.github.io/campsismod.doc/">campsismod</a></li>
-<li>Package <a href="https://calvagone.github.io/campsis.doc/">campsis</a></li>
+<li>Package <a href="https://calvagone.github.io/campsismod.doc/"><code>campsismod</code></a></li>
+<li>Package <a href="https://calvagone.github.io/campsis.doc/"><code>campsis</code></a></li>
 </ul>
 </div>
 

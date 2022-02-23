@@ -444,26 +444,19 @@ div.tocify {
 <li>Download and install <a href="https://cran.r-project.org/bin/windows/Rtools/">R tools</a></li>
 </ul>
 </div>
-<div id="install-devtools" class="section level2">
-<h2>Install devtools</h2>
-<p>Open R and install devtools as follows:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)</span></code></pre></div>
-</div>
 <div id="install-simulation-engines" class="section level2">
 <h2>Install simulation engines</h2>
 <p>CAMPSIS needs <code>RxODE</code> or <code>mrgsolve</code> to perform simulations. Install these two packages from CRAN as follows:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;mrgsolve&quot;</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;RxODE&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;mrgsolve&quot;</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;RxODE&quot;</span>)</span></code></pre></div>
 </div>
-<div id="install-package-campsismod" class="section level2">
-<h2>Install package campsismod</h2>
-<p>Install the latest stable release of <code>campsismod</code> using <code>devtools</code>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;Calvagone/campsismod&quot;</span>)</span></code></pre></div>
-</div>
-<div id="install-package-campsis" class="section level2">
-<h2>Install package campsis</h2>
-<p>Install the latest stable release of <code>campsis</code> using <code>devtools</code>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;Calvagone/campsis&quot;</span>)</span></code></pre></div>
+<div id="install-campsis" class="section level2">
+<h2>Install CAMPSIS</h2>
+<p>Install the latest release of <code>campsis</code> from CRAN.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;campsis&quot;</span>)</span></code></pre></div>
+<p>Alternatively, <code>campsis</code> may also be installed from GitHub via devtools.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;Calvagone/campsismod&quot;</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;Calvagone/campsis&quot;</span>)</span></code></pre></div>
 </div>
 
 
