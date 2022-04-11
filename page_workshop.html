@@ -11,7 +11,7 @@
 
 
 
-<title>Welcome to CAMPSIS</title>
+<title>Workshop at PAGE22</title>
 
 <script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -20,6 +20,9 @@
 <script src="site_libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
 <script src="site_libs/bs3compat-0.2.5.1/tabs.js"></script>
 <script src="site_libs/bs3compat-0.2.5.1/bs3compat.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
@@ -206,6 +209,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -213,6 +279,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -239,7 +315,7 @@ $(document).ready(function () {
   <a href="./get_started.html">Get started</a>
 </li>
 <li>
-  <a href="./workshop_page.html">Workshop</a>
+  <a href="./get_started.html">Workshop at PAGE22</a>
 </li>
 <li>
   <a href="./news.html">News</a>
@@ -265,74 +341,48 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">Workshop at PAGE22</h1>
 
 </div>
 
 
-<p><img src="images/campsis_banner_small.png" /></p>
-<p>Welcome to the official website of the CAMPSIS suite.</p>
-<p>CAMPSIS is a PK/PD simulation platform developed by <a
-href="http://www.calvagone.com">Calvagone</a>. The suite comprises two R
-packages <code>campsismod</code> and <code>campsis</code> which are both
-free and open-source on GitHub (see links below).</p>
-<p>Want to learn more? Please visit our section <a
-href="./intro.html">What is CAMPSIS</a>.<br />
-Want to give it a try? Please follow the <a
-href="./install.html">Installation</a> instructions and have a look at
-the documentation below.</p>
-<div id="packages-on-github" class="section level2">
-<h2>Packages on Github</h2>
-<div class="level">
-<div class="column-left">
-<p><a href="https://github.com/Calvagone/campsismod"><img src="images/campsismod_logo.png"></a></p>
-</div>
-<div id="campsismod" class="section level4 column-right">
-<h4><a
-href="https://github.com/Calvagone/campsismod">campsismod</a></h4>
-<p>Generic implementation of a drug model in pharmacometrics.</p>
-</div>
-</div>
-<div class="level">
-<div class="column-left">
-<p><a href="https://github.com/Calvagone/campsis"><img src="images/campsis_logo.png"></a></p>
-</div>
-<div id="campsis" class="section level4 column-right">
-<h4><a href="https://github.com/Calvagone/campsis">campsis</a></h4>
-<p>A generic PK/PD simulation platform based on RxODE and mrgsolve
-engines.</p>
-</div>
-</div>
-</div>
-<div id="documentation" class="section level2">
-<h2>Documentation</h2>
-<div class="level">
-<div class="column-left">
-<p><a href="https://calvagone.github.io/campsismod.doc/"><img src="images/campsismod_doc_logo.png"></a></p>
-</div>
-<div id="campsismod.doc" class="section level4 column-right">
-<h4><a
-href="https://calvagone.github.io/campsismod.doc/">campsismod.doc</a></h4>
-<p>Documentation of R package campsismod.<br />
-Please check out our many vignettes available in this pkgdown
-website.</p>
-</div>
-</div>
-<div class="level">
-<div class="column-left">
-<p><a href="https://calvagone.github.io/campsis.doc/"><img src="images/campsis_doc_logo.png"></a></p>
-</div>
-<div id="campsis.doc" class="section level4 column-right">
-<h4><a
-href="https://calvagone.github.io/campsis.doc/">campsis.doc</a></h4>
-<p>Documentation of R package campsis.<br />
-Please check out our many vignettes available in this pkgdown
-website.</p>
-</div>
-</div>
+<div id="workshop-description" class="section level2">
+<h2>Workshop description</h2>
+<p>Calvagone is running a 1-day hands-on course on Campsis on Tuesday
+28th of June 2022.</p>
+<p>This course is an opportunity to discover Campsis (www.campsis.org),
+a new, intuitive, and open-source platform to set-up and run your
+model-based PK-PD simulations with ease. Campsis is built on top of the
+packages RxODE and mrgsolve, and provides an abstraction layer over the
+underlying processes of writing a model, assembling a dataset and
+running a simulation with one of these packages, at the user’s
+choice.</p>
+<p>To begin with, the participants will be trained, through hands-on
+exercises, on the basic use of Campsis: model implementation from
+literature, dataset creation based on given protocol, drug formulation
+and population characteristics and, eventually, the execution of simple
+PK simulations (typical profile/specific individuals/population).
+Additional Campsis-specific features like the management of scenarios or
+the bootstrap of covariates will then also be shown and put into
+practice.<br />
+In the second part, the training will especially focus on clinical trial
+simulations and, more specifically the simulation and analysis of
+clinical endpoints from pharmacodynamic (PD) models. Finally, dose
+adaptation based on such endpoints will be demonstrated as well through
+the use of interruption events, another built-in feature in Campsis for
+stopping/resuming a simulation.</p>
+<p>Date: Tuesday, 28th June, 2022 Time: 09:00 - 17:00 Location:
+Ljubljana, Slovenia Timezone: (GMT +1:00) Central European Time Fees:
+€250 for industry, €150 for academia/government/non-profit, €100 for
+students Maximum participants: 40 Please download the registration form
+here and send it back to <a href="mailto:contact@calvagone.com"
+class="email">contact@calvagone.com</a></p>
 </div>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -365,6 +415,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
