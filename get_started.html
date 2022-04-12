@@ -474,6 +474,19 @@ interval:</p>
 <p>The dataset can contain more than one treatment arm. In the example
 below, we explicitly create two arms. The first arm receives a dose of
 1000 mg QD, while the second arm receives twice this dose amount.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>arm1 <span class="ot">&lt;-</span> <span class="fu">Arm</span>(<span class="at">subjects=</span><span class="dv">50</span>, <span class="at">label=</span><span class="st">&quot;1000 mg QD&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Bolus</span>(<span class="at">time=</span><span class="dv">0</span>, <span class="at">amount=</span><span class="dv">1000</span>, <span class="at">ii=</span><span class="dv">24</span>, <span class="at">addl=</span><span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Observations</span>(<span class="at">times=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">72</span>))</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>arm2 <span class="ot">&lt;-</span> <span class="fu">Arm</span>(<span class="at">subjects=</span><span class="dv">50</span>, <span class="at">label=</span><span class="st">&quot;2000 mg QD&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Bolus</span>(<span class="at">time=</span><span class="dv">0</span>, <span class="at">amount=</span><span class="dv">2000</span>, <span class="at">ii=</span><span class="dv">24</span>, <span class="at">addl=</span><span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Observations</span>(<span class="at">times=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">72</span>))</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>dataset <span class="ot">&lt;-</span> <span class="fu">Dataset</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">c</span>(arm1, arm2))</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(dataset, <span class="at">seed=</span><span class="dv">1</span>)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CP&quot;</span>, <span class="at">scenarios=</span><span class="st">&quot;ARM&quot;</span>)</span></code></pre></div>
 <p><img src="get_started_files/figure-html/get_started_2arms_plot-1.png" width="768" style="display: block; margin: auto;" /></p>
 </div>
 <div id="derive-from-base-model" class="section level2">
@@ -481,6 +494,12 @@ below, we explicitly create two arms. The first arm receives a dose of
 <p>Scenarios derived from the base model and/or dataset can be easily
 implemented. Below, we’d like to see what happens if the clearance of
 this model is multiplied by two.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>scenarios <span class="ot">&lt;-</span> <span class="fu">Scenarios</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Scenario</span>(<span class="st">&quot;Base model&quot;</span>)) <span class="sc">%&gt;%</span> <span class="co"># Original CL is 5</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Scenario</span>(<span class="st">&quot;Increased clearance&quot;</span>, <span class="at">model=</span><span class="sc">~</span>.x <span class="sc">%&gt;%</span> <span class="fu">replace</span>(<span class="fu">Theta</span>(<span class="at">name=</span><span class="st">&quot;CL&quot;</span>, <span class="at">value=</span><span class="dv">10</span>))))</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(dataset, <span class="at">scenarios=</span>scenarios, <span class="at">seed=</span><span class="dv">1</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CP&quot;</span>, <span class="at">scenarios=</span><span class="fu">c</span>(<span class="st">&quot;ARM&quot;</span>, <span class="st">&quot;SCENARIO&quot;</span>)) <span class="sc">+</span> ggplot2<span class="sc">::</span><span class="fu">facet_wrap</span>(<span class="sc">~</span>SCENARIO)</span></code></pre></div>
 <p><img src="get_started_files/figure-html/get_started_2arms_scenarios_plot-1.png" width="768" style="display: block; margin: auto;" /></p>
 </div>
 
