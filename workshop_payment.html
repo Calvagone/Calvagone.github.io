@@ -31,13 +31,13 @@
         shape: 'pill',
         color: 'blue',
         layout: 'vertical',
-        label: 'pay',
+        label: 'paypal',
         
       },
       createOrder: function(data, actions) {
         var selectedItemDescription = itemOptions.options[itemOptions.selectedIndex].value;
         var selectedItemPrice = parseFloat(itemOptions.options[itemOptions.selectedIndex].getAttribute("price"));
-        var tax = (0 === 0 || false) ? 0 : (selectedItemPrice * (parseFloat(0)/100));
+        var tax = (20 === 0 || false) ? 0 : (selectedItemPrice * (parseFloat(20)/100));
         if(quantitySelect.options.length > 0) {
           quantity = parseInt(quantitySelect.options[quantitySelect.selectedIndex].value);
         } else {
