@@ -13,13 +13,14 @@
 
 <title>News</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
-<script src="site_libs/bs3compat-0.2.5.1/tabs.js"></script>
-<script src="site_libs/bs3compat-0.2.5.1/bs3compat.js"></script>
+<script src="site_libs/bs3compat-0.3.1/transition.js"></script>
+<script src="site_libs/bs3compat-0.3.1/tabs.js"></script>
+<script src="site_libs/bs3compat-0.3.1/bs3compat.js"></script>
 <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
@@ -51,6 +52,7 @@
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -71,6 +73,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -296,7 +301,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -313,9 +318,6 @@ div.tocify {
 </li>
 <li>
   <a href="./get_started.html">Get started</a>
-</li>
-<li>
-  <a href="./workshop_page.html">Workshop</a>
 </li>
 <li>
   <a href="./news.html">News</a>
@@ -346,14 +348,14 @@ div.tocify {
 </div>
 
 
-<div id="workshops" class="section level2">
-<h2>Workshops</h2>
+<div id="meet-us-at-page" class="section level2">
+<h2>Meet us at PAGE</h2>
 <ul>
-<li><a
-href="https://www.page-meeting.org/default.asp?id=47&amp;keuze=meeting">Workshop
-at PAGE</a>: A 1-day workshop on the CAMPSIS suite is planned to be held
-on Tuesday, 28 June 2022 at PAGE in Slovenia. Click <a
-href="./workshop_page.html">here</a> for more details.</li>
+<li><strong>Poster session</strong>: We’ll be happy to present you our
+<a
+href="https://www.page-meeting.org/default.asp?abstract=9991">abstract</a>
+about CAMPSIS at the poster session at PAGE 2022, Ljubljana. Feel free
+to join us!</li>
 </ul>
 </div>
 <div id="miscellaneaous" class="section level2">

@@ -13,13 +13,14 @@
 
 <title>Welcome to CAMPSIS</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
-<script src="site_libs/bs3compat-0.2.5.1/tabs.js"></script>
-<script src="site_libs/bs3compat-0.2.5.1/bs3compat.js"></script>
+<script src="site_libs/bs3compat-0.3.1/transition.js"></script>
+<script src="site_libs/bs3compat-0.3.1/tabs.js"></script>
+<script src="site_libs/bs3compat-0.3.1/bs3compat.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
@@ -39,6 +40,7 @@
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
     </style>
+
 
 
 
@@ -68,6 +70,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -220,7 +225,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -237,9 +242,6 @@ $(document).ready(function () {
 </li>
 <li>
   <a href="./get_started.html">Get started</a>
-</li>
-<li>
-  <a href="./workshop_page.html">Workshop</a>
 </li>
 <li>
   <a href="./news.html">News</a>
@@ -284,6 +286,16 @@ the documentation below.</p>
 <h2>Packages on Github</h2>
 <div class="level">
 <div class="column-left">
+<p><a href="https://github.com/Calvagone/campsis"><img src="images/campsis_logo.png"></a></p>
+</div>
+<div id="campsis" class="section level4 column-right">
+<h4><a href="https://github.com/Calvagone/campsis">campsis</a></h4>
+<p>A generic PK/PD simulation platform based on rxode2, RxODE and
+mrgsolve engines.</p>
+</div>
+</div>
+<div class="level">
+<div class="column-left">
 <p><a href="https://github.com/Calvagone/campsismod"><img src="images/campsismod_logo.png"></a></p>
 </div>
 <div id="campsismod" class="section level4 column-right">
@@ -292,31 +304,9 @@ href="https://github.com/Calvagone/campsismod">campsismod</a></h4>
 <p>Generic implementation of a drug model in pharmacometrics.</p>
 </div>
 </div>
-<div class="level">
-<div class="column-left">
-<p><a href="https://github.com/Calvagone/campsis"><img src="images/campsis_logo.png"></a></p>
-</div>
-<div id="campsis" class="section level4 column-right">
-<h4><a href="https://github.com/Calvagone/campsis">campsis</a></h4>
-<p>A generic PK/PD simulation platform based on RxODE and mrgsolve
-engines.</p>
-</div>
-</div>
 </div>
 <div id="documentation" class="section level2">
 <h2>Documentation</h2>
-<div class="level">
-<div class="column-left">
-<p><a href="https://calvagone.github.io/campsismod.doc/"><img src="images/campsismod_doc_logo.png"></a></p>
-</div>
-<div id="campsismod.doc" class="section level4 column-right">
-<h4><a
-href="https://calvagone.github.io/campsismod.doc/">campsismod.doc</a></h4>
-<p>Documentation of R package campsismod.<br />
-Please check out our many vignettes available in this pkgdown
-website.</p>
-</div>
-</div>
 <div class="level">
 <div class="column-left">
 <p><a href="https://calvagone.github.io/campsis.doc/"><img src="images/campsis_doc_logo.png"></a></p>
@@ -325,6 +315,18 @@ website.</p>
 <h4><a
 href="https://calvagone.github.io/campsis.doc/">campsis.doc</a></h4>
 <p>Documentation of R package campsis.<br />
+Please check out our many vignettes available in this pkgdown
+website.</p>
+</div>
+</div>
+<div class="level">
+<div class="column-left">
+<p><a href="https://calvagone.github.io/campsismod.doc/"><img src="images/campsismod_doc_logo.png"></a></p>
+</div>
+<div id="campsismod.doc" class="section level4 column-right">
+<h4><a
+href="https://calvagone.github.io/campsismod.doc/">campsismod.doc</a></h4>
+<p>Documentation of R package campsismod.<br />
 Please check out our many vignettes available in this pkgdown
 website.</p>
 </div>
