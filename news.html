@@ -13,22 +13,22 @@
 
 <title>News</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
-<script src="site_libs/bs3compat-0.3.1/transition.js"></script>
-<script src="site_libs/bs3compat-0.3.1/tabs.js"></script>
-<script src="site_libs/bs3compat-0.3.1/bs3compat.js"></script>
+<script src="site_libs/bs3compat-0.4.2/transition.js"></script>
+<script src="site_libs/bs3compat-0.4.2/tabs.js"></script>
+<script src="site_libs/bs3compat-0.4.2/bs3compat.js"></script>
 <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
 <meta property="og:title" content="CAMPSIS">
 <meta property="og:description" content="An open-source PK/PD simulation platform">
 <meta property="og:image" content="https://calvagone.github.io/images/campsis_og_image.png">
@@ -133,11 +133,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -166,8 +170,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -175,16 +179,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -320,6 +317,9 @@ div.tocify {
   <a href="./get_started.html">Get started</a>
 </li>
 <li>
+  <a href="./ecampsis.html">e-Campsis</a>
+</li>
+<li>
   <a href="./news.html">News</a>
 </li>
 <li>
@@ -348,19 +348,22 @@ div.tocify {
 </div>
 
 
-<div id="meet-us-at-page" class="section level2">
-<h2>Meet us at PAGE</h2>
+<div id="meet-us-at-page-in-a-coruña" class="section level2">
+<h2>Meet us at PAGE in A Coruña!</h2>
 <ul>
-<li><strong>Poster session</strong>: We’ll be happy to present you our
-<a
-href="https://www.page-meeting.org/default.asp?abstract=9991">abstract</a>
-about CAMPSIS at the poster session at PAGE 2022, Ljubljana. Feel free
-to join us!</li>
+<li><strong>Poster session</strong>: We will present a <a
+href="https://www.page-meeting.org/default.asp?abstract=10493">poster</a>
+about e-Campsis on Thursday 10:15-11:45. This would also be a great
+opportunity for you to learn about Calvagone’s pharmacometrics
+consultancy services.</li>
 </ul>
 </div>
 <div id="miscellaneaous" class="section level2">
 <h2>Miscellaneaous</h2>
 <ul>
+<li><p><strong>June 22nd, 2023</strong>: Release of the first version of
+e-Campsis free. Try it out by clicking this <a
+href="https://ecampsis.shinyapps.io/free/">link</a>.</p></li>
 <li><p><strong>February 17th, 2022</strong>: Packages <a
 href="https://cran.r-project.org/web/packages/campsis/index.html"><code>campsis</code></a>
 and <a

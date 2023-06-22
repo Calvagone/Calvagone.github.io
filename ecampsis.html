@@ -11,7 +11,7 @@
 
 
 
-<title>Contact us</title>
+<title>e-Campsis</title>
 
 <script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -343,35 +343,129 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Contact us</h1>
+<h1 class="title toc-ignore">e-Campsis</h1>
 
 </div>
 
 
-<div id="who-are-we" class="section level2">
-<h2>Who are we?</h2>
-<p>Calvagone is a scientific consultancy company applying model-based
-approaches and related services in support of pharmaceutical research
-and development with its registered office in France. Calvagone offers
-expertise and services in population PK/PD modelling, integration of
-model-based pre-clinical and clinical PK/PD analyses, drug-disease
-modelling and clinical trial simulation (M&amp;S) consulting as a means
-to focus on optimising (pre)-clinical development strategies and support
-knowledge-based drug development decisions. Calvagone also provides
-bespoke training in the modelling and simulation methodologies that we
-use.</p>
-<p>For more information, please visit our <a
-href="http://www.calvagone.com">website</a>.</p>
+<div id="discover-e-campsis" class="section level2">
+<h2>Discover e-Campsis</h2>
+<p><a href="https://ecampsis.shinyapps.io/free/">e-Campsis</a> is a free
+Shiny app, developed by Calvagone, which allows an intuitive and
+user-friendly simulation of population PK/PD models. The app is based on
+R package campsis, that provides a powerful backend to run model-based
+simulations with mrgsolve or rxode2.</p>
+<p><a href="https://ecampsis.shinyapps.io/free/"><img
+src="images/ecampsis_screenshot.png"
+alt="e-Campsis free screenshot" /></a></p>
+<p>Want to try out? Click <a
+href="https://ecampsis.shinyapps.io/free/"><strong>here</strong></a> or
+click on the screenshot above to test the free version and enjoy the
+power of e-Campsis.</p>
+<p>The app consists of 4 main tabs:</p>
+<ul>
+<li>Model: a powerful model editor to edit your Campsis model online.
+Try out one of the numerous models available from the library.</li>
+<li>Trial design: an easy-to-use interface to quickly set up a trial
+design that you want to simulate.</li>
+<li>Simulation: a single window dedicate to the simulation
+configuration, execution and preview. Customise your plots as you wish.
+Adapt model parameters on the fly using the quick access panel. Make
+interactive simulations by creating scenarios or arms and stratify your
+results in one-click. Switch to the plotly mode to make your plots even
+more interactive.</li>
+<li>Download: last but not least, download the whole code of the
+simulation and reproduce what you see in the app locally on your
+computer, thanks to the open source package campsis.</li>
+</ul>
 </div>
-<div id="campsis-suite" class="section level2">
-<h2>CAMPSIS suite</h2>
-<p>If you are interested in a CAMPSIS training or if you need any kind
-of support in your simulation project, don’t hesitate to reach out to us
-via our <a href="http://www.calvagone.com/contact/index.html">contact
-page</a>.</p>
-<p>If your company is interested in CAMPSIS and would like to contribute
-to this open-source project, please let us know! We will be happy to
-have a chat with you.</p>
+<div id="use-cases" class="section level2">
+<h2>Use cases</h2>
+<p>The following section lists a few pre-configured example cases we
+have prepared for you to get an idea of e-Campsis’ capabilities.</p>
+<div class="level">
+<div class="column-use-case-left">
+<p><a href="https://ecampsis.shinyapps.io/emax-dose-response/"><img src="images/use_case_dose_response_model.png"></a></p>
+</div>
+<div id="simple-dose-reponse-model"
+class="section level4 column-use-case-right">
+<h4><a href="https://ecampsis.shinyapps.io/emax-dose-response/">Simple
+dose reponse model</a></h4>
+<p>This is a straight-forward example of a sigmoidal dose-response model
+to illustrate how you can easily simulate non-longitudinal models with
+Campsis. In the present case we use dosing compartment where the amount
+per arm is injected as a bolus. Since we have no time-dependency, we
+only need to specify a single observation time point. You can use custom
+plotting code to show the dose-response curve.</p>
+</div>
+</div>
+<div class="level">
+<div class="column-use-case-left">
+<p><a href="https://ecampsis.shinyapps.io/pbpk-tmdd/"><img src="images/use_case_dose_pbpk_tmdd.png"></a></p>
+</div>
+<div id="pbpk-tmdd-model-cao-et-al-2013"
+class="section level4 column-use-case-right">
+<h4><a href="https://ecampsis.shinyapps.io/pbpk-tmdd/">PBPK-TMDD model
+(Cao et al, 2013)</a></h4>
+<p>This model is an adaptation of the second-generation minimal PBPK
+model for monoclonal antibodies initially described by Cao et al 2013
+and later refined and applied to interspecies-scaling by Zhao et
+al. 2015. Physiological parameters like lymph or plasma flow and volumes
+are scaled by body weight, to allow simple scaling between species on
+the basis of body weight. Binding of the antibody to it’s target occurs
+in the plasma compartment and is handled by the full TMDD approach with
+the following parameters:</p>
+<ul>
+<li>BL_target: Baseline target concentration (nM)</li>
+<li>KD_target: Equilibrium dissociation constant (nM)</li>
+<li>KOFF_target: Rate constant of dissociation of the antibody-target
+complex (1/day)</li>
+<li>KDEG_target: Degradation rate of the free target (1/day)</li>
+<li>KINT_target_AB: Internalization or degradation rate of the
+antibody-target complex (1/day)</li>
+</ul>
+</div>
+</div>
+<div class="level">
+<div class="column-use-case-left">
+<p><a href="https://ecampsis.shinyapps.io/filgrastim/"><img src="images/use_case_dose_filgrastim.png"></a></p>
+</div>
+<div id="filgrastim-model-krzyzanski-et-al-2010"
+class="section level4 column-use-case-right">
+<h4><a href="https://ecampsis.shinyapps.io/filgrastim/">Filgrastim model
+(Krzyzanski et al, 2010)</a></h4>
+<p>Filgrastim is a recombinant human granulocyte colony stimulating
+factor (G-CSF) that stimulates production of neutrophils. The model
+depicted the decaying trend in Cmax values with repeated doses and an
+increase in absolute neutrophil count (ANC) consistently with an
+increase in the G-CSF receptor pool. Simulated time courses of the total
+clearance exhibited an increasing pattern. The increase in filgrastim
+clearance on multiple dosing was attributed to the increased neutrophil
+count in the bone marrow and blood paralleled by an increase in the
+total G-CSF receptor density.</p>
+</div>
+</div>
+<div class="level">
+<div class="column-use-case-left">
+<p><a href="https://ecampsis.shinyapps.io/draflazine/"><img src="images/use_case_dose_draflazine.png"></a></p>
+</div>
+<div id="draflazine-model-snoeck-et-al-1999"
+class="section level4 column-use-case-right">
+<h4><a href="https://ecampsis.shinyapps.io/draflazine/">Draflazine model
+(Snoeck et al, 1999)</a></h4>
+<p>The red blood cell/plasma distribution of draflazine (a nucleoside
+transport inhibitor which is cardioprotective due to potentiation of
+receptor mediated effects of adenosine in the ischemic myocardium) was
+non-linear and characterized as a capacity-limited specific binding to
+the nucleoside transporter on the red blood cells. Binding to the
+nucleoside transporter on red blood cells is an important determinant of
+the pharmacokinetics of draflazine and a high degree of occupancy of the
+transporter by draflazine is required to inhibit adenosine breakdown ex
+vivo. It is suggested that red blood cell nucleoside transporter
+occupancy may serve as a useful pharmacodynamic endpoint in dose ranging
+studies with draflazine.</p>
+</div>
+</div>
 </div>
 
 
