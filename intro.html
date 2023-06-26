@@ -11,7 +11,7 @@
 
 
 
-<title>What is CAMPSIS?</title>
+<title>What is Campsis?</title>
 
 <script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -409,7 +409,7 @@ div.tocify {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="./intro.html">What is CAMPSIS</a>
+  <a href="./intro.html">What is Campsis</a>
 </li>
 <li>
   <a href="./install.html">Installation</a>
@@ -432,7 +432,7 @@ div.tocify {
   <a href="./index.html">
     <span class="fa fa-home"></span>
      
-    CAMPSIS
+    Campsis
   </a>
 </li>
       </ul>
@@ -444,14 +444,14 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">What is CAMPSIS?</h1>
+<h1 class="title toc-ignore">What is Campsis?</h1>
 
 </div>
 
 
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>CAMPSIS is a open-source PK/PD simulation platform built on top of
+<p>Campsis is a open-source PK/PD simulation platform built on top of
 the open-source simulation packages <a
 href="https://github.com/nlmixr2/rxode2"><code>rxode2</code></a>, <a
 href="https://github.com/nlmixrdevelopment/RxODE"><code>RxODE</code></a>
@@ -460,7 +460,7 @@ href="https://github.com/metrumresearchgroup/mrgsolve"><code>mrgsolve</code></a>
 It provides an abstraction layer over the underlying processes of
 writing a model, assembling a dataset and running, in the background, a
 simulation with these packages.</p>
-<p>CAMPSIS is developed by software engineers working at <a
+<p>Campsis is developed by software engineers working at <a
 href="http://www.calvagone.com/">Calvagone</a> and designed for
 pharmacometricians who are looking for an easy and intuitive way to run
 model-based simulations. The packages are developed in R, which makes it
@@ -470,7 +470,7 @@ etc.).</p>
 </div>
 <div id="brief-overview" class="section level2">
 <h2>Brief overview</h2>
-<p>As shown in the schematic below, CAMPSIS comprises two
+<p>As shown in the schematic below, Campsis comprises two
 inter-connected R packages: <a
 href="https://github.com/Calvagone/campsismod"><code>campsismod</code></a>
 and <a
@@ -504,21 +504,18 @@ library.</p>
 <span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Infusion</span>(<span class="at">time=</span><span class="dv">0</span>, <span class="at">amount=</span><span class="dv">100</span>, <span class="at">compartment=</span><span class="dv">1</span>, <span class="at">duration=</span><span class="dv">10</span>)) <span class="sc">%&gt;%</span></span>
 <span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Observations</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">24</span>))</span></code></pre></div>
 <p>We can now simulate this very simple model and dataset.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(<span class="at">dataset=</span>dataset, <span class="at">seed=</span><span class="dv">0</span>)</span></code></pre></div>
 <p>Finally, we can use <code>ggplot2</code> to plot these results.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="fu">ggplot</span>(results, <span class="fu">aes</span>(<span class="at">x=</span>TIME, <span class="at">y=</span>CP, <span class="at">group=</span>ID)) <span class="sc">+</span></span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">colour=</span><span class="st">&quot;gray39&quot;</span>, <span class="at">size=</span><span class="dv">1</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span></code></pre></div>
-<pre><code>## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
-## ℹ Please use `linewidth` instead.
-## This warning is displayed once every 8 hours.
-## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was generated.</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="fu">ggplot</span>(results, <span class="fu">aes</span>(<span class="at">x=</span>TIME, <span class="at">y=</span>CP, <span class="at">group=</span>ID)) <span class="sc">+</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">colour=</span><span class="st">&quot;gray39&quot;</span>, <span class="at">linewidth=</span><span class="dv">1</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span></code></pre></div>
 <p><img src="intro_files/figure-html/campsis_a_letter_plot-1.png" width="576" /></p>
-<p>Well done, you just drew the <code>A</code> letter of our CAMPSIS
+<p>Well done, you just drew the <code>A</code> letter of our Campsis
 logo.</p>
 </div>
 <div id="going-further" class="section level2">
 <h2>Going further</h2>
-<p>If you haven’t installed CAMPSIS, please visit the <a
+<p>If you haven’t installed Campsis, please visit the <a
 href="./install.html">installation</a> section.</p>
 <p>If you are looking for some more examples, please check out our
 documentation websites:</p>
