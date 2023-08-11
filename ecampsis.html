@@ -13,15 +13,15 @@
 
 <title>e-Campsis</title>
 
-<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.22/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
-<script src="site_libs/bs3compat-0.4.2/transition.js"></script>
-<script src="site_libs/bs3compat-0.4.2/tabs.js"></script>
-<script src="site_libs/bs3compat-0.4.2/bs3compat.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<script src="site_libs/bs3compat-0.5.0/transition.js"></script>
+<script src="site_libs/bs3compat-0.5.0/tabs.js"></script>
+<script src="site_libs/bs3compat-0.5.0/bs3compat.js"></script>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
@@ -351,33 +351,36 @@ div.tocify {
 <div id="discover-e-campsis" class="section level2">
 <h2>Discover e-Campsis</h2>
 <p><a href="https://ecampsis.shinyapps.io/free/">e-Campsis</a> is a free
-Shiny app, developed by Calvagone, which allows an intuitive and
-user-friendly simulation of population PK/PD models. The app is based on
-R package campsis, that provides a powerful backend to run model-based
-simulations with mrgsolve or rxode2.</p>
+web application developed by Calvagone that provides an intuitive and
+user-friendly interface for setting up population PK/PD simulations. The
+app is built on the R-package <a
+href="https://github.com/Calvagone/campsis">campsis</a>, which serves as
+a powerful frontend for running model-based simulations using mrgsolve
+or rxode2.</p>
 <p><a href="https://ecampsis.shinyapps.io/free/"><img
-src="images/ecampsis_screenshot.png"
-alt="e-Campsis free screenshot" /></a></p>
+src="images/Screenshot_2.png" alt="e-Campsis free screenshot" /></a></p>
 <p>Want to try out? Click <a
 href="https://ecampsis.shinyapps.io/free/"><strong>here</strong></a> or
 click on the screenshot above to test the free version and enjoy the
 power of e-Campsis.</p>
-<p>The app consists of 4 main tabs:</p>
+<p>The app consists of 4 main sections:</p>
 <ul>
 <li>Model: a powerful model editor to edit your Campsis model online.
-Try out one of the numerous models available from the library.</li>
-<li>Trial design: an easy-to-use interface to quickly set up a trial
-design that you want to simulate.</li>
-<li>Simulation: a single window dedicate to the simulation
-configuration, execution and preview. Customise your plots as you wish.
-Adapt model parameters on the fly using the quick access panel. Make
-interactive simulations by creating scenarios or arms and stratify your
-results in one-click. Switch to the plotly mode to make your plots even
-more interactive.</li>
-<li>Download: last but not least, download the whole code of the
-simulation and reproduce what you see in the app locally on your
-computer, thanks to the open source package campsis.</li>
+Try out one of the numerous models available from the library and adapt
+it to your needs.</li>
+<li>Trial design: an easy-to-use interface to quickly set-up the dosing
+regimen, observation times and covariates.</li>
+<li>Simulation: a single screen dedicated to the simulation
+configuration and visualisation of the results. Explore different
+scenarios of parameter settings quickly and interactively.</li>
+<li>Download: last but not least, download the model, parameters and the
+whole code of the simulation to reproduce what you see in the app on
+your computer using the open-source package <a
+href="https://github.com/Calvagone/campsis">campsis</a>.</li>
 </ul>
+<p>Click <a
+href="https://youtu.be/uypETm6aoNc"><strong>here</strong></a> for a
+short video explaining how to set-up and run your first simulation.</p>
 </div>
 <div id="use-cases" class="section level2">
 <h2>Use cases</h2>
@@ -385,7 +388,7 @@ computer, thanks to the open source package campsis.</li>
 have prepared for you to get an idea of e-Campsis’ capabilities.</p>
 <div class="level">
 <div class="column-use-case-left">
-<p><a href="https://ecampsis.shinyapps.io/emax-dose-response/"><img src="images/use_case_dose_response_model.png"></a></p>
+<p><a href="https://ecampsis.shinyapps.io/emax-dose-response/"><img src="images/screenshot_dose-response.png"/></a></p>
 </div>
 <div id="simple-dose-reponse-model"
 class="section level4 column-use-case-right">
@@ -393,22 +396,21 @@ class="section level4 column-use-case-right">
 dose reponse model</a></h4>
 <p>This is a straight-forward example of a sigmoidal dose-response model
 to illustrate how you can easily simulate non-longitudinal models with
-Campsis. In the present case we use a dosing compartment where the
+e-Campsis. In the present case we use a dosing compartment where the
 amount per arm is injected as a bolus. Since we have no time-dependency,
-we only need to specify a single observation time point. You can use
-custom plotting code to show the dose-response curve.</p>
+we only need to specify a single observation time point.</p>
 </div>
 </div>
 <div class="level">
 <div class="column-use-case-left">
-<p><a href="https://ecampsis.shinyapps.io/pbpk-tmdd/"><img src="images/use_case_dose_pbpk_tmdd.png"></a></p>
+<p><a href="https://ecampsis.shinyapps.io/pbpk-tmdd/"><img src="images/use_case_dose_pbpk_tmdd.png"/></a></p>
 </div>
 <div id="pbpk-tmdd-model-cao-et-al-2013"
 class="section level4 column-use-case-right">
 <h4><a href="https://ecampsis.shinyapps.io/pbpk-tmdd/">PBPK-TMDD model
 (Cao et al, 2013)</a></h4>
 <p>This model is an adaptation of the second-generation minimal PBPK
-model for monoclonal antibodies initially described by Cao et al 2013
+model for monoclonal antibodies initially described by Cao et al. 2013
 and later refined and applied to interspecies-scaling by Zhao et
 al. 2015. Physiological parameters like lymph or plasma flow and volumes
 are scaled by body weight, to allow simple scaling between species on
@@ -428,7 +430,7 @@ antibody-target complex (1/day)</li>
 </div>
 <div class="level">
 <div class="column-use-case-left">
-<p><a href="https://ecampsis.shinyapps.io/filgrastim/"><img src="images/use_case_dose_filgrastim.png"></a></p>
+<p><a href="https://ecampsis.shinyapps.io/filgrastim/"><img src="images/use_case_dose_filgrastim.png"/></a></p>
 </div>
 <div id="filgrastim-model-krzyzanski-et-al-2010"
 class="section level4 column-use-case-right">
@@ -447,7 +449,7 @@ total G-CSF receptor density.</p>
 </div>
 <div class="level">
 <div class="column-use-case-left">
-<p><a href="https://ecampsis.shinyapps.io/draflazine/"><img src="images/use_case_dose_draflazine.png"></a></p>
+<p><a href="https://ecampsis.shinyapps.io/draflazine/"><img src="images/use_case_dose_draflazine.png"/></a></p>
 </div>
 <div id="draflazine-model-snoeck-et-al-1999"
 class="section level4 column-use-case-right">
@@ -465,6 +467,34 @@ vivo. It is suggested that the red blood cell nucleoside transporter
 occupancy may serve as a useful pharmacodynamic endpoint in dose ranging
 studies with draflazine.</p>
 </div>
+</div>
+</div>
+<div id="versions" class="section level2">
+<h2>Versions</h2>
+<div id="free" class="section level4">
+<h4>free</h4>
+<p>The free web version of e-Campsis is accessible to everyone, without
+registration. However, to limit and control server usage it comes with
+certain restrictions regarding the simulation size.</p>
+</div>
+<div id="free-1" class="section level4">
+<h4>free+</h4>
+<p>If you want to simulate up to 16 arms or scenarios (combined), 100
+subjects/arm and 250 observations/arm we invite you to become an
+authorized user of e-Campsis free+. Please click on the link below to
+send us a pre-filled email and you will get an invitation to register as
+soon as possible:</p>
+<a class="mailtoui" href="mailto:campsis@calvagone.com?subject=e-Campsis%20free%2B&amp;cc=&amp;bcc=&amp;body=Hello%2C%20%0A%0A%20I%27d%20like%20to%20get%20access%20to%20e-Campsis%20free%2B.%20%0A%0A%20Thank%20you%2C%20%0A%0A%20%3CYour%20name%3E%20%0A%0ABy%20sending%20this%20e-mail%20I%20agree%20that%20Calvagone%20gets%20in%20touch%20with%20me%20regarding%20Campsis%20and%20associated%20services.%20I%20understand%20that%20Calvagone%20will%20never%20sell%20or%20distribute%20my%20contact%20information%20to%20a%20third%20party%20and%20promises%20to%20keep%20my%20details%20safe%20and%20secure.%20If%20I%20don%27t%20want%20to%20receive%20e-mails%20from%20Calvagone%20anymore%20or%20have%20questions%20around%20their%20GDPR%20compliance%2C%20I%20will%20contact%20them%20at%20contact%40calvagone.com.">campsis@calvagone.com</a>
+</div>
+<div id="pro" class="section level4">
+<h4>pro</h4>
+<p>We are working without rest on a pro-version of e-Campsis which will
+include many additional features such as, import and automatic
+translation of NONMEM code, post-processing of simulations to calculate
+NCA parameters and summarize them in a table, easy saving and loading of
+simulation projects and much more. We plan to have a beta version ready
+in Q4 this year. Please stay tuned and meanwhile enjoy the free versions
+of e-Campsis!</p>
 </div>
 </div>
 
