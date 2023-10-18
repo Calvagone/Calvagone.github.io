@@ -1,0 +1,83 @@
+---
+pagetitle: "Welcome to Campsis"
+description: "An open-source PK/PD simulation platform"
+output:
+  html_document:
+    toc: false
+---
+
+```{r setup, include = FALSE}
+source("_R/campsis_setup.R")
+```
+
+![](images/campsis_banner_small.png)
+
+Welcome to the official website of the Campsis suite.  
+
+Campsis is a PK/PD simulation platform developed by [Calvagone](http://www.calvagone.com). The suite comprises two R packages `campsismod` and `campsis` which are both free and open-source on GitHub (see links below).  
+
+Want to learn more? Please visit our section [What is Campsis](./intro.html).  
+Want to give it a try? Please follow the [Installation](./install.html) instructions and have a look at the documentation below.
+
+## Packages on Github
+
+<div class="level">
+<div class="column-left">
+<a href="https://github.com/Calvagone/campsis"><img src="images/campsis_logo.png"></a>
+</div>
+
+<div class="column-right">
+
+#### [campsis](https://github.com/Calvagone/campsis)
+
+A generic PK/PD simulation platform based on rxode2, RxODE and mrgsolve engines.
+
+</div>
+</div>
+
+<div class="level">
+<div class="column-left">
+<a href="https://github.com/Calvagone/campsismod"><img src="images/campsismod_logo.png"></a>
+</div>
+
+<div class="column-right">
+
+#### [campsismod](https://github.com/Calvagone/campsismod)
+
+Generic implementation of a drug model in pharmacometrics.
+
+</div>
+</div>
+
+## Documentation
+
+<div class="level">
+<div class="column-left">
+<a href="https://calvagone.github.io/campsis.doc/"><img src="images/campsis_doc_logo.png"></a>
+</div>
+
+<div class="column-right">
+
+#### [campsis.doc](https://calvagone.github.io/campsis.doc/)
+
+Documentation of R package campsis.  
+Please check out our many vignettes available in this pkgdown website.
+
+</div>
+</div>
+
+
+<div class="level">
+<div class="column-left">
+<a href="https://calvagone.github.io/campsismod.doc/"><img src="images/campsismod_doc_logo.png"></a>
+</div>
+
+<div class="column-right">
+
+#### [campsismod.doc](https://calvagone.github.io/campsismod.doc/)
+
+Documentation of R package campsismod.  
+Please check out our many vignettes available in this pkgdown website.
+
+</div>
+</div>

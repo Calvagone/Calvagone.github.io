@@ -1,0 +1,36 @@
+name: "Campsis"
+author: "Calvagone"
+output_dir: "../"
+exclude: ["*.xls", "*.csv","*.R"]
+output:
+  html_document:
+    toc: true
+    toc_float: yes
+    toc_depth: 2
+    df_print: paged
+    self_contained: no
+    theme: 
+      primary: "#EF7E0B"
+      version: 4
+    highlight: tango
+    css: style.css
+    includes:
+      in_header: "header.html"
+navbar:
+  left:
+  - text: "What is Campsis"
+    href: ./intro.html
+  - text: "Installation"
+    href: ./install.html
+  - text: "Get started"
+    href: ./get_started.html
+  - text: "e-Campsis"
+    href: ./ecampsis.html
+  - text: "News"
+    href: ./news.html
+  - text: "Contact us"
+    href: ./contact.html
+  right:
+  - text: "Campsis"
+    icon: fa-home
+    href: ./index.html

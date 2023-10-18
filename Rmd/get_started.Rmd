@@ -1,0 +1,81 @@
+---
+title: 'Get started'
+---
+
+```{r, message=FALSE}
+library(campsis)
+```
+
+## Load model
+
+Load a PK model from the built-in model library or load your own one.
+
+```{r}
+model <- model_suite$nonmem$advan4_trans4 # 2-compartment PK model with absorption compartment
+```
+
+## Create dataset
+
+Create a dataset of 10 individuals in Campsis For instance, let's give 1000 mg QD for 3 days and observe every hour.
+
+```{r}
+dataset <- Dataset(10) %>%
+  add(Bolus(time=0, amount=1000, ii=24, addl=2)) %>%
+  add(Observations(times=0:72))
+```
+
+## Simulate
+
+Simulate this very simple protocol:
+
+```{r, include=FALSE}
+results <- model %>% simulate(dataset, seed=1)
+head(results)
+```
+
+## Plot results
+
+Plot all simulated profiles using a spaghetti plot:
+
+```{r get_started_spaguetti_plot, fig.align='center', fig.height=4, fig.width=8}
+spaghettiPlot(results, "CONC")
+```
+
+Or use a shaded plot to see the simulated 90% prediction interval:
+
+```{r get_started_shaded_plot, fig.align='center', fig.height=4, fig.width=8}
+shadedPlot(results, "CONC")
+```
+
+## Simulate arms
+
+The dataset can contain more than one treatment arm. In the example below, we explicitly create two arms. The first arm receives a dose of 1000 mg QD, while the second arm receives twice this dose amount.
+
+```{r get_started_2arms_plot, fig.align='center', fig.height=4, fig.width=8, results='hide', message=FALSE}
+arm1 <- Arm(subjects=50, label="1000 mg QD") %>%
+  add(Bolus(time=0, amount=1000, ii=24, addl=2)) %>%
+  add(Observations(times=0:72))
+
+arm2 <- Arm(subjects=50, label="2000 mg QD") %>%
+  add(Bolus(time=0, amount=2000, ii=24, addl=2)) %>%
+  add(Observations(times=0:72))
+
+dataset <- Dataset() %>%
+  add(c(arm1, arm2))
+
+results <- model %>% simulate(dataset, seed=1)
+shadedPlot(results, "CONC", colour="ARM")
+```
+
+## Derive from base model
+
+Scenarios derived from the base model and/or dataset can be easily implemented. Below, we'd like to see what happens if the clearance of this model is multiplied by two.
+
+```{r get_started_2arms_scenarios_plot, fig.align='center', fig.height=4, fig.width=8, results='hide', message=FALSE}
+scenarios <- Scenarios() %>%
+  add(Scenario("Base model")) %>% # Original CL is 5
+  add(Scenario("Increased clearance", model=~.x %>% replace(Theta(name="CL", value=10))))
+
+results <- model %>% simulate(dataset, scenarios=scenarios, seed=1)
+shadedPlot(results, "CONC", colour=c("ARM", "SCENARIO")) + ggplot2::facet_wrap(~SCENARIO)
+```
