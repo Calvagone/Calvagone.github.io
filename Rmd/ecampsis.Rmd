@@ -92,3 +92,13 @@ We are working without rest on a pro-version of e-Campsis which will include man
 We plan to have a beta version ready in Q4 this year. 
 Please stay tuned and meanwhile enjoy the free versions of e-Campsis!
 
+## Videos
+
+#### An introduction to e-Campsis - The free PK/PD simulator
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uypETm6aoNc" frameborder="0" allowfullscreen></iframe>
+&nbsp;
+
+#### Preview of e-Campsis Pro and updates to Free
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/M_LLI_poS2E" frameborder="0" allowfullscreen></iframe>
