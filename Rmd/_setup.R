@@ -15,7 +15,7 @@ browseURL(
 )
 
 browseURL(
-  xfun::in_dir(".", rmarkdown::render_site("ecampsis.Rmd"))
+  xfun::in_dir("./Rmd/", rmarkdown::render_site("ecampsis.Rmd"))
 )
 
 # browseURL(

@@ -13,22 +13,22 @@
 
 <title>e-Campsis</title>
 
-<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.22/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
-<script src="site_libs/bs3compat-0.5.1/transition.js"></script>
-<script src="site_libs/bs3compat-0.5.1/tabs.js"></script>
-<script src="site_libs/bs3compat-0.5.1/bs3compat.js"></script>
+<script src="site_libs/bs3compat-0.5.0/transition.js"></script>
+<script src="site_libs/bs3compat-0.5.0/tabs.js"></script>
+<script src="site_libs/bs3compat-0.5.0/bs3compat.js"></script>
 <script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
-<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
 <meta property="og:title" content="Campsis">
 <meta property="og:description" content="An open-source PK/PD simulation platform">
 <meta property="og:image" content="https://calvagone.github.io/images/campsis_og_image.png">
@@ -385,10 +385,40 @@ short video explaining how to set-up and run your first simulation.</p>
 <div id="use-cases" class="section level2">
 <h2>Use cases</h2>
 <p>The following section lists a few pre-configured example cases we
-have prepared for you to get an idea of e-Campsis’ capabilities.</p>
+have prepared for you to get an idea of e-Campsis’ capabilities. Just
+click on the titles and you will be redirected to the app.</p>
 <div class="level">
 <div class="column-use-case-left">
-<p><a href="https://ecampsis.shinyapps.io/emax-dose-response/"><img src="images/screenshot_dose-response.png"/></a></p>
+<p><a href="https://ecampsis.shinyapps.io/free/?usecase=alcohol-pk"><img src="images/use_case_alcohol_PK.png"/></a></p>
+</div>
+<div id="christmas-party-simulator-alcohol-pk"
+class="section level4 column-use-case-right">
+<h4><a
+href="https://ecampsis.shinyapps.io/free/?usecase=alcohol-pk">Christmas
+party simulator (alcohol PK)</a></h4>
+<p>We have implemented the alcohol popPK model recently published by <a
+href="https://pubmed.ncbi.nlm.nih.gov/36688276/">Büsker et al. 2023</a>.
+It nicely illustrates the impact of non-linear PK on the blood
+concentrations, especially for repeated doses of your favorite Christmas
+drink. German Glühwein, Christmas Punch and the Swedish Glögg are given
+as examples, however, you can simply change the dose (i.e. amount of
+alcohol per serving) to simulate other beverages. We assumed the actual
+drinking of of a ‘dose’ to be a zero-order infusion into the gut with a
+duration of 0.5 hours. Feel free to adapt if you are a faster/slower
+drinker. The frequency at which you hit the bar and the number of drinks
+can be adjusted in the ‘Dose interval’ and ‘Additional doses’ fields.
+You will see that it is good idea to have a proper meal before going to
+the party. But note that we assume that the food-effect lasts only 3
+hours (FOOD_DUR). Click <a
+href="https://youtu.be/Oq9PBJ7v-yQ"><strong>here</strong></a> for a
+short explainer video.</p>
+<p>We wish you a lot of fun at your next party. And please don’t drink
+and drive.</p>
+</div>
+</div>
+<div class="level">
+<div class="column-use-case-left">
+<p><a href="https://ecampsis.shinyapps.io/free/?usecase=emax-dose-response"><img src="images/screenshot_dose-response.png"/></a></p>
 </div>
 <div id="simple-dose-reponse-model"
 class="section level4 column-use-case-right">
@@ -404,13 +434,13 @@ we only need to specify a single observation time point.</p>
 </div>
 <div class="level">
 <div class="column-use-case-left">
-<p><a href="https://ecampsis.shinyapps.io/pbpk-tmdd/"><img src="images/use_case_dose_pbpk_tmdd.png"/></a></p>
+<p><a href="https://ecampsis.shinyapps.io/free/?usecase=pbpk-tmdd"><img src="images/use_case_dose_pbpk_tmdd.png"/></a></p>
 </div>
-<div id="pbpk-tmdd-model-cao-et-al-2013"
+<div id="pbpk-tmdd-model-cao-et-al.-2013"
 class="section level4 column-use-case-right">
 <h4><a
 href="https://ecampsis.shinyapps.io/free/?usecase=pbpk-tmdd">PBPK-TMDD
-model (Cao et al, 2013)</a></h4>
+model (Cao et al. 2013)</a></h4>
 <p>This model is an adaptation of the second-generation minimal PBPK
 model for monoclonal antibodies initially described by Cao et al. 2013
 and later refined and applied to interspecies-scaling by Zhao et
@@ -432,13 +462,13 @@ antibody-target complex (1/day)</li>
 </div>
 <div class="level">
 <div class="column-use-case-left">
-<p><a href="https://ecampsis.shinyapps.io/filgrastim/"><img src="images/use_case_dose_filgrastim.png"/></a></p>
+<p><a href="https://ecampsis.shinyapps.io/free/?usecase=filgrastim"><img src="images/use_case_dose_filgrastim.png"/></a></p>
 </div>
-<div id="filgrastim-model-krzyzanski-et-al-2010"
+<div id="filgrastim-model-krzyzanski-et-al.-2010"
 class="section level4 column-use-case-right">
 <h4><a
 href="https://ecampsis.shinyapps.io/free/?usecase=filgrastim">Filgrastim
-model (Krzyzanski et al, 2010)</a></h4>
+model (Krzyzanski et al. 2010)</a></h4>
 <p>Filgrastim is a recombinant human granulocyte colony stimulating
 factor (G-CSF) that stimulates production of neutrophils. The model
 depicted the decaying trend in Cmax values with repeated doses and an
@@ -452,7 +482,7 @@ total G-CSF receptor density.</p>
 </div>
 <div class="level">
 <div class="column-use-case-left">
-<p><a href="https://ecampsis.shinyapps.io/draflazine/"><img src="images/use_case_dose_draflazine.png"/></a></p>
+<p><a href="https://ecampsis.shinyapps.io/free/?usecase=draflazine"><img src="images/use_case_dose_draflazine.png"/></a></p>
 </div>
 <div id="draflazine-model-snoeck-et-al-1999"
 class="section level4 column-use-case-right">
@@ -475,30 +505,108 @@ studies with draflazine.</p>
 </div>
 <div id="versions" class="section level2">
 <h2>Versions</h2>
-<div id="free" class="section level4">
+<div class="card-group">
+<div class="card">
+<div id="free" class="section level4 card-header">
 <h4>free</h4>
-<p>The free web version of e-Campsis is accessible to everyone, without
-registration. However, to limit and control server usage it comes with
-certain restrictions regarding the simulation size.</p>
 </div>
-<div id="free-1" class="section level4">
+<div class="card-body">
+<ul>
+<li>Extensive library of PK and PD models</li>
+<li>Easy set-up of scenarios</li>
+<li>Customizable trial designs</li>
+<li>Basic customization options for plots</li>
+<li>Simulate 50 subjects and 100 observations per arm</li>
+<li>Up to 4 arms or scenarios (combined)</li>
+<li>Download of campsis simulation code for offline execution</li>
+<li>Support via github <em>issues</em></li>
+<li>Free to everyone without registration</li>
+</ul>
+</div>
+</div>
+<div class="card">
+<div id="free-1" class="section level4 card-header">
 <h4>free+</h4>
-<p>If you want to simulate up to 16 arms or scenarios (combined), 100
-subjects/arm and 250 observations/arm we invite you to become an
-authorized user of e-Campsis free+. Please click on the link below to
-send us a pre-filled email and you will get an invitation to register as
-soon as possible:</p>
+</div>
+<div class="card-body">
+<p>Same as features as in free plus:</p>
+<ul>
+<li>16 arms or scenarios (combined)</li>
+<li>100 subjects/arm and 250 observations/arm</li>
+<li>Free for registered users</li>
+</ul>
+<p>Click on the link below to send us a pre-filled email and you will
+get an invitation to register as soon as possible:</p>
 <a class="mailtoui" href="mailto:campsis@calvagone.com?subject=e-Campsis%20free%2B&amp;cc=&amp;bcc=&amp;body=Hello%2C%20%0A%0A%20I%27d%20like%20to%20get%20access%20to%20e-Campsis%20free%2B.%20%0A%0A%20Thank%20you%2C%20%0A%0A%20%3CYour%20name%3E%20%0A%0ABy%20sending%20this%20e-mail%20I%20agree%20that%20Calvagone%20gets%20in%20touch%20with%20me%20regarding%20Campsis%20and%20associated%20services.%20I%20understand%20that%20Calvagone%20will%20never%20sell%20or%20distribute%20my%20contact%20information%20to%20a%20third%20party%20and%20promises%20to%20keep%20my%20details%20safe%20and%20secure.%20If%20I%20don%27t%20want%20to%20receive%20e-mails%20from%20Calvagone%20anymore%20or%20have%20questions%20around%20their%20GDPR%20compliance%2C%20I%20will%20contact%20them%20at%20contact%40calvagone.com.">campsis@calvagone.com</a>
 </div>
-<div id="pro" class="section level4">
+</div>
+<div class="card">
+<div id="pro" class="section level4 card-header">
 <h4>pro</h4>
-<p>We are working without rest on a pro-version of e-Campsis which will
-include many additional features such as, import and automatic
-translation of NONMEM code, post-processing of simulations to calculate
-NCA parameters and summarize them in a table, easy saving and loading of
-simulation projects and much more. We plan to have a beta version ready
-in Q4 this year. Please stay tuned and meanwhile enjoy the free versions
-of e-Campsis!</p>
+</div>
+<div class="card-body">
+<p>Same as features as in free plus:</p>
+<ul>
+<li>Save/load e-campsis projects</li>
+<li>NONMEM code import</li>
+<li>Number of arms, scenarios, subjects, observations only limited by
+memory</li>
+<li>Advanced customization of plots</li>
+<li>NCA &amp; summary statistics</li>
+<li>Sensitivity analysis*</li>
+<li>Forest plots*</li>
+<li>Upload of external data for plotting*</li>
+<li>Bootstrap covariates from external file or NHANES*</li>
+<li>Replicate simulation with parameter uncertainty*</li>
+<li>Import rxode2 and mrgsolve simulation code*</li>
+<li>Personalized support via email</li>
+</ul>
+<p>A beta version will be available in Q4 this year. Stay tuned and
+meanwhile enjoy the free versions of e-Campsis!</p>
+<p>*<em>Under development. Will be ready in Spring 2024.</em></p>
+</div>
+</div>
+</div>
+</div>
+<div id="faq" class="section level2">
+<h2>FAQ</h2>
+<div id="is-e-campsis-validaded" class="section level3">
+<h3>Is E-campsis validaded ?</h3>
+<p>E-campsis itself is not validated, as it merely provides a graphical
+user interface that facilitates the set-up of simulations. The actual
+<em>work</em> is done by the open-source packages campsis and campsismod
+in the background. Simulations of almost all library models with campsis
+- which uses mrgsolve or rsxode2 as the back-end simulation engine -
+have been successfully validated against simulations with NONMEM. In
+addition users of e-Campsis pro will have the option to obtain an
+installation qualification suite to ensure accurate functioning of
+campsis and campismod in their local environment.</p>
+</div>
+<div
+id="how-can-i-implement-more-complex-dosing-regimens-including-e.g.-a-loading-dose"
+class="section level3">
+<h3>How can I implement more complex dosing regimens including, e.g. a
+loading dose ?</h3>
+<p>This can be done via the ‘Custom dataset’ option in the trial design
+tab. There you can directly provide campsis code in of more complex
+dosing and observation regimens. Have a look at <a
+href="https://calvagone.github.io/campsis.doc/articles/v01_dataset.html"
+class="uri">https://calvagone.github.io/campsis.doc/articles/v01_dataset.html</a>
+for instructions how to do it.</p>
+</div>
+<div id="when-can-i-buy-the-pro-version-how-much-will-it-cost"
+class="section level3">
+<h3>When can I buy the pro version ? How much will it cost ?</h3>
+<p>The beta pro-version will be available very soon. It will be a annual
+subscription per named user. The price will be announced with on the
+date of the release. Early bird beta-users will get a discount of 50%
+!</p>
+</div>
+<div id="will-there-be-a-dicount-for-academia" class="section level3">
+<h3>Will there be a dicount for academia ?</h3>
+<p>Yes, for the purpose of research there will be a significant
+discount. For teaching we think that the free version should already
+cover your needs. If not let us know.</p>
 </div>
 </div>
 <div id="videos" class="section level2">
@@ -508,12 +616,16 @@ class="section level4">
 <h4>An introduction to e-Campsis - The free PK/PD simulator</h4>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uypETm6aoNc" frameborder="0" allowfullscreen>
 </iframe>
-<p> </p>
 </div>
 <div id="preview-of-e-campsis-pro-and-updates-to-free"
 class="section level4">
 <h4>Preview of e-Campsis Pro and updates to Free</h4>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/M_LLI_poS2E" frameborder="0" allowfullscreen>
+</iframe>
+</div>
+<div id="the-christmas-party-simulator" class="section level4">
+<h4>The Christmas party simulator</h4>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Oq9PBJ7v-yQ" frameborder="0" allowfullscreen>
 </iframe>
 </div>
 </div>
