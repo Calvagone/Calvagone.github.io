@@ -195,7 +195,7 @@ This can be done via the 'Custom dataset' option in the trial design tab. There 
 ### When can I buy the pro version ? How much will it cost ?
 The beta pro-version will be available very soon. It will be a annual subscription per named user. The price will be announced with on the date of the release. Early bird beta-users will get a discount of 50% !
 
-### Will there be a dicount for academia ?
+### Will there be a discount for academia ?
 Yes, for the purpose of research there will be a significant discount. For teaching we think that the free version should already cover your needs. If not let us know.
 
 
