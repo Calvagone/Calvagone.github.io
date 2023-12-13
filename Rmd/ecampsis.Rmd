@@ -185,8 +185,8 @@ A beta version will be available in Q4 this year. Stay tuned and meanwhile enjoy
 
 ## FAQ
 
-### Is E-campsis validaded ?
-E-campsis itself is not validated, as it merely provides a graphical user interface that facilitates the set-up of simulations. The actual *work* is done by the open-source packages campsis and campsismod in the background. Simulations of almost all library models with campsis - which uses mrgsolve or rsxode2 as the back-end simulation engine - have been successfully validated against simulations with NONMEM. 
+### Is e-Campsis validated ?
+e-Campsis itself is not validated, as it merely provides a graphical user interface that facilitates the set-up of simulations. The actual *work* is done by the open-source packages campsis and campsismod in the background. Simulations of almost all library models with campsis - which uses mrgsolve or rsxode2 as the back-end simulation engine - have been successfully verified against simulations with NONMEM. 
 In addition users of e-Campsis pro will have the option to obtain an installation qualification suite to ensure accurate functioning of campsis and campismod in their local environment.
 
 ### How can I implement more complex dosing regimens including, e.g. a loading dose ?
