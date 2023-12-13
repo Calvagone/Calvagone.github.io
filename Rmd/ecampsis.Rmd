@@ -185,8 +185,8 @@ A beta version will be available in Q4 this year. Stay tuned and meanwhile enjoy
 
 ## FAQ
 
-### Is E-campsis validaded ?
-E-campsis itself is not validated, as it merely provides a graphical user interface that facilitates the set-up of simulations. The actual *work* is done by the open-source packages campsis and campsismod in the background. Simulations of almost all library models with campsis - which uses mrgsolve or rsxode2 as the back-end simulation engine - have been successfully validated against simulations with NONMEM. 
+### Is e-Campsis validated ?
+e-Campsis itself is not validated, as it merely provides a graphical user interface that facilitates the set-up of simulations. The actual *work* is done by the open-source packages campsis and campsismod in the background. Simulations of almost all library models with campsis - which uses mrgsolve or rsxode2 as the back-end simulation engine - have been successfully verified against simulations with NONMEM. 
 In addition users of e-Campsis pro will have the option to obtain an installation qualification suite to ensure accurate functioning of campsis and campismod in their local environment.
 
 ### How can I implement more complex dosing regimens including, e.g. a loading dose ?
@@ -195,7 +195,7 @@ This can be done via the 'Custom dataset' option in the trial design tab. There 
 ### When can I buy the pro version ? How much will it cost ?
 The beta pro-version will be available very soon. It will be a annual subscription per named user. The price will be announced with on the date of the release. Early bird beta-users will get a discount of 50% !
 
-### Will there be a dicount for academia ?
+### Will there be a discount for academia ?
 Yes, for the purpose of research there will be a significant discount. For teaching we think that the free version should already cover your needs. If not let us know.
 
 
