@@ -26,7 +26,8 @@ Click [**here**](https://youtu.be/uypETm6aoNc) for a short video explaining how 
 
 ## Use cases
 
-The following section lists a few pre-configured example cases we have prepared for you to get an idea of e-Campsis' capabilities. Just click on the titles and you will be redirected to the app.
+The following section lists a few pre-configured example cases we have prepared for you to get an idea of e-Campsis' capabilities.
+Just click on the titles and you will be redirected to the app.
 
 ::: level
 ::: column-use-case-left
@@ -161,24 +162,25 @@ Click on the link below to send us a pre-filled email and you will get an invita
 :::
 
 ::: card-body
-Same as features as in free plus: 
+Same as features as in free plus:
 
--   Save/load e-campsis projects 
--   NONMEM code import 
--   Number of arms, scenarios, subjects, observations only limited by memory 
--   Advanced customization of plots 
--   NCA & summary statistics 
--   Sensitivity analysis\* 
--   Forest plots\* 
--   Upload of external data for plotting\* 
+-   Save/load e-campsis projects
+-   NONMEM code import
+-   Number of arms, scenarios, subjects, observations only limited by memory
+-   Advanced customization of plots
+-   NCA & summary statistics
+-   Sensitivity analysis\*
+-   Forest plots\*
+-   Upload of external data for plotting\*
 -   Bootstrap covariates from external file or NHANES\*
--   Replicate simulation with parameter uncertainty\* 
+-   Replicate simulation with parameter uncertainty\*
 -   Import rxode2 and mrgsolve simulation code\*
 -   Personalized support via email
 
-A beta version will be available in Q4 this year. Stay tuned and meanwhile enjoy the free versions of e-Campsis!
+A beta version will be available in Q4 this year.
+Stay tuned and meanwhile enjoy the free versions of e-Campsis!
 
-\**Under development. Will be ready in Spring 2024.* 
+\**Under development. Will be ready in Spring 2024.*
 :::
 :::
 :::
@@ -186,18 +188,33 @@ A beta version will be available in Q4 this year. Stay tuned and meanwhile enjoy
 ## FAQ
 
 ### Is e-Campsis validated ?
-e-Campsis itself is not validated, as it merely provides a graphical user interface that facilitates the set-up of simulations. The actual *work* is done by the open-source packages campsis and campsismod in the background. Simulations of almost all library models with campsis - which uses mrgsolve or rsxode2 as the back-end simulation engine - have been successfully verified against simulations with NONMEM. 
-In addition users of e-Campsis pro will have the option to obtain an installation qualification suite to ensure accurate functioning of campsis and campismod in their local environment.
+
+e-Campsis is being developed with quality in mind through object-oriented programming and automatic unit tests of key functions.
+This drastically reduces the occurrence of bugs and regressions when the software is updated.
+
+However, e-Campsis is a graphical user interface that facilitates the set-up of simulations and does not do any calculation itself.
+The actual "work" is done by the open-source packages *campsis* and *campsismod* in the background.
+Simulations of almost all library models with *campsis* - which uses *mrgsolve* or *rxode2* as the back-end simulation engine - have been successfully verified against simulations with NONMEM.
+In addition, users of e-Campsis pro will have the option to obtain an installation qualification suite to ensure accurate functioning of *campsis* and *campismod* in their local environment.
 
 ### How can I implement more complex dosing regimens including, e.g. a loading dose ?
-This can be done via the 'Custom dataset' option in the trial design tab. There you can directly provide campsis code in of more complex dosing and observation regimens. Have a look at https://calvagone.github.io/campsis.doc/articles/v01_dataset.html for instructions how to do it.
+
+This can be done via the 'Custom dataset' option in the trial design tab.
+There you can directly provide campsis code in of more complex dosing and observation regimens.
+Have a look at <https://calvagone.github.io/campsis.doc/articles/v01_dataset.html> for instructions how to do it.
 
 ### When can I buy the pro version ? How much will it cost ?
-The beta pro-version will be available very soon. It will be a annual subscription per named user. The price will be announced with on the date of the release. Early bird beta-users will get a discount of 50% !
+
+The beta pro-version will be available very soon.
+It will be a annual subscription per named user.
+The price will be announced with on the date of the release.
+Early bird beta-users will get a discount of 50% !
 
 ### Will there be a discount for academia ?
-Yes, for the purpose of research there will be a significant discount. For teaching we think that the free version should already cover your needs. If not let us know.
 
+Yes, for the purpose of research there will be a significant discount.
+For teaching we think that the free version should already cover your needs.
+If not let us know.
 
 ## Videos
 
@@ -207,17 +224,14 @@ Yes, for the purpose of research there will be a significant discount. For teach
 
 </iframe>
 
-
 #### Preview of e-Campsis Pro and updates to Free
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/M_LLI_poS2E" frameborder="0" allowfullscreen>
 
 </iframe>
 
-
 #### The Christmas party simulator
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Oq9PBJ7v-yQ" frameborder="0" allowfullscreen>
 
 </iframe>
-
