@@ -164,7 +164,7 @@ Click on the link below to send us a pre-filled email and you will get an invita
 ::: card-body
 Same as features as in free plus:
 
--   Save/load e-campsis projects
+-   Save/load e-Campsis projects
 -   NONMEM code import
 -   Number of arms, scenarios, subjects, observations only limited by memory
 -   Advanced customization of plots
@@ -177,9 +177,15 @@ Same as features as in free plus:
 -   Import rxode2 and mrgsolve simulation code\*
 -   Personalized support via email
 
-A beta version will be available in Q4 this year.
-Stay tuned and meanwhile enjoy the free versions of e-Campsis!
+The Pro version is available as an annual subscription for 990 Euros per user.
+Discounts for multiple users apply.
+Early adopters get a 50% discount!
 
+Click below and send us an e-mail if you want to subscribe to e-Campsis Pro.
+
+```{=html}
+<a class="mailtoui" href="mailto:campsis@calvagone.com?subject=e-Campsis%20pro&amp;cc=&amp;bcc=&amp;body=Hello%2C%20%0A%0A%20I%27d%20like%20to%20get%20access%20to%20e-Campsis%20Pro.%20%0A%0A%20Thank%20you%2C%20%0A%0A%20%3CYour%20name%3E%20%0A%0ABy%20sending%20this%20e-mail%20I%20agree%20that%20Calvagone%20gets%20in%20touch%20with%20me%20regarding%20Campsis%20and%20associated%20services.%20I%20understand%20that%20Calvagone%20will%20never%20sell%20or%20distribute%20my%20contact%20information%20to%20a%20third%20party%20and%20promises%20to%20keep%20my%20details%20safe%20and%20secure.%20If%20I%20don%27t%20want%20to%20receive%20e-mails%20from%20Calvagone%20anymore%20or%20have%20questions%20around%20their%20GDPR%20compliance%2C%20I%20will%20contact%20them%20at%20contact%40calvagone.com.">campsis@calvagone.com</a>
+```
 \**Under development. Will be ready in Spring 2024.*
 :::
 :::
@@ -203,14 +209,7 @@ This can be done via the 'Custom dataset' option in the trial design tab.
 There you can directly provide campsis code in of more complex dosing and observation regimens.
 Have a look at <https://calvagone.github.io/campsis.doc/articles/v01_dataset.html> for instructions how to do it.
 
-### When can I buy the pro version ? How much will it cost ?
-
-The beta pro-version will be available very soon.
-It will be a annual subscription per named user.
-The price will be announced with on the date of the release.
-Early bird beta-users will get a discount of 50% !
-
-### Will there be a discount for academia ?
+### Is there a discount of the Pro version for academia ?
 
 Yes, for the purpose of research there will be a significant discount.
 For teaching we think that the free version should already cover your needs.
