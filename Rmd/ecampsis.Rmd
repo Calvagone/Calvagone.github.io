@@ -19,10 +19,101 @@ The app consists of 4 main sections:
 
 -   Model: a powerful model editor to edit your Campsis model online. Try out one of the numerous models available from the library and adapt it to your needs.
 -   Trial design: an easy-to-use interface to quickly set-up the dosing regimen, observation times and covariates.
--   Simulation: a single screen dedicated to the simulation configuration and visualisation of the results. Explore different scenarios of parameter settings quickly and interactively.
+-   Simulation: a single screen dedicated to the simulation configuration and visualization of the results. Explore different scenarios of parameter settings quickly and interactively.
 -   Download: last but not least, download the model, parameters and the whole code of the simulation to reproduce what you see in the app on your computer using the open-source package [campsis](https://github.com/Calvagone/campsis).
 
 Click [**here**](https://youtu.be/uypETm6aoNc) for a short video explaining how to set-up and run your first simulation.
+
+## Plans
+
+::: card-group
+::: card
+::: card-header
+### free
+
+### **0,- €**
+
+​
+:::
+
+::: card-body
+-   Extensive library of PK and PD models
+-   Easy set-up of scenarios
+-   Customizable trial designs
+-   Basic customization options for plots
+-   Simulate 50 subjects and 100 observations per arm
+-   Up to 4 arms or scenarios (combined)
+-   Download of campsis simulation code for offline execution
+-   Support via github *issues*
+-   Free to everyone without registration
+:::
+:::
+
+::: card
+::: card-header
+### free+
+
+### **0,- €**
+
+​
+:::
+
+::: card-body
+Same features as in free plus:
+
+-   16 arms or scenarios (combined)
+-   100 subjects/arm and 250 observations/arm
+-   Free for registered users
+
+Click on the link below to send us a pre-filled email and you will get an invitation to register as soon as possible:
+
+```{=html}
+<a class="mailtoui" href="mailto:campsis@calvagone.com?subject=e-Campsis%20free%2B&amp;cc=&amp;bcc=&amp;body=Hello%2C%20%0A%0A%20I%27d%20like%20to%20get%20access%20to%20e-Campsis%20free%2B.%20%0A%0A%20Thank%20you%2C%20%0A%0A%20%3CYour%20name%3E%20%0A%0ABy%20sending%20this%20e-mail%20I%20agree%20that%20Calvagone%20gets%20in%20touch%20with%20me%20regarding%20Campsis%20and%20associated%20services.%20I%20understand%20that%20Calvagone%20will%20never%20sell%20or%20distribute%20my%20contact%20information%20to%20a%20third%20party%20and%20promises%20to%20keep%20my%20details%20safe%20and%20secure.%20If%20I%20don%27t%20want%20to%20receive%20e-mails%20from%20Calvagone%20anymore%20or%20have%20questions%20around%20their%20GDPR%20compliance%2C%20I%20will%20contact%20them%20at%20contact%40calvagone.com.">campsis@calvagone.com</a>
+```
+:::
+:::
+
+::: card
+::: card-header
+### pro
+
+### ~~990~~ **495,- €**
+
+per year & user\*\*
+:::
+
+::: card-body
+Same features as in free+ plus:
+
+-   Save/load e-Campsis projects
+-   NONMEM code import
+-   Number of arms, scenarios, subjects, observations only limited by memory
+-   Advanced customization of plots
+-   NCA & summary statistics
+-   Sensitivity analysis\*
+-   Forest plots\*
+-   Upload of external data for plotting\*
+-   Bootstrap covariates from external file or NHANES\*
+-   Replicate simulation with parameter uncertainty\*
+-   Import rxode2 and mrgsolve simulation code\*
+-   Personalized support via email
+
+Click below and send us an e-mail if you want to subscribe to e-Campsis Pro.
+
+```{=html}
+<a class="mailtoui" href="mailto:campsis@calvagone.com?subject=e-Campsis%20pro&amp;cc=&amp;bcc=&amp;body=Hello%2C%20%0A%0A%20I%27d%20like%20to%20get%20access%20to%20e-Campsis%20Pro.%20%0A%0A%20Thank%20you%2C%20%0A%0A%20%3CYour%20name%3E%20%0A%0ABy%20sending%20this%20e-mail%20I%20agree%20that%20Calvagone%20gets%20in%20touch%20with%20me%20regarding%20Campsis%20and%20associated%20services.%20I%20understand%20that%20Calvagone%20will%20never%20sell%20or%20distribute%20my%20contact%20information%20to%20a%20third%20party%20and%20promises%20to%20keep%20my%20details%20safe%20and%20secure.%20If%20I%20don%27t%20want%20to%20receive%20e-mails%20from%20Calvagone%20anymore%20or%20have%20questions%20around%20their%20GDPR%20compliance%2C%20I%20will%20contact%20them%20at%20contact%40calvagone.com.">campsis@calvagone.com</a>
+```
+​
+
+\**Under development. Will be ready in Spring 2024.*
+
+\*\* excl.
+VAT.
+Includes a 50% discount for early adopters!
+Discounts for multiple users available.
+:::
+:::
+:::
 
 ## Use cases
 
@@ -115,82 +206,6 @@ It is suggested that the red blood cell nucleoside transporter occupancy may ser
 :::
 :::
 
-## Versions
-
-::: card-group
-::: card
-::: card-header
-#### free
-:::
-
-::: card-body
--   Extensive library of PK and PD models
--   Easy set-up of scenarios
--   Customizable trial designs
--   Basic customization options for plots
--   Simulate 50 subjects and 100 observations per arm
--   Up to 4 arms or scenarios (combined)
--   Download of campsis simulation code for offline execution
--   Support via github *issues*
--   Free to everyone without registration
-:::
-:::
-
-::: card
-::: card-header
-#### free+
-:::
-
-::: card-body
-Same as features as in free plus:
-
--   16 arms or scenarios (combined)
--   100 subjects/arm and 250 observations/arm
--   Free for registered users
-
-Click on the link below to send us a pre-filled email and you will get an invitation to register as soon as possible:
-
-```{=html}
-<a class="mailtoui" href="mailto:campsis@calvagone.com?subject=e-Campsis%20free%2B&amp;cc=&amp;bcc=&amp;body=Hello%2C%20%0A%0A%20I%27d%20like%20to%20get%20access%20to%20e-Campsis%20free%2B.%20%0A%0A%20Thank%20you%2C%20%0A%0A%20%3CYour%20name%3E%20%0A%0ABy%20sending%20this%20e-mail%20I%20agree%20that%20Calvagone%20gets%20in%20touch%20with%20me%20regarding%20Campsis%20and%20associated%20services.%20I%20understand%20that%20Calvagone%20will%20never%20sell%20or%20distribute%20my%20contact%20information%20to%20a%20third%20party%20and%20promises%20to%20keep%20my%20details%20safe%20and%20secure.%20If%20I%20don%27t%20want%20to%20receive%20e-mails%20from%20Calvagone%20anymore%20or%20have%20questions%20around%20their%20GDPR%20compliance%2C%20I%20will%20contact%20them%20at%20contact%40calvagone.com.">campsis@calvagone.com</a>
-```
-:::
-:::
-
-::: card
-::: card-header
-#### pro
-:::
-
-::: card-body
-Same as features as in free plus:
-
--   Save/load e-Campsis projects
--   NONMEM code import
--   Number of arms, scenarios, subjects, observations only limited by memory
--   Advanced customization of plots
--   NCA & summary statistics
--   Sensitivity analysis\*
--   Forest plots\*
--   Upload of external data for plotting\*
--   Bootstrap covariates from external file or NHANES\*
--   Replicate simulation with parameter uncertainty\*
--   Import rxode2 and mrgsolve simulation code\*
--   Personalized support via email
-
-The Pro version is available as an annual subscription for 990 Euros per user.
-Discounts for multiple users apply.
-Early adopters get a 50% discount!
-
-Click below and send us an e-mail if you want to subscribe to e-Campsis Pro.
-
-```{=html}
-<a class="mailtoui" href="mailto:campsis@calvagone.com?subject=e-Campsis%20pro&amp;cc=&amp;bcc=&amp;body=Hello%2C%20%0A%0A%20I%27d%20like%20to%20get%20access%20to%20e-Campsis%20Pro.%20%0A%0A%20Thank%20you%2C%20%0A%0A%20%3CYour%20name%3E%20%0A%0ABy%20sending%20this%20e-mail%20I%20agree%20that%20Calvagone%20gets%20in%20touch%20with%20me%20regarding%20Campsis%20and%20associated%20services.%20I%20understand%20that%20Calvagone%20will%20never%20sell%20or%20distribute%20my%20contact%20information%20to%20a%20third%20party%20and%20promises%20to%20keep%20my%20details%20safe%20and%20secure.%20If%20I%20don%27t%20want%20to%20receive%20e-mails%20from%20Calvagone%20anymore%20or%20have%20questions%20around%20their%20GDPR%20compliance%2C%20I%20will%20contact%20them%20at%20contact%40calvagone.com.">campsis@calvagone.com</a>
-```
-\**Under development. Will be ready in Spring 2024.*
-:::
-:::
-:::
-
 ## FAQ
 
 ### Is e-Campsis validated ?
@@ -211,7 +226,8 @@ Have a look at <https://calvagone.github.io/campsis.doc/articles/v01_dataset.htm
 
 ### Is there a discount of the Pro version for academia ?
 
-Yes, for the purpose of research there will be a significant discount.
+We support research at universities and other academic institutions by a significantly reduced subscription fee of 500 Euros per year for up to 5 named users in your research group.
+No additional discount applies on top of this offer.
 For teaching we think that the free version should already cover your needs.
 If not let us know.
 
@@ -219,18 +235,24 @@ If not let us know.
 
 #### An introduction to e-Campsis - The free PK/PD simulator
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uypETm6aoNc" frameborder="0" allowfullscreen>
+<iframe width="300" height="200" src="https://www.youtube.com/embed/uypETm6aoNc" frameborder="0" allowfullscreen>
 
 </iframe>
 
 #### Preview of e-Campsis Pro and updates to Free
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/M_LLI_poS2E" frameborder="0" allowfullscreen>
+<iframe width="300" height="200" src="https://www.youtube.com/embed/M_LLI_poS2E" frameborder="0" allowfullscreen>
+
+</iframe>
+
+#### e-Campsis pro for Pharmacometricians
+
+<iframe width="300" height="200" src="https://www.youtube.com/embed/RKXOuG2QHBw?si=xnoqrBo3O1Xn-M2" frameborder="0" allowfullscreen>
 
 </iframe>
 
 #### The Christmas party simulator
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Oq9PBJ7v-yQ" frameborder="0" allowfullscreen>
+<iframe width="300" height="200" src="https://www.youtube.com/embed/Oq9PBJ7v-yQ" frameborder="0" allowfullscreen>
 
 </iframe>
