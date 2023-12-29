@@ -98,7 +98,7 @@ Same features as in free+ plus:
 -   Import rxode2 and mrgsolve simulation code\*
 -   Personalized support via email
 
-Click below and send us an e-mail if you want to subscribe to e-Campsis Pro.
+Click below and send us an e-mail if you want to subscribe to e-Campsis pro.
 
 ```{=html}
 <a class="mailtoui" href="mailto:campsis@calvagone.com?subject=e-Campsis%20pro&amp;cc=&amp;bcc=&amp;body=Hello%2C%20%0A%0A%20I%27d%20like%20to%20get%20access%20to%20e-Campsis%20Pro.%20%0A%0A%20Thank%20you%2C%20%0A%0A%20%3CYour%20name%3E%20%0A%0ABy%20sending%20this%20e-mail%20I%20agree%20that%20Calvagone%20gets%20in%20touch%20with%20me%20regarding%20Campsis%20and%20associated%20services.%20I%20understand%20that%20Calvagone%20will%20never%20sell%20or%20distribute%20my%20contact%20information%20to%20a%20third%20party%20and%20promises%20to%20keep%20my%20details%20safe%20and%20secure.%20If%20I%20don%27t%20want%20to%20receive%20e-mails%20from%20Calvagone%20anymore%20or%20have%20questions%20around%20their%20GDPR%20compliance%2C%20I%20will%20contact%20them%20at%20contact%40calvagone.com.">campsis@calvagone.com</a>
@@ -115,7 +115,7 @@ Discounts for multiple users available.
 :::
 :::
 
-## Use cases
+## Examples
 
 The following section lists a few pre-configured example cases we have prepared for you to get an idea of e-Campsis' capabilities.
 Just click on the titles and you will be redirected to the app.
@@ -224,12 +224,16 @@ This can be done via the 'Custom dataset' option in the trial design tab.
 There you can directly provide campsis code in of more complex dosing and observation regimens.
 Have a look at <https://calvagone.github.io/campsis.doc/articles/v01_dataset.html> for instructions how to do it.
 
-### Is there a discount of the Pro version for academia ?
+### Is there a discount of the pro version for academia ?
 
 We support research at universities and other academic institutions by a significantly reduced subscription fee of 500 Euros per year for up to 5 named users in your research group.
 No additional discount applies on top of this offer.
 For teaching we think that the free version should already cover your needs.
 If not let us know.
+
+## Documentation
+
+Click [here](https://calvagone.github.io/ecampsis.doc/) to read the documentation of e-Campsis.
 
 ## Videos
 
