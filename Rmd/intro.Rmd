@@ -58,7 +58,7 @@ Finally, we can use `ggplot2` to plot these results.
 
 ```{r campsis_a_letter_plot, fig.height=4, fig.width=6}
 library(ggplot2)
-ggplot(results, aes(x=TIME, y=CONC, group=ID)) +
+ggplot(results, aes(x=TIME, y=CP, group=ID)) +
   geom_line(colour="gray39", linewidth=1) + theme_bw()
 ```
 

@@ -1,17 +1,17 @@
 browseURL(
-  xfun::in_dir(".", rmarkdown::render_site("index.Rmd"))
+  xfun::in_dir("./Rmd/", rmarkdown::render_site("index.Rmd"))
 )
 
 browseURL(
-  xfun::in_dir(".", rmarkdown::render_site("intro.Rmd"))
+  xfun::in_dir("./Rmd/", rmarkdown::render_site("intro.Rmd"))
 )
 
 browseURL(
-  xfun::in_dir(".", rmarkdown::render_site("install.Rmd"))
+  xfun::in_dir("./Rmd/", rmarkdown::render_site("install.Rmd"))
 )
 
 browseURL(
-  xfun::in_dir(".", rmarkdown::render_site("get_started.Rmd"))
+  xfun::in_dir("./Rmd/", rmarkdown::render_site("get_started.Rmd"))
 )
 
 browseURL(
