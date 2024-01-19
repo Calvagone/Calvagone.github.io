@@ -13,22 +13,22 @@
 
 <title>Get started</title>
 
-<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.22/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
-<script src="site_libs/bs3compat-0.5.1/transition.js"></script>
-<script src="site_libs/bs3compat-0.5.1/tabs.js"></script>
-<script src="site_libs/bs3compat-0.5.1/bs3compat.js"></script>
+<script src="site_libs/bs3compat-0.5.0/transition.js"></script>
+<script src="site_libs/bs3compat-0.5.0/tabs.js"></script>
+<script src="site_libs/bs3compat-0.5.0/bs3compat.js"></script>
 <script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
-<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
 <meta property="og:title" content="Campsis">
 <meta property="og:description" content="An open-source PK/PD simulation platform">
 <meta property="og:image" content="https://calvagone.github.io/images/campsis_og_image.png">
@@ -424,6 +424,9 @@ div.tocify {
   <a href="./news.html">News</a>
 </li>
 <li>
+  <a href="./workshop_page.html">Workshops</a>
+</li>
+<li>
   <a href="./contact.html">Contact us</a>
 </li>
       </ul>
@@ -471,11 +474,11 @@ give 1000 mg QD for 3 days and observe every hour.</p>
 <div id="plot-results" class="section level2">
 <h2>Plot results</h2>
 <p>Plot all simulated profiles using a spaghetti plot:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">spaghettiPlot</span>(results, <span class="st">&quot;CONC&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">spaghettiPlot</span>(results, <span class="st">&quot;CP&quot;</span>)</span></code></pre></div>
 <p><img src="get_started_files/figure-html/get_started_spaguetti_plot-1.png" width="768" style="display: block; margin: auto;" /></p>
 <p>Or use a shaded plot to see the simulated 90% prediction
 interval:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CONC&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CP&quot;</span>)</span></code></pre></div>
 <p><img src="get_started_files/figure-html/get_started_shaded_plot-1.png" width="768" style="display: block; margin: auto;" /></p>
 </div>
 <div id="simulate-arms" class="section level2">
@@ -495,7 +498,7 @@ below, we explicitly create two arms. The first arm receives a dose of
 <span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">c</span>(arm1, arm2))</span>
 <span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a></span>
 <span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(dataset, <span class="at">seed=</span><span class="dv">1</span>)</span>
-<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CONC&quot;</span>, <span class="at">colour=</span><span class="st">&quot;ARM&quot;</span>)</span></code></pre></div>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CP&quot;</span>,  <span class="at">colour=</span><span class="st">&quot;ARM&quot;</span>)</span></code></pre></div>
 <p><img src="get_started_files/figure-html/get_started_2arms_plot-1.png" width="768" style="display: block; margin: auto;" /></p>
 </div>
 <div id="derive-from-base-model" class="section level2">
@@ -508,7 +511,7 @@ this model is multiplied by two.</p>
 <span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Scenario</span>(<span class="st">&quot;Increased clearance&quot;</span>, <span class="at">model=</span><span class="sc">~</span>.x <span class="sc">%&gt;%</span> <span class="fu">replace</span>(<span class="fu">Theta</span>(<span class="at">name=</span><span class="st">&quot;CL&quot;</span>, <span class="at">value=</span><span class="dv">10</span>))))</span>
 <span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a></span>
 <span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(dataset, <span class="at">scenarios=</span>scenarios, <span class="at">seed=</span><span class="dv">1</span>)</span>
-<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CONC&quot;</span>, <span class="at">colour=</span><span class="fu">c</span>(<span class="st">&quot;ARM&quot;</span>), <span class="at">strat_extra=</span><span class="st">&quot;SCENARIO&quot;</span>) <span class="sc">+</span> ggplot2<span class="sc">::</span><span class="fu">facet_wrap</span>(<span class="sc">~</span>SCENARIO)</span></code></pre></div>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CP&quot;</span>, <span class="at">colour=</span><span class="fu">c</span>(<span class="st">&quot;ARM&quot;</span>), <span class="at">strat_extra=</span><span class="st">&quot;SCENARIO&quot;</span>) <span class="sc">+</span> ggplot2<span class="sc">::</span><span class="fu">facet_wrap</span>(<span class="sc">~</span>SCENARIO)</span></code></pre></div>
 <p><img src="get_started_files/figure-html/get_started_2arms_scenarios_plot-1.png" width="768" style="display: block; margin: auto;" /></p>
 </div>
 
