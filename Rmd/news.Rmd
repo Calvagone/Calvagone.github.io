@@ -1,6 +1,9 @@
 ---
 title: 'News'
 ---
+-   **January 19th, 2024**: We will run an e-Campsis workshop at the PAGE meeting in Rome on June 25th. Click [here](/images/ecampsis_workshop_PAGE2024.pdf) to download the registration form.
+
+-   **December 20th, 2023**: Release of e-Campsis pro! The professional version of e-Campsis is now available.
 
 -   **October 17th, 2023**: New release of e-Campsis free / free+ / interim pro! Model parameters can now be annotated (see columns label, unit and comment). The model library has been revised and fully annotated. Save and load functionalities, as well as the NONMEM import are now part of the pro version. Check out this [video](https://www.youtube.com/M_LLI_poS2E).
 

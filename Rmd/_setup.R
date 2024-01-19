@@ -18,14 +18,14 @@ browseURL(
   xfun::in_dir("./Rmd/", rmarkdown::render_site("ecampsis.Rmd"))
 )
 
-# browseURL(
-#   xfun::in_dir(".", rmarkdown::render_site("workshop_page.Rmd"))
-# )
-
 browseURL(
-  xfun::in_dir(".", rmarkdown::render_site("news.Rmd"))
+  xfun::in_dir("./Rmd/", rmarkdown::render_site("workshop_page.Rmd"))
 )
 
 browseURL(
-  xfun::in_dir(".", rmarkdown::render_site("contact.Rmd"))
+  xfun::in_dir("./Rmd/", rmarkdown::render_site("news.Rmd"))
+)
+
+browseURL(
+  xfun::in_dir("./Rmd/", rmarkdown::render_site("contact.Rmd"))
 )

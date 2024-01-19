@@ -2,14 +2,21 @@
 title: 'Contact us'
 ---
 
-## Who are we?
+## Who we are
 
-Calvagone is a scientific consultancy company applying model-based approaches and related services in support of pharmaceutical research and development with its registered office in France. Calvagone offers expertise and services in population PK/PD modelling, integration of model-based pre-clinical and clinical PK/PD analyses, drug-disease modelling and clinical trial simulation (M&S) consulting as a means to focus on optimising (pre)-clinical development strategies and support knowledge-based drug development decisions. Calvagone also provides bespoke training in the modelling and simulation methodologies that we use.
+Calvagone is a scientific consultancy company applying model-based approaches and related services in support of pharmaceutical research and development with its registered office in France. As experts in pharmacometrics we offer a broad spectrum of services, for example: 
 
-For more information, please visit our [website](http://www.calvagone.com).
+- Population PK/PD modelling
+- Translational pre-clinical PK/PD modelling
+- First-in-human dose predictions (large and small molecules)
+- Drug-disease modelling
+- Clinical trial simulations 
+- Clinical pharmacology consulting and regulatory advise
+- Non-compartmental analysis
+- DDI and pediatric PBPK modelling
+- NONMEM and Campsis training courses
 
-## Campsis suite
+For more information, please visit our [website](http://www.calvagone.com) or contact us directly at contact@calvagone.com.
 
-If you are interested in a Campsis training or if you need any kind of support in your simulation project, don't hesitate to reach out to us via our [contact page](http://www.calvagone.com/contact/index.html).  
 
-If your company is interested in Campsis and would like to contribute to this open-source project, please let us know! We will be happy to have a chat with you. 
+ 

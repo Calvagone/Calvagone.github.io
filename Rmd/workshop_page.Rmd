@@ -1,5 +1,34 @@
 ---
-title: 'Workshop at PAGE 2022'
+title: 'e-Campsis Workshop at PAGE 2024 in Rome'
 ---
 
-We are sorry to announce that the workshop at PAGE has been cancelled. Don't hesitate to meet us at the poster session ([abstract on Campsis](https://www.page-meeting.org/default.asp?abstract=9991)) or contact us via email at contact@calvagone.com for more information.
+On Tuesday the 25th of June 2024, we will be hosting a 1-day workshop on e-Campsis at the [PAGE meeting](https://www.page-meeting.org/) in Rome. 
+
+As a participant you will get free access to e-Campsis pro. You will learn how to:
+
+-	Import a model from various sources (Campsis, model library, NONMEM) 
+-	Set up a trial design
+-	Bootstrap covariates from an external source (e.g. NHANES)
+-	Simulate specific individuals, a population or a clinical trial with uncertainty
+-	Explore what-if scenarios thanks to the built-in scenario creator
+-	Stratify and visualize the results with customizable plots 
+-	Post-process the results, derive useful metrics and summary statistics and generate HTML tables in a few clicks
+-	Create forest plots in an intuitive manner to assess the impact of covariates 
+-	Make a sensitivity analysis effortlessly and understand the limitations of your model
+
+You will also learn how to reproduce the simulations offline in R thanks to the open-source package campsis.
+
+The following registration fee applies for this 1-day workshop:
+
+	Industry:   € 250 excl. VAT 
+	Academic:   € 150 excl. VAT 
+	Student:    € 100 excl. VAT 
+
+The fee includes the workshop material, lunch and coffee breaks as well as temporary access to e-Campsis pro for 2 months.
+On top of it you will get a 50% discount on the annual subscription fee.  
+
+This course only requires limited knowledge of R, since all hands-on exercises will be done in the web application. You should bring your own laptop.
+
+Click [here](/images/ecampsis_workshop_PAGE2024.pdf) to download the registration form and send it to campsis@calvagone.com.
+
+We are looking forward to seeing you in Rome! Meanwhile, please go ahead and try e-Campsis free!
