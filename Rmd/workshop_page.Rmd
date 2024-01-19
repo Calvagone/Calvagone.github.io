@@ -20,7 +20,7 @@ You will also learn how to reproduce the simulations offline in R thanks to the 
 
 The following registration fee applies for this 1-day workshop:
 
-	Industry:   € 250 excl. VAT 
+	Industry:   € 300 excl. VAT 
 	Academic:   € 150 excl. VAT 
 	Student:    € 100 excl. VAT 
 
