@@ -456,7 +456,7 @@ memory</li>
 <li>Sensitivity analysis*</li>
 <li>Forest plots*</li>
 <li>Upload of external data for plotting*</li>
-<li>Bootstrap covariates from external file or NHANES*</li>
+<li>Bootstrap covariates from external file or NHANES</li>
 <li>Replicate simulation with parameter uncertainty*</li>
 <li>Import rxode2 and mrgsolve simulation code*</li>
 <li>Personalized support via email</li>
@@ -613,18 +613,6 @@ users of e-Campsis pro will have the option to obtain an installation
 qualification suite to ensure accurate functioning of <em>campsis</em>
 and <em>campismod</em> in their local environment.</p>
 </div>
-<div
-id="how-can-i-implement-more-complex-dosing-regimens-including-e.g.-a-loading-dose"
-class="section level3">
-<h3>How can I implement more complex dosing regimens including, e.g. a
-loading dose ?</h3>
-<p>This can be done via the ‘Custom dataset’ option in the trial design
-tab. There you can directly provide campsis code in of more complex
-dosing and observation regimens. Have a look at <a
-href="https://calvagone.github.io/campsis.doc/articles/v01_dataset.html"
-class="uri">https://calvagone.github.io/campsis.doc/articles/v01_dataset.html</a>
-for instructions how to do it.</p>
-</div>
 <div id="is-there-a-discount-of-the-pro-version-for-academia"
 class="section level3">
 <h3>Is there a discount of the pro version for academia ?</h3>
@@ -634,11 +622,65 @@ to 5 named users in your research group. No additional discount applies
 on top of this offer. For teaching we think that the free version should
 already cover your needs. If not let us know.</p>
 </div>
+<div
+id="how-can-i-implement-more-complex-dosing-regimens-including-e.g.-a-loading-dose"
+class="section level3">
+<h3>How can I implement more complex dosing regimens including, e.g. a
+loading dose ?</h3>
+<p>You can enter up to 4 administration events in the user interface. If
+you need more this can be done in e-Campsis pro via the ‘Custom dataset’
+option in the trial design tab. There you can directly provide campsis
+code in of more complex dosing and observation regimens. Have a look <a
+href="https://calvagone.github.io/campsis.doc/articles/v01_dataset.html">here</a>
+for instructions how to do it.</p>
+</div>
+<div id="can-i-simulate-categorical-data-like-time-to-event-models"
+class="section level3">
+<h3>Can I simulate categorical data, like time-to-event models?</h3>
+<p>Yes, you can! Have a look <a
+href="https://github.com/Calvagone/ecampsis.feedback/issues/2">here</a>.</p>
+</div>
+<div id="and-inter-occasion-variability" class="section level3">
+<h3>And inter-occasion variability?</h3>
+<p>Also possible with e-Campsis pro, see <a
+href="https://github.com/Calvagone/ecampsis.feedback/issues/4">here</a>.</p>
+</div>
+<div
+id="i-need-to-simulate-response-triggered-dose-adaptation-is-this-possible"
+class="section level3">
+<h3>I need to simulate response-triggered dose-adaptation, is this
+possible?</h3>
+<p>Currently e-Campsis does not support this feature. However, this is
+totally possible with the so called ‘interruption events’ in
+<em>campsis</em>. See <a
+href="https://calvagone.github.io/campsis.doc/articles/v13_events.html">here</a>
+for instructions how to do it.</p>
+</div>
+<div
+id="im-used-to-code-my-simulations-in-mrgsolve-rxode2-why-should-i-switch"
+class="section level3">
+<h3>I’m used to code my simulations in mrgsolve (rxode2) why should I
+switch ?</h3>
+<p>With Campsis you can do the same things as with these other packages
+AND MORE:</p>
+<ul>
+<li>Convenient setup of simulation designs in e-Campsis</li>
+<li>Live and interactive simulations in team meetings (or do you enjoy
+coding in front of the clinical lead?)</li>
+<li>Consistent, human readable and well-structured R-code, facilitating
+project handover.</li>
+</ul>
+<p>By the way, Calvagone offers a model translation and implementation
+service. Just get in touch and we will help you in translating your
+important models and simulation scripts to the Campsis environment.</p>
+</div>
 </div>
 <div id="documentation" class="section level2">
 <h2>Documentation</h2>
 <p>Click <a href="https://calvagone.github.io/ecampsis.doc/">here</a> to
 read the documentation of e-Campsis.</p>
+<p>Tips and tricks and “How to” guides can be found <a
+href="https://github.com/Calvagone/ecampsis.feedback/issues">here</a>.</p>
 </div>
 <div id="videos" class="section level2">
 <h2>Videos</h2>

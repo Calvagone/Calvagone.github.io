@@ -93,7 +93,7 @@ Same features as in free+ plus:
 -   Sensitivity analysis\*
 -   Forest plots\*
 -   Upload of external data for plotting\*
--   Bootstrap covariates from external file or NHANES\*
+-   Bootstrap covariates from external file or NHANES
 -   Replicate simulation with parameter uncertainty\*
 -   Import rxode2 and mrgsolve simulation code\*
 -   Personalized support via email
@@ -218,12 +218,6 @@ The actual "work" is done by the open-source packages *campsis* and *campsismod*
 Simulations of almost all library models with *campsis* - which uses *mrgsolve* or *rxode2* as the back-end simulation engine - have been successfully verified against simulations with NONMEM.
 In addition, users of e-Campsis pro will have the option to obtain an installation qualification suite to ensure accurate functioning of *campsis* and *campismod* in their local environment.
 
-### How can I implement more complex dosing regimens including, e.g. a loading dose ?
-
-This can be done via the 'Custom dataset' option in the trial design tab.
-There you can directly provide campsis code in of more complex dosing and observation regimens.
-Have a look at <https://calvagone.github.io/campsis.doc/articles/v01_dataset.html> for instructions how to do it.
-
 ### Is there a discount of the pro version for academia ?
 
 We support research at universities and other academic institutions by a significantly reduced subscription fee of 500 Euros per year for up to 5 named users in your research group.
@@ -231,9 +225,44 @@ No additional discount applies on top of this offer.
 For teaching we think that the free version should already cover your needs.
 If not let us know.
 
+### How can I implement more complex dosing regimens including, e.g. a loading dose ?
+
+You can enter up to 4 administration events in the user interface.
+If you need more this can be done in e-Campsis pro via the 'Custom dataset' option in the trial design tab.
+There you can directly provide campsis code in of more complex dosing and observation regimens.
+Have a look [here](https://calvagone.github.io/campsis.doc/articles/v01_dataset.html) for instructions how to do it.
+
+### Can I simulate categorical data, like time-to-event models?
+
+Yes, you can!
+Have a look [here](https://github.com/Calvagone/ecampsis.feedback/issues/2).
+
+### And inter-occasion variability?
+
+Also possible with e-Campsis pro, see [here](https://github.com/Calvagone/ecampsis.feedback/issues/4).
+
+### I need to simulate response-triggered dose-adaptation, is this possible?
+
+Currently e-Campsis does not support this feature.
+However, this is totally possible with the so called 'interruption events' in *campsis*.
+See [here](https://calvagone.github.io/campsis.doc/articles/v13_events.html) for instructions how to do it.
+
+### I’m used to code my simulations in mrgsolve (rxode2) why should I switch ?
+
+With Campsis you can do the same things as with these other packages AND MORE:
+
+-   Convenient setup of simulation designs in e-Campsis
+-   Live and interactive simulations in team meetings (or do you enjoy coding in front of the clinical lead?)
+-   Consistent, human readable and well-structured R-code, facilitating project handover.
+
+By the way, Calvagone offers a model translation and implementation service.
+Just get in touch and we will help you in translating your important models and simulation scripts to the Campsis environment.
+
 ## Documentation
 
 Click [here](https://calvagone.github.io/ecampsis.doc/) to read the documentation of e-Campsis.
+
+Tips and tricks and "How to" guides can be found [here](https://github.com/Calvagone/ecampsis.feedback/issues).
 
 ## Videos
 

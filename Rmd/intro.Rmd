@@ -4,14 +4,16 @@ title: "What is Campsis?"
 
 ## Introduction
 
-Campsis is a open-source PK/PD simulation platform built on top of the open-source simulation packages [`rxode2`](https://github.com/nlmixr2/rxode2), [`RxODE`](https://github.com/nlmixrdevelopment/RxODE) and [`mrgsolve`](https://github.com/metrumresearchgroup/mrgsolve). It provides an abstraction layer over the underlying processes of writing a model, assembling a dataset and running, in the background, a simulation with these packages.   
+Campsis is a open-source PK/PD simulation platform built on top of the open-source simulation packages [`rxode2`](https://github.com/nlmixr2/rxode2) and [`mrgsolve`](https://github.com/metrumresearchgroup/mrgsolve). It provides an abstraction layer over the underlying processes of writing a model, assembling a dataset and running, in the background, a simulation with these packages.   
 
 Campsis is developed by software engineers working at [Calvagone](http://www.calvagone.com/) and designed for pharmacometricians who are looking for an easy and intuitive way to run model-based simulations.
-The packages are developed in R, which makes it possible to integrate your simulation(s) into an R workflow (e.g. standard R script, `Rmarkdown`, `Shiny` app, etc.).
+The packages are developed in R, which makes it possible to integrate your simulation(s) into an R workflow.
+
+e-Campsis is a free web-based graphical user interface for Campsis, helping the user to easily setup and run simulations and visualize the results in an interactive manner. It allows the user to download the complete simulation script and execute it offline using `campsis` and `campsismod`.
 
 ## Brief overview
 
-As shown in the schematic below, Campsis comprises two inter-connected R packages: [`campsismod`](https://github.com/Calvagone/campsismod) and [`campsis`](https://github.com/Calvagone/campsis). The first package allows the user to assemble, read, write or manipulate a PK/PD model. It also provides useful utilities to export the model to RxODE or mrgsolve. The second package allows the user to assemble the dataset in a very intuitive manner. Once the user's dataset is ready, the package is in charge of preparing the simulation, calling RxODE or mrgsolve and returning the results, for a given model, dataset and desired simulation settings.
+As shown in the schematic below, Campsis comprises two inter-connected R packages: [`campsismod`](https://github.com/Calvagone/campsismod) and [`campsis`](https://github.com/Calvagone/campsis). The first package allows the user to assemble, read, write or manipulate a PK/PD model. It also provides useful utilities to export the model to rxode2 or mrgsolve. The second package allows the user to assemble the dataset in a very intuitive manner. Once the user's dataset is ready, the package is in charge of preparing the simulation, calling rxode2 or mrgsolve and returning the results, for a given model, dataset and desired simulation settings.
 
 ![](images/overview.png)
 
@@ -58,7 +60,7 @@ Finally, we can use `ggplot2` to plot these results.
 
 ```{r campsis_a_letter_plot, fig.height=4, fig.width=6}
 library(ggplot2)
-ggplot(results, aes(x=TIME, y=CP, group=ID)) +
+ggplot(results, aes(x=TIME, y=CONC, group=ID)) +
   geom_line(colour="gray39", linewidth=1) + theme_bw()
 ```
 

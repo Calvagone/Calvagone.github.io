@@ -1,6 +1,8 @@
 ---
 title: 'News'
 ---
+- **February 2nd, 2024**: Release of an updated version of e-Campsis including a multitude of minor improvements that collectively improve the user-experience and functionality of e-Campsis. 
+
 -   **January 19th, 2024**: We will run an e-Campsis workshop at the PAGE meeting in Rome on June 25th. Click [here](/images/ecampsis_workshop_PAGE2024.pdf) to download the registration form.
 
 -   **December 20th, 2023**: Release of e-Campsis pro! The professional version of e-Campsis is now available.

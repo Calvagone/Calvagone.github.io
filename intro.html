@@ -456,9 +456,7 @@ div.tocify {
 <h2>Introduction</h2>
 <p>Campsis is a open-source PK/PD simulation platform built on top of
 the open-source simulation packages <a
-href="https://github.com/nlmixr2/rxode2"><code>rxode2</code></a>, <a
-href="https://github.com/nlmixrdevelopment/RxODE"><code>RxODE</code></a>
-and <a
+href="https://github.com/nlmixr2/rxode2"><code>rxode2</code></a> and <a
 href="https://github.com/metrumresearchgroup/mrgsolve"><code>mrgsolve</code></a>.
 It provides an abstraction layer over the underlying processes of
 writing a model, assembling a dataset and running, in the background, a
@@ -467,9 +465,12 @@ simulation with these packages.</p>
 href="http://www.calvagone.com/">Calvagone</a> and designed for
 pharmacometricians who are looking for an easy and intuitive way to run
 model-based simulations. The packages are developed in R, which makes it
-possible to integrate your simulation(s) into an R workflow
-(e.g. standard R script, <code>Rmarkdown</code>, <code>Shiny</code> app,
-etc.).</p>
+possible to integrate your simulation(s) into an R workflow.</p>
+<p>e-Campsis is a free web-based graphical user interface for Campsis,
+helping the user to easily setup and run simulations and visualize the
+results in an interactive manner. It allows the user to download the
+complete simulation script and execute it offline using
+<code>campsis</code> and <code>campsismod</code>.</p>
 </div>
 <div id="brief-overview" class="section level2">
 <h2>Brief overview</h2>
@@ -480,9 +481,9 @@ and <a
 href="https://github.com/Calvagone/campsis"><code>campsis</code></a>.
 The first package allows the user to assemble, read, write or manipulate
 a PK/PD model. It also provides useful utilities to export the model to
-RxODE or mrgsolve. The second package allows the user to assemble the
+rxode2 or mrgsolve. The second package allows the user to assemble the
 dataset in a very intuitive manner. Once the user’s dataset is ready,
-the package is in charge of preparing the simulation, calling RxODE or
+the package is in charge of preparing the simulation, calling rxode2 or
 mrgsolve and returning the results, for a given model, dataset and
 desired simulation settings.</p>
 <p><img src="images/overview.png" /></p>
@@ -510,7 +511,7 @@ library.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(<span class="at">dataset=</span>dataset, <span class="at">seed=</span><span class="dv">0</span>)</span></code></pre></div>
 <p>Finally, we can use <code>ggplot2</code> to plot these results.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="fu">ggplot</span>(results, <span class="fu">aes</span>(<span class="at">x=</span>TIME, <span class="at">y=</span>CP, <span class="at">group=</span>ID)) <span class="sc">+</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="fu">ggplot</span>(results, <span class="fu">aes</span>(<span class="at">x=</span>TIME, <span class="at">y=</span>CONC, <span class="at">group=</span>ID)) <span class="sc">+</span></span>
 <span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">colour=</span><span class="st">&quot;gray39&quot;</span>, <span class="at">linewidth=</span><span class="dv">1</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span></code></pre></div>
 <p><img src="intro_files/figure-html/campsis_a_letter_plot-1.png" width="576" /></p>
 <p>Well done, you just drew the <code>A</code> letter of our Campsis
