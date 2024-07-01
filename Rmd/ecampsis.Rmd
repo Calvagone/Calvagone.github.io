@@ -91,10 +91,10 @@ Same features as in free+ plus:
 -   Advanced customization of plots
 -   NCA & summary statistics
 -   Sensitivity analysis\*
--   Forest plots\*
+-   Forest plots
 -   Upload of external data for plotting\*
 -   Bootstrap covariates from external file or NHANES
--   Replicate simulation with parameter uncertainty\*
+-   Replicate simulation with parameter uncertainty
 -   Import rxode2 and mrgsolve simulation code\*
 -   Personalized support via email
 
@@ -105,7 +105,7 @@ Download and fill out this [order form](/images/Order_Form_e-Campsis_v2_240109.p
 ```
 ​
 
-\**Under development. Will be ready in Spring 2024.*
+\**Under development.*
 
 \*\* excl.
 VAT.
@@ -281,6 +281,18 @@ Tips and tricks and "How to" guides can be found [here](https://github.com/Calva
 #### e-Campsis pro for Pharmacometricians
 
 <iframe width="300" height="200" src="https://www.youtube.com/embed/RKXOuG2QHBw?si=xnoqrBo3O1Xn-M2" frameborder="0" allowfullscreen>
+
+</iframe>
+
+#### Handling of time-units
+
+<iframe width="300" height="200" src="https://www.youtube.com/embed/Il3Z56sG34g?si=ubsIgQHhzolAwjv0" frameborder="0" allowfullscreen>
+
+</iframe>
+
+#### Post-processing and summary statistics
+
+<iframe width="300" height="200" src="https://www.youtube.com/embed/3YPIeQEdQng?si=PugvJ1oI_Hb5CbPm" frameborder="0" allowfullscreen>
 
 </iframe>
 
