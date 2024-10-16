@@ -11,7 +11,7 @@ Calvagone is a scientific consultancy company applying model-based approaches an
 - First-in-human dose predictions (large and small molecules)
 - Drug-disease modelling
 - Clinical trial simulations 
-- Clinical pharmacology consulting and regulatory advise
+- Clinical pharmacology consulting and regulatory advice
 - Non-compartmental analysis
 - DDI and pediatric PBPK modelling
 - NONMEM and Campsis training courses
