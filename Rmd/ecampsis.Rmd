@@ -90,15 +90,15 @@ Same features as in free+ plus:
 -   Number of arms, scenarios, subjects, observations only limited by memory
 -   Advanced customization of plots
 -   NCA & summary statistics
--   Sensitivity analysis\*
+-   Sensitivity analysis
 -   Forest plots
 -   Upload of external data for plotting\*
--   Bootstrap covariates from external file or NHANES
+-   Bootstrap covariates from NHANES
 -   Replicate simulation with parameter uncertainty
--   Import rxode2 and mrgsolve simulation code\*
+-   Import Monolix simulation code\*
 -   Personalized support via email
 
-Download and fill out this [order form](/images/Order_Form_e-Campsis_v2_240109.pdf) and send it to:
+Download and fill out this [order form](/images/Order_Form_e-Campsis_v3_240911.pdf) and send it to:
 
 ```{=html}
 <a class="mailtoui" href="mailto:campsis@calvagone.com?subject=e-Campsis%20pro&amp;cc=&amp;bcc=&amp;body=Hello%2C%20%0A%0A%20I%27d%20like%20to%20get%20access%20to%20e-Campsis%20Pro.%20%0A%0A%20Thank%20you%2C%20%0A%0A%20%3CYour%20name%3E%20%0A%0ABy%20sending%20this%20e-mail%20I%20agree%20that%20Calvagone%20gets%20in%20touch%20with%20me%20regarding%20Campsis%20and%20associated%20services.%20I%20understand%20that%20Calvagone%20will%20never%20sell%20or%20distribute%20my%20contact%20information%20to%20a%20third%20party%20and%20promises%20to%20keep%20my%20details%20safe%20and%20secure.%20If%20I%20don%27t%20want%20to%20receive%20e-mails%20from%20Calvagone%20anymore%20or%20have%20questions%20around%20their%20GDPR%20compliance%2C%20I%20will%20contact%20them%20at%20contact%40calvagone.com.">campsis@calvagone.com</a>
@@ -214,9 +214,9 @@ e-Campsis is being developed with quality in mind through object-oriented progra
 This drastically reduces the occurrence of bugs and regressions when the software is updated.
 
 However, e-Campsis is a graphical user interface that facilitates the set-up of simulations and does not do any calculation itself.
-The actual "work" is done by the open-source packages *campsis* and *campsismod* in the background.
+The actual "work" is done by the open-source packages *campsis*, *campsismod* and others in the background.
 Simulations of almost all library models with *campsis* - which uses *mrgsolve* or *rxode2* as the back-end simulation engine - have been successfully verified against simulations with NONMEM.
-In addition, users of e-Campsis pro will have the option to obtain an installation qualification suite to ensure accurate functioning of *campsis* and *campismod* in their local environment.
+In addition, users of e-Campsis pro will have the option to obtain an qualification suite to ensure accurate functioning of *campsis* packages in their local environment.
 
 ### Is there a discount of the pro version for academia ?
 
@@ -224,6 +224,12 @@ We support research at universities and other academic institutions by a signifi
 No additional discount applies on top of this offer.
 For teaching we think that the free version should already cover your needs.
 If not let us know.
+
+Download and fill out this [order form](/images/Order_Form_e-Campsis_v3_academic_240911.pdf) and send it to:
+
+```{=html}
+<a class="mailtoui" href="mailto:campsis@calvagone.com?subject=e-Campsis%20pro&amp;cc=&amp;bcc=&amp;body=Hello%2C%20%0A%0A%20I%27d%20like%20to%20get%20access%20to%20e-Campsis%20Pro.%20%0A%0A%20Thank%20you%2C%20%0A%0A%20%3CYour%20name%3E%20%0A%0ABy%20sending%20this%20e-mail%20I%20agree%20that%20Calvagone%20gets%20in%20touch%20with%20me%20regarding%20Campsis%20and%20associated%20services.%20I%20understand%20that%20Calvagone%20will%20never%20sell%20or%20distribute%20my%20contact%20information%20to%20a%20third%20party%20and%20promises%20to%20keep%20my%20details%20safe%20and%20secure.%20If%20I%20don%27t%20want%20to%20receive%20e-mails%20from%20Calvagone%20anymore%20or%20have%20questions%20around%20their%20GDPR%20compliance%2C%20I%20will%20contact%20them%20at%20contact%40calvagone.com.">campsis@calvagone.com</a>
+```
 
 ### How can I implement more complex dosing regimens including, e.g. a loading dose ?
 
@@ -293,6 +299,13 @@ Tips and tricks and "How to" guides can be found [here](https://github.com/Calva
 #### Post-processing and summary statistics
 
 <iframe width="300" height="200" src="https://www.youtube.com/embed/3YPIeQEdQng?si=PugvJ1oI_Hb5CbPm" frameborder="0" allowfullscreen>
+
+</iframe>
+
+
+#### Forest plots
+
+<iframe width="300" height="200" src="https://www.youtube.com/embed/UNREZfS2amk?si=p95o_XvSomGINO5u" frameborder="0" allowfullscreen>
 
 </iframe>
 
