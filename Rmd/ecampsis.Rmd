@@ -26,8 +26,8 @@ Click [**here**](https://youtu.be/uypETm6aoNc) for a short video explaining how 
 
 ## Plans
 
-::: card-group
-::: card
+:::::::::::: card-group
+::::: card
 ::: card-header
 ### free
 
@@ -47,9 +47,9 @@ Click [**here**](https://youtu.be/uypETm6aoNc) for a short video explaining how 
 -   Support via github *issues*
 -   Free to everyone without registration
 :::
-:::
+:::::
 
-::: card
+::::: card
 ::: card-header
 ### free+
 
@@ -67,13 +67,11 @@ Same features as in free plus:
 
 Click on the link below to send us a pre-filled email and you will get an invitation to register as soon as possible:
 
-```{=html}
 <a class="mailtoui" href="mailto:campsis@calvagone.com?subject=e-Campsis%20free%2B&amp;cc=&amp;bcc=&amp;body=Hello%2C%20%0A%0A%20I%27d%20like%20to%20get%20access%20to%20e-Campsis%20free%2B.%20%0A%0A%20Thank%20you%2C%20%0A%0A%20%3CYour%20name%3E%20%0A%0ABy%20sending%20this%20e-mail%20I%20agree%20that%20Calvagone%20gets%20in%20touch%20with%20me%20regarding%20Campsis%20and%20associated%20services.%20I%20understand%20that%20Calvagone%20will%20never%20sell%20or%20distribute%20my%20contact%20information%20to%20a%20third%20party%20and%20promises%20to%20keep%20my%20details%20safe%20and%20secure.%20If%20I%20don%27t%20want%20to%20receive%20e-mails%20from%20Calvagone%20anymore%20or%20have%20questions%20around%20their%20GDPR%20compliance%2C%20I%20will%20contact%20them%20at%20contact%40calvagone.com.">campsis@calvagone.com</a>
-```
 :::
-:::
+:::::
 
-::: card
+::::: card
 ::: card-header
 ### pro
 
@@ -98,29 +96,25 @@ Same features as in free+ plus:
 -   Import Monolix simulation code\*
 -   Personalized support via email
 
-Download and fill out this [order form](/images/Order_Form_e-Campsis_v3_240911.pdf) and send it to:
+Subscribe today by filling out this [order form](/images/Order_Form_e-Campsis_v3_240911.pdf) and sending it to:
 
-```{=html}
 <a class="mailtoui" href="mailto:campsis@calvagone.com?subject=e-Campsis%20pro&amp;cc=&amp;bcc=&amp;body=Hello%2C%20%0A%0A%20I%27d%20like%20to%20get%20access%20to%20e-Campsis%20Pro.%20%0A%0A%20Thank%20you%2C%20%0A%0A%20%3CYour%20name%3E%20%0A%0ABy%20sending%20this%20e-mail%20I%20agree%20that%20Calvagone%20gets%20in%20touch%20with%20me%20regarding%20Campsis%20and%20associated%20services.%20I%20understand%20that%20Calvagone%20will%20never%20sell%20or%20distribute%20my%20contact%20information%20to%20a%20third%20party%20and%20promises%20to%20keep%20my%20details%20safe%20and%20secure.%20If%20I%20don%27t%20want%20to%20receive%20e-mails%20from%20Calvagone%20anymore%20or%20have%20questions%20around%20their%20GDPR%20compliance%2C%20I%20will%20contact%20them%20at%20contact%40calvagone.com.">campsis@calvagone.com</a>
-```
 ​
 
-\**Under development.*
+or contact us for a live demo or a trial version of e-Campsis pro.
+:::
+:::::
+::::::::::::
 
-\*\* excl.
-VAT.
-Includes a 50% discount for early adopters!
-Discounts for multiple users available.
-:::
-:::
-:::
+\**Under development. \*\* excl.VAT. Includes a 50% discount for early adopters! Discounts for multiple users available.*
+
 
 ## Examples
 
 The following section lists a few pre-configured example cases we have prepared for you to get an idea of e-Campsis' capabilities.
 Just click on the titles and you will be redirected to the app.
 
-::: level
+::::: level
 ::: column-use-case-left
 <a href="https://ecampsis.shinyapps.io/free/?usecase=alcohol-pk"><img src="images/use_case_alcohol_PK.png"/></a>
 :::
@@ -141,9 +135,9 @@ Click [**here**](https://youtu.be/Oq9PBJ7v-yQ) for a short explainer video.
 We wish you a lot of fun at your next party.
 And please don't drink and drive.
 :::
-:::
+:::::
 
-::: level
+::::: level
 ::: column-use-case-left
 <a href="https://ecampsis.shinyapps.io/free/?usecase=emax-dose-response"><img src="images/screenshot_dose-response.png"/></a>
 :::
@@ -155,9 +149,9 @@ This is a straight-forward example of a sigmoidal dose-response model to illustr
 In the present case we use a dosing compartment where the amount per arm is injected as a bolus.
 Since we have no time-dependency, we only need to specify a single observation time point.
 :::
-:::
+:::::
 
-::: level
+::::: level
 ::: column-use-case-left
 <a href="https://ecampsis.shinyapps.io/free/?usecase=pbpk-tmdd"><img src="images/use_case_dose_pbpk_tmdd.png"/></a>
 :::
@@ -175,9 +169,9 @@ Binding of the antibody to it's target occurs in the plasma compartment and is h
 -   KDEG_target: Degradation rate of the free target (1/day)
 -   KINT_target_AB: Internalization or degradation rate of the antibody-target complex (1/day)
 :::
-:::
+:::::
 
-::: level
+::::: level
 ::: column-use-case-left
 <a href="https://ecampsis.shinyapps.io/free/?usecase=filgrastim"><img src="images/use_case_dose_filgrastim.png"/></a>
 :::
@@ -190,9 +184,9 @@ The model depicted the decaying trend in Cmax values with repeated doses and an 
 Simulated time courses of the total clearance exhibited an increasing pattern.
 The increase in filgrastim clearance on multiple dosing was attributed to the increased neutrophil count in the bone marrow and blood paralleled by an increase in the total G-CSF receptor density.
 :::
-:::
+:::::
 
-::: level
+::::: level
 ::: column-use-case-left
 <a href="https://ecampsis.shinyapps.io/free/?usecase=draflazine"><img src="images/use_case_dose_draflazine.png"/></a>
 :::
@@ -204,7 +198,7 @@ The red blood cell/plasma distribution of draflazine (a nucleoside transport inh
 Binding to the nucleoside transporter on red blood cells is an important determinant of the pharmacokinetics of draflazine and a high degree of occupancy of the transporter by draflazine is required to inhibit adenosine breakdown ex vivo.
 It is suggested that the red blood cell nucleoside transporter occupancy may serve as a useful pharmacodynamic endpoint in dose ranging studies with draflazine.
 :::
-:::
+:::::
 
 ## FAQ
 
@@ -227,9 +221,7 @@ If not let us know.
 
 Download and fill out this [order form](/images/Order_Form_e-Campsis_v3_academic_240911.pdf) and send it to:
 
-```{=html}
 <a class="mailtoui" href="mailto:campsis@calvagone.com?subject=e-Campsis%20pro&amp;cc=&amp;bcc=&amp;body=Hello%2C%20%0A%0A%20I%27d%20like%20to%20get%20access%20to%20e-Campsis%20Pro.%20%0A%0A%20Thank%20you%2C%20%0A%0A%20%3CYour%20name%3E%20%0A%0ABy%20sending%20this%20e-mail%20I%20agree%20that%20Calvagone%20gets%20in%20touch%20with%20me%20regarding%20Campsis%20and%20associated%20services.%20I%20understand%20that%20Calvagone%20will%20never%20sell%20or%20distribute%20my%20contact%20information%20to%20a%20third%20party%20and%20promises%20to%20keep%20my%20details%20safe%20and%20secure.%20If%20I%20don%27t%20want%20to%20receive%20e-mails%20from%20Calvagone%20anymore%20or%20have%20questions%20around%20their%20GDPR%20compliance%2C%20I%20will%20contact%20them%20at%20contact%40calvagone.com.">campsis@calvagone.com</a>
-```
 
 ### How can I implement more complex dosing regimens including, e.g. a loading dose ?
 
@@ -301,7 +293,6 @@ Tips and tricks and "How to" guides can be found [here](https://github.com/Calva
 <iframe width="300" height="200" src="https://www.youtube.com/embed/3YPIeQEdQng?si=PugvJ1oI_Hb5CbPm" frameborder="0" allowfullscreen>
 
 </iframe>
-
 
 #### Forest plots
 
