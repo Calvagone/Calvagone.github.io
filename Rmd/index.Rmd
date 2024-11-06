@@ -14,70 +14,84 @@ source("_R/campsis_setup.R")
 
 Welcome to the official website of the Campsis suite.  
 
-Campsis is a PK/PD simulation platform developed by [Calvagone](http://www.calvagone.com). The suite comprises two R packages `campsismod` and `campsis` which are both free and open-source on GitHub (see links below).  
+Campsis is a PK/PD simulation platform developed by [Calvagone](http://www.calvagone.com). Most packages of the suite are open-source and can be downloaded from GitHub.  
 
 Want to learn more? Please visit our section [What is Campsis](./intro.html).  
 Want to give it a try? Please follow the [Installation](./install.html) instructions and have a look at the documentation below.
 
-## Packages on Github
+## Our suite of packages
 
 <div class="level">
 <div class="column-left">
-<a href="https://github.com/Calvagone/campsis"><img src="images/campsis_logo.png"></a>
+<a href="https://github.com/Calvagone/campsis"><img src="images/r_package_campsis.png"></a>
 </div>
 
-<div class="column-right">
+<div class="column-right" style="padding-left: 30px;">
 
 #### [campsis](https://github.com/Calvagone/campsis)
 
-A generic PK/PD simulation platform based on rxode2, RxODE and mrgsolve engines.
+A generic PK/PD simulation platform based on rxode2 and mrgsolve engines.  
+Please check out our [documentation](https://calvagone.github.io/campsis.doc/).
 
 </div>
 </div>
 
 <div class="level">
 <div class="column-left">
-<a href="https://github.com/Calvagone/campsismod"><img src="images/campsismod_logo.png"></a>
+<a href="https://github.com/Calvagone/campsismod"><img src="images/r_package_campsismod.png"></a>
 </div>
 
-<div class="column-right">
+<div class="column-right" style="padding-left: 30px;">
 
 #### [campsismod](https://github.com/Calvagone/campsismod)
 
-Generic implementation of a drug model in pharmacometrics.
+Generic implementation of a drug model in pharmacometrics.  
+Please check out our [documentation](https://calvagone.github.io/campsismod.doc/).
 
 </div>
 </div>
-
-## Documentation
 
 <div class="level">
 <div class="column-left">
-<a href="https://calvagone.github.io/campsis.doc/"><img src="images/campsis_doc_logo.png"></a>
+<a href="https://github.com/Calvagone/campsisnca"><img src="images/r_package_campsisnca.png"></a>
 </div>
 
-<div class="column-right">
+<div class="column-right" style="padding-left: 30px;">
 
-#### [campsis.doc](https://calvagone.github.io/campsis.doc/)
+#### [campsisnca](https://github.com/Calvagone/campsisnca)
 
-Documentation of R package campsis.  
-Please check out our many vignettes available in this pkgdown website.
+Analyse your simulation output using non-compartmental analysis (NCA).   
+Please check out the [README](https://github.com/Calvagone/campsisnca?tab=readme-ov-file) on GitHub. It contains many useful examples.
 
 </div>
 </div>
-
 
 <div class="level">
 <div class="column-left">
-<a href="https://calvagone.github.io/campsismod.doc/"><img src="images/campsismod_doc_logo.png"></a>
+<a href="https://github.com/Calvagone/campsismisc"><img src="images/r_package_campsismisc.png"></a>
 </div>
 
-<div class="column-right">
+<div class="column-right" style="padding-left: 30px;">
 
-#### [campsismod.doc](https://calvagone.github.io/campsismod.doc/)
+#### [campsismisc](https://github.com/Calvagone/campsismisc)
 
-Documentation of R package campsismod.  
-Please check out our many vignettes available in this pkgdown website.
+Easily perform forest plots and sensitivity analyses using Campsis.   
+Please check out the [README](https://github.com/Calvagone/campsismisc?tab=readme-ov-file) on GitHub. It contains many useful examples.
 
 </div>
 </div>
+
+<div class="level">
+<div class="column-left">
+<a href="./ecampsis"><img src="images/r_package_ecampsis.png"></a>
+</div>
+
+<div class="column-right" style="padding-left: 30px;">
+
+#### [e-Campsis](./ecampsis.html)
+
+e-Campsis is a web application that provides an intuitive and user-friendly interface for setting up population PK/PD simulations. Discover [e-Campsis](./ecampsis.html) here.
+
+</div>
+</div>
+
