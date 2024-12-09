@@ -41,7 +41,7 @@ In order to run the qualification process, the user must contact [Calvagone](mai
 
 Similarly to the qualification of the Campsis suite, our package e-Campsis, hosted on the Calvagone server (previously hosted on shinyapps.io), is qualified at every release as follows:
 
-1. **Installation**: An docker image of e-Campsis and the Campsis suite is made before every release.
+1. **Installation**: A [`Docker`](https://www.docker.com/) image of e-Campsis and the Campsis suite is made before every release.
 2. **Qualification**: The image is qualified using the [`campsisqual`](https://github.com/Calvagone/campsisqual) package and our qualification suite of models
 3. **Reporting**: A report is output for the specific version of e-Campsis. It is signed digitally and it serves as the proof of the qualification.
 
@@ -62,13 +62,64 @@ Our report, besides showing the detailed results of the tests, also includes a q
 - **Has bug reports URL?**: Does the package have a URL for bug reports? This is important to keep the users informed about the bugs in the package.
 - **Has source control?**: Does the package have source control? Source control is important to track every change made to the package.
 
-For illustration, the quality assessment of the Campsis suite is shown below:
+For illustration, the quality assessment of the Campsis suite printed out in the report is shown below:
 
 ![](images/package_quality_assessment.png){width=75%}
 
 ## Online GitHub repositories
 
-All the Campsis packages are hosted on GitHub. The source code of the Campsis suite is available at [github.com/Calvagone](https://github.com/Calvagone/).
+All packages of the Campsis suite are hosted on GitHub. The source code of the packages is available online. The list of repositories is available on our [home page](./index.html).  
+
+Pull requests are welcome. If you want to contribute to the Campsis suite, please contact [Calvagone](mailto:campsis@calvagone.com).
+
+## Online code coverage
+
+The code coverage of the Campsis suite is available online at [codecov.io](https://codecov.io/gh/Calvagone). The code coverage shows that our packages are extensively tested.
+
+This online code coverage allows the end users to check, at any time and for each package, the percentage of code tested, but also:
+
+- follow this percentage over time
+- check the code coverage of every function or script
+- have a better understanding of the quality of the package
+
+Again, if you want to contribute to the Campsis suite or add a few specific tests, please contact [Calvagone](mailto:campsis@calvagone.com).
+
+## Software development life cycle
+
+The Campsis suite follows a software development life cycle (SDLC) based on the Agile methodology. The Agile methodology is a set of principles for software development in which requirements and solutions evolve through the collaborative effort within our team. It promotes adaptive planning, evolutionary development, early delivery, and continuous improvement, and it encourages rapid and flexible response to change.
+
+![](images/agile_methodology.png){width=50%}
+
+1. **Requirements**: Requirements are tracked on GitHub thanks to
+    - Calvagone feedback
+    - Community feedback
+2. **Design**
+    - Design is discussed internally during meetings
+    - Code is object-oriented (use of S4 class system in R)
+    - Functional programming using `purrr` is extensively used
+3. **Development**
+    - R packages developed in RStudio
+    - Use of Git as version control system
+    - Use of Git branches (main/master, develop, feature branches)
+    - Use of GitHub for collaboration
+4. **Testing**
+    - Unit tests, functional tests, non-regression and integration tests are implemented
+    - Continuous integration using GitHub Actions (R CMD Check, run tests, build vignettes, code coverage)
+    - Code is tested on Mac, Linux and Windows
+5. **Deployment**
+    - e-Campsis deployed on the Calvagone server (previously on shinyapps.io)
+    - Packages released on GitHub/CRAN
+    - Documentation is updated
+    - Qualification reports are issued thanks to [`campsisqual`](https://github.com/Calvagone/campsisqual) and the qualification suite of models
+6. **Review**
+    - e-Campsis/Campsis used on a daily base at Calvagone for M&S projects
+    - Feedback from the users is collected (online, during workshops) and is used to improve the software
+
+
+
+
+
+
 
 
 
