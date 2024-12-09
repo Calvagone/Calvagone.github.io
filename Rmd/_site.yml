@@ -26,6 +26,8 @@ navbar:
     href: ./get_started.html
   - text: "e-Campsis"
     href: ./ecampsis.html
+  - text: "Quality"
+    href: ./quality.html
   - text: "News"
     href: ./news.html
   - text: "Workshops"

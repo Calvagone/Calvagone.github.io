@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Quality</title>
+
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
+<script src="site_libs/bs3compat-0.8.0/transition.js"></script>
+<script src="site_libs/bs3compat-0.8.0/tabs.js"></script>
+<script src="site_libs/bs3compat-0.8.0/bs3compat.js"></script>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
+<meta property="og:title" content="Campsis">
+<meta property="og:description" content="An open-source PK/PD simulation platform">
+<meta property="og:image" content="https://calvagone.github.io/images/campsis_og_image.png">
+<meta property="og:url" content="https://calvagone.github.io/">
+<meta property="twitter:card" content="summary_large_image">
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="./intro.html">What is Campsis</a>
+</li>
+<li>
+  <a href="./install.html">Installation</a>
+</li>
+<li>
+  <a href="./get_started.html">Get started</a>
+</li>
+<li>
+  <a href="./ecampsis.html">e-Campsis</a>
+</li>
+<li>
+  <a href="./quality.html">Quality</a>
+</li>
+<li>
+  <a href="./news.html">News</a>
+</li>
+<li>
+  <a href="./workshop_page.html">Workshops</a>
+</li>
+<li>
+  <a href="./contact.html">Contact us</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="./index.html">
+    <span class="fa fa-home"></span>
+     
+    Campsis
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Quality</h1>
+
+</div>
+
+
+<p>At Calvagone, since we are developing software for scientific
+research, we are committed to providing high-quality software. We have
+developed a quality assurance process that is applied to all packages of
+the Campsis suite. This process is based on the following
+principles:</p>
+<div id="fully-reproducible-workflow" class="section level2">
+<h2>Fully reproducible workflow</h2>
+<p>All the simulations performed with e-Campsis are fully reproducible
+thanks to the open-source suite of packages.<br />
+In e-Campsis, the users can download the generated R code and run it on
+their own machine. The exact version of the packages and the
+dependencies, used by e-Campsis, can be locally restored using the <a
+href="https://github.com/Calvagone/campsisverse"><code>campsisverse</code></a>
+package, the official R package manager for the Campsis suite. This
+allows the users to reproduce the results obtained with e-Campsis.</p>
+<p>Here is a typical example workflow with Campsis/e-Campsis:</p>
+<ol style="list-style-type: decimal">
+<li>The user imports his/her model into e-Campsis</li>
+<li>The study design is created and the simulations are run</li>
+<li>Post-processing is performed (single replicate or multiple
+replicates)</li>
+<li>The user downloads the generated R code and runs it on his/her
+machine or server</li>
+<li>The user restores the exact version of the packages used by
+e-Campsis (this code is made available in the downloaded R code)</li>
+<li>The user reproduces the results obtained with e-Campsis</li>
+<li>Optionally, if the user wants to run hundreds of replicates, he/she
+can increase the number of replicates in the downloaded R code and run
+it on his/her machine or server</li>
+</ol>
+<p><img src="images/fully_reproducible_simulations.png"
+style="width:90.0%" /></p>
+</div>
+<div id="qualification-of-the-campsis-suite" class="section level2">
+<h2>Qualification of the Campsis suite</h2>
+<p>Although the Campsis suite can be installed easily with the <a
+href="https://github.com/Calvagone/campsisverse"><code>campsisverse</code></a>
+package, we have developed a qualification process to ensure that the
+Campsis suite is working properly on all platforms (local installation
+or server installation). This process is based on the following
+steps:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Installation</strong>: The Campsis suite is installed on a
+clean R environment.</li>
+<li><strong>Qualification</strong>: The Campsis suite is qualified using
+the <a
+href="https://github.com/Calvagone/campsisqual"><code>campsisqual</code></a>
+package and our qualification suite of models</li>
+<li><strong>Reporting</strong>: A report is output, signed digitally and
+serves as the proof of the qualification.</li>
+</ol>
+<p><img src="images/campsis_suite_qualification.png"
+style="width:90.0%" /></p>
+<p>In order to run the qualification process, the user must contact <a
+href="mailto:campsis@calvagone.com">Calvagone</a> to obtain:</p>
+<ul>
+<li>The qualification suite of models</li>
+<li>The qualification report template</li>
+<li>The digital certificate and key</li>
+</ul>
+</div>
+<div id="qualification-of-e-campsis" class="section level2">
+<h2>Qualification of e-Campsis</h2>
+<p>Similarly to the qualification of the Campsis suite, our package
+e-Campsis, hosted on the Calvagone server (previously hosted on
+shinyapps.io), is qualified at every release as follows:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Installation</strong>: A <a
+href="https://www.docker.com/"><code>Docker</code></a> image of
+e-Campsis and the Campsis suite is made before every release.</li>
+<li><strong>Qualification</strong>: The image is qualified using the <a
+href="https://github.com/Calvagone/campsisqual"><code>campsisqual</code></a>
+package and our qualification suite of models</li>
+<li><strong>Reporting</strong>: A report is output for the specific
+version of e-Campsis. It is signed digitally and it serves as the proof
+of the qualification.</li>
+</ol>
+<p><img src="images/ecampsis_qualification.png"
+style="width:90.0%" /></p>
+</div>
+<div id="package-quality-assessment" class="section level2">
+<h2>Package quality assessment</h2>
+<p>Our report, besides showing the detailed results of the tests, also
+includes a quality assessment of every Campsis package. This assessment
+is based on the known <a
+href="https://github.com/pharmaR/riskmetric"><code>riskmetric</code></a>
+package, which provides a set of metrics to assess the quality of an R
+package. The metrics that were evaluated are listed below:</p>
+<ul>
+<li><strong>Has NEWS file?</strong>: Has the package a NEWS file? This
+type of file is important to keep the users informed about the changes
+in the package.</li>
+<li><strong>Has vignettes?</strong>: Does the package have vignettes?
+Vignettes are important to show the users how to use the package.</li>
+<li><strong>Has website?</strong>: Does the package have one or more
+website(s)? A website is important to provide more information about the
+package and keep the users informed.</li>
+<li><strong>Has maintainer?</strong>: Does the package have a
+maintainer? The maintainer is important to keep the package
+up-to-date.</li>
+<li><strong>Has license?</strong>: Does the package have a license? A
+license is important to protect the package and the users. Our Campsis
+suite is licensed under the GPL-3 license. This basically means that you
+can use the software for free, you can modify it, and you can distribute
+it. However, if you distribute the software, you must also distribute
+the source code.</li>
+<li><strong>Package version in NEWS</strong>: Is the current version of
+the packages detailed in the NEWS file? This is important to keep the
+users informed about the recent changes in the package.</li>
+<li><strong>Were tests successful?</strong>: Were the tests successful?
+This is important to ensure that the package is working properly. This
+is a prerequisite for a successful qualification of the Campsis suite.
+All tests must pass.</li>
+<li><strong>Online code coverage URL?</strong>: Is the code coverage of
+the package available online? Code coverage is important to ensure that
+the package is well tested. The code coverage of the Campsis suite is
+available online at <a
+href="https://codecov.io/gh/Calvagone">codecov.io</a>.</li>
+<li><strong>Has bug reports URL?</strong>: Does the package have a URL
+for bug reports? This is important to keep the users informed about the
+bugs in the package.</li>
+<li><strong>Has source control?</strong>: Does the package have source
+control? Source control is important to track every change made to the
+package.</li>
+</ul>
+<p>For illustration, the quality assessment of the Campsis suite printed
+out in the report is shown below:</p>
+<p><img src="images/package_quality_assessment.png"
+style="width:75.0%" /></p>
+</div>
+<div id="online-github-repositories" class="section level2">
+<h2>Online GitHub repositories</h2>
+<p>All packages of the Campsis suite are hosted on GitHub. The source
+code of the packages is available online. The list of repositories is
+available on our <a href="./index.html">home page</a>.</p>
+<p>Pull requests are welcome. If you want to contribute to the Campsis
+suite, please contact <a
+href="mailto:campsis@calvagone.com">Calvagone</a>.</p>
+</div>
+<div id="online-code-coverage" class="section level2">
+<h2>Online code coverage</h2>
+<p>The code coverage of the Campsis suite is available online at <a
+href="https://codecov.io/gh/Calvagone">codecov.io</a>. The code coverage
+shows that our packages are extensively tested.</p>
+<p>This online code coverage allows the end users to check, at any time
+and for each package, the percentage of code tested, but also:</p>
+<ul>
+<li>follow this percentage over time</li>
+<li>check the code coverage of every function or script</li>
+<li>have a better understanding of the quality of the package</li>
+</ul>
+<p>Again, if you want to contribute to the Campsis suite or add a few
+specific tests, please contact <a
+href="mailto:campsis@calvagone.com">Calvagone</a>.</p>
+</div>
+<div id="software-development-life-cycle" class="section level2">
+<h2>Software development life cycle</h2>
+<p>The Campsis suite follows a software development life cycle (SDLC)
+based on the Agile methodology. The Agile methodology is a set of
+principles for software development in which requirements and solutions
+evolve through the collaborative effort within our team. It promotes
+adaptive planning, evolutionary development, early delivery, and
+continuous improvement, and it encourages rapid and flexible response to
+change.</p>
+<p><img src="images/agile_methodology.png" style="width:50.0%" /></p>
+<ol style="list-style-type: decimal">
+<li><strong>Requirements</strong>: Requirements are tracked on GitHub
+thanks to
+<ul>
+<li>Calvagone feedback</li>
+<li>Community feedback</li>
+</ul></li>
+<li><strong>Design</strong>
+<ul>
+<li>Design is discussed internally during meetings</li>
+<li>Code is object-oriented (use of S4 class system in R)</li>
+<li>Functional programming using <code>purrr</code> is extensively
+used</li>
+</ul></li>
+<li><strong>Development</strong>
+<ul>
+<li>R packages developed in RStudio</li>
+<li>Use of Git as version control system</li>
+<li>Use of Git branches (main/master, develop, feature branches)</li>
+<li>Use of GitHub for collaboration</li>
+</ul></li>
+<li><strong>Testing</strong>
+<ul>
+<li>Unit tests, functional tests, non-regression and integration tests
+are implemented</li>
+<li>Continuous integration using GitHub Actions (R CMD Check, run tests,
+build vignettes, code coverage)</li>
+<li>Code is tested on Mac, Linux and Windows</li>
+</ul></li>
+<li><strong>Deployment</strong>
+<ul>
+<li>e-Campsis deployed on the Calvagone server (previously on
+shinyapps.io)</li>
+<li>Packages released on GitHub/CRAN</li>
+<li>Documentation is updated</li>
+<li>Qualification reports are issued thanks to <a
+href="https://github.com/Calvagone/campsisqual"><code>campsisqual</code></a>
+and the qualification suite of models</li>
+</ul></li>
+<li><strong>Review</strong>
+<ul>
+<li>e-Campsis/Campsis used on a daily base at Calvagone for M&amp;S
+projects</li>
+<li>Feedback from the users is collected (online, during workshops) and
+is used to improve the software</li>
+</ul></li>
+</ol>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
