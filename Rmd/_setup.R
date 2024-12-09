@@ -23,6 +23,10 @@ browseURL(
 )
 
 browseURL(
+  xfun::in_dir("./Rmd/", rmarkdown::render_site("quality.Rmd"))
+)
+
+browseURL(
   xfun::in_dir("./Rmd/", rmarkdown::render_site("news.Rmd"))
 )
 
