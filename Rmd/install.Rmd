@@ -26,5 +26,5 @@ campsisverse::install()
 
 You want to qualify your suite? We have everything you need.  
 Please contact [Calvagone](mailto:campsis@calvagone.com) to get your certificate and qualification suite of models.  
-Thanks to our [`campsisqual`](https://github.com/Calvagone/campsisqual) package, an extensive IQ/OQ report can be issued. Please visit our [Quality tab](./quality.html).  
+Thanks to our [`campsisqual`](https://github.com/Calvagone/campsisqual) package, an extensive IQ/OQ report can be generated. Please visit our [Quality tab](./quality.html).  
 

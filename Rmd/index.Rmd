@@ -36,6 +36,8 @@ Please check out our [documentation](https://calvagone.github.io/campsis.doc/).
 </div>
 </div>
 
+<!-- Separator -->
+
 <div class="level">
 <div class="column-left">
 <a href="https://github.com/Calvagone/campsismod"><img src="images/r_package_campsismod.png"></a>
@@ -50,6 +52,8 @@ Please check out our [documentation](https://calvagone.github.io/campsismod.doc/
 
 </div>
 </div>
+
+<!-- Separator -->
 
 <div class="level">
 <div class="column-left">
@@ -66,6 +70,8 @@ Please check out the [README](https://github.com/Calvagone/campsisnca?tab=readme
 </div>
 </div>
 
+<!-- Separator -->
+
 <div class="level">
 <div class="column-left">
 <a href="https://github.com/Calvagone/campsismisc"><img src="images/r_package_campsismisc.png"></a>
@@ -81,6 +87,25 @@ Please check out the [README](https://github.com/Calvagone/campsismisc?tab=readm
 </div>
 </div>
 
+<!-- Separator -->
+
+<div class="level">
+<div class="column-left">
+<a href="https://github.com/Calvagone/campsisqual"><img src="images/r_package_campsisqual.png"></a>
+</div>
+
+<div class="column-right" style="padding-left: 30px;">
+
+#### [campsisqual](https://github.com/Calvagone/campsisqual)
+
+Qualify your installation of the Campsis suite and generate an IQ/OQ report.   
+Please check out the [README](https://github.com/Calvagone/campsisqual) or contact [Calvagone](mailto:campsis@calvagone.com) for more information.
+
+</div>
+</div>
+
+<!-- Separator -->
+
 <div class="level">
 <div class="column-left">
 <a href="./ecampsis"><img src="images/r_package_ecampsis.png"></a>
@@ -91,6 +116,38 @@ Please check out the [README](https://github.com/Calvagone/campsismisc?tab=readm
 #### [e-Campsis](./ecampsis.html)
 
 e-Campsis is a web application that provides an intuitive and user-friendly interface for setting up population PK/PD simulations. Discover [e-Campsis](./ecampsis.html) here.
+
+</div>
+</div>
+
+<!-- Separator -->
+
+<div class="level">
+<div class="column-left">
+<img src="images/r_package_campsistrans.png">
+</div>
+
+<div class="column-right" style="padding-left: 30px;">
+
+#### [campsistrans](./ecampsis.html)
+
+Campsistrans is dedicated to importing models from a variety of sources. Currently, it imports your models from NONMEM (including parameter estimates and variance-covariance matrix). Note that this package, although not open-source, is available in the pro version of [e-Campsis](./ecampsis.html).
+
+</div>
+</div>
+
+<!-- Separator -->
+
+<div class="level">
+<div class="column-left">
+<img src="images/r_package_campsisverse.png">
+</div>
+
+<div class="column-right" style="padding-left: 30px;">
+
+#### [campsisverse](https://github.com/Calvagone/campsisverse)
+
+Last but not least, Campsisverse is our package manager. It allows you to install the Campsis suite and its dependencies in one go. Based on `renv`, it ensures reproducibility of your simulation environment in R.
 
 </div>
 </div>
