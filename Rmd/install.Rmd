@@ -7,28 +7,24 @@ title: 'Installation'
 * Download and install latest version of [R](https://cran.r-project.org/bin/windows/base/)
 * Download and install [R tools](https://cran.r-project.org/bin/windows/Rtools/)
 
-## Install simulation engines
+## Install the Campsis suite
 
-Campsis needs one of these simulation engines to perform simulations: `rxode2` (formerly `RxODE`) or `mrgsolve`.
-Install your preferred package(s) as follows:
-  
-```{r, eval=FALSE}
-install.packages("rxode2")
-install.packages("mrgsolve")
-install.packages("RxODE") # Not on CRAN anymore but still supported by Campsis
-```
-
-## Install Campsis
-
-Install the latest release of `campsis` from CRAN.
-  
-```{r, eval=FALSE}
-install.packages("campsis") # This will install 'campsismod' as well
-```
-
-Alternatively, `campsis` may also be installed from GitHub via devtools.
+Installing the Campsis suite is easy. First download our Campsis package manager using `remotes`:
 
 ```{r, eval=FALSE}
-devtools::install_github("Calvagone/campsismod")
-devtools::install_github("Calvagone/campsis")
+remotes::install_github("Calvagone/campsisverse")
 ```
+
+Then, run the install method. This will install all the packages of the suite, including their dependencies and the simulation engines (`mrgsolve` and `rxode2`).
+Follow the instructions in the console.
+
+```{r, eval=FALSE}
+campsisverse::install()
+```
+
+## Qualify the Campsis suite
+
+You want to qualify your suite? We have everything you need.  
+Please contact [Calvagone](mailto:campsis@calvagone.com) to get your certificate and qualification suite of models.  
+Thanks to our [`campsisqual`](https://github.com/Calvagone/campsisqual) package, an extensive IQ/OQ report can be issued. Please visit our [Quality tab](./quality.html).  
+
