@@ -485,11 +485,13 @@ give 1000 mg QD for 3 days and observe every hour.</p>
 <div id="plot-results" class="section level2">
 <h2>Plot results</h2>
 <p>Plot all simulated profiles using a spaghetti plot:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">spaghettiPlot</span>(results, <span class="st">&quot;CONC&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">spaghettiPlot</span>(results, <span class="st">&quot;CONC&quot;</span>) <span class="sc">+</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_bw</span>()</span></code></pre></div>
 <p><img src="get_started_files/figure-html/get_started_spaguetti_plot-1.png" width="768" style="display: block; margin: auto;" /></p>
 <p>Or use a shaded plot to see the simulated 90% prediction
 interval:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CONC&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CONC&quot;</span>) <span class="sc">+</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_bw</span>()</span></code></pre></div>
 <p><img src="get_started_files/figure-html/get_started_shaded_plot-1.png" width="768" style="display: block; margin: auto;" /></p>
 </div>
 <div id="simulate-arms" class="section level2">
@@ -509,7 +511,8 @@ below, we explicitly create two arms. The first arm receives a dose of
 <span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">c</span>(arm1, arm2))</span>
 <span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a></span>
 <span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(dataset, <span class="at">seed=</span><span class="dv">1</span>)</span>
-<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CONC&quot;</span>,  <span class="at">colour=</span><span class="st">&quot;ARM&quot;</span>)</span></code></pre></div>
+<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CONC&quot;</span>,  <span class="at">colour=</span><span class="st">&quot;ARM&quot;</span>) <span class="sc">+</span></span>
+<span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_bw</span>()</span></code></pre></div>
 <p><img src="get_started_files/figure-html/get_started_2arms_plot-1.png" width="768" style="display: block; margin: auto;" /></p>
 </div>
 <div id="derive-from-base-model" class="section level2">
@@ -522,8 +525,542 @@ this model is multiplied by two.</p>
 <span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Scenario</span>(<span class="st">&quot;Increased clearance&quot;</span>, <span class="at">model=</span><span class="sc">~</span>.x <span class="sc">%&gt;%</span> <span class="fu">replace</span>(<span class="fu">Theta</span>(<span class="at">name=</span><span class="st">&quot;CL&quot;</span>, <span class="at">value=</span><span class="dv">10</span>))))</span>
 <span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a></span>
 <span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(dataset, <span class="at">scenarios=</span>scenarios, <span class="at">seed=</span><span class="dv">1</span>)</span>
-<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CONC&quot;</span>, <span class="at">colour=</span><span class="fu">c</span>(<span class="st">&quot;ARM&quot;</span>), <span class="at">strat_extra=</span><span class="st">&quot;SCENARIO&quot;</span>) <span class="sc">+</span> ggplot2<span class="sc">::</span><span class="fu">facet_wrap</span>(<span class="sc">~</span>SCENARIO)</span></code></pre></div>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CONC&quot;</span>, <span class="at">colour=</span><span class="fu">c</span>(<span class="st">&quot;ARM&quot;</span>), <span class="at">strat_extra=</span><span class="st">&quot;SCENARIO&quot;</span>) <span class="sc">+</span></span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">facet_wrap</span>(<span class="sc">~</span>SCENARIO) <span class="sc">+</span></span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_bw</span>()</span></code></pre></div>
 <p><img src="get_started_files/figure-html/get_started_2arms_scenarios_plot-1.png" width="768" style="display: block; margin: auto;" /></p>
+</div>
+<div id="post-process-your-results" class="section level2">
+<h2>Post-process your results</h2>
+<p>For instance, let’s derive some non-compartmental analysis (NCA)
+metrics at Day 3, for each scenario and arm, with the <a
+href="https://github.com/Calvagone/campsisnca"><code>campsisnca</code></a>
+package:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">library</span>(campsisnca)</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>table <span class="ot">&lt;-</span> <span class="fu">NCAMetricsTable</span>()</span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a><span class="cf">for</span> (scenario <span class="cf">in</span> <span class="fu">c</span>(<span class="st">&quot;Base model&quot;</span>, <span class="st">&quot;Increased clearance&quot;</span>)) {</span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a>  <span class="cf">for</span> (arm <span class="cf">in</span> <span class="fu">c</span>(<span class="st">&quot;1000 mg QD&quot;</span>, <span class="st">&quot;2000 mg QD&quot;</span>)) {</span>
+<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a>    data <span class="ot">&lt;-</span> results <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(SCENARIO<span class="sc">==</span>scenario, ARM<span class="sc">==</span>arm) <span class="sc">%&gt;%</span> <span class="fu">timerange</span>(<span class="dv">48</span>, <span class="dv">72</span>, <span class="at">rebase=</span><span class="cn">TRUE</span>)</span>
+<span id="cb11-10"><a href="#cb11-10" tabindex="-1"></a>    </span>
+<span id="cb11-11"><a href="#cb11-11" tabindex="-1"></a>    nca <span class="ot">&lt;-</span> <span class="fu">NCAMetrics</span>(<span class="at">x=</span>data, <span class="at">variable=</span><span class="st">&quot;CONC&quot;</span>, <span class="at">scenario=</span><span class="fu">c</span>(<span class="at">scenario=</span>scenario, <span class="at">arm=</span>arm)) <span class="sc">%&gt;%</span></span>
+<span id="cb11-12"><a href="#cb11-12" tabindex="-1"></a>      <span class="fu">add</span>(<span class="fu">c</span>(<span class="fu">AUC</span>(<span class="at">unit=</span><span class="st">&quot;ng/mL*h&quot;</span>), <span class="fu">Cmax</span>(<span class="at">unit=</span><span class="st">&quot;ng/mL&quot;</span>), <span class="fu">Tmax</span>(<span class="at">unit=</span><span class="st">&quot;h&quot;</span>), <span class="fu">Ctrough</span>(<span class="at">unit=</span><span class="st">&quot;ng/mL&quot;</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb11-13"><a href="#cb11-13" tabindex="-1"></a>      <span class="fu">calculate</span>()</span>
+<span id="cb11-14"><a href="#cb11-14" tabindex="-1"></a>    </span>
+<span id="cb11-15"><a href="#cb11-15" tabindex="-1"></a>    table <span class="ot">&lt;-</span> table <span class="sc">%&gt;%</span></span>
+<span id="cb11-16"><a href="#cb11-16" tabindex="-1"></a>      <span class="fu">add</span>(nca)</span>
+<span id="cb11-17"><a href="#cb11-17" tabindex="-1"></a>  }</span>
+<span id="cb11-18"><a href="#cb11-18" tabindex="-1"></a>}</span>
+<span id="cb11-19"><a href="#cb11-19" tabindex="-1"></a>table <span class="sc">%&gt;%</span></span>
+<span id="cb11-20"><a href="#cb11-20" tabindex="-1"></a>  <span class="fu">export</span>(<span class="at">dest=</span><span class="st">&quot;gt&quot;</span>, <span class="at">subscripts=</span><span class="cn">TRUE</span>, <span class="at">combine_with=</span><span class="st">&quot;tbl_merge&quot;</span>)</span></code></pre></div>
+<div id="nydgabwknr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#nydgabwknr table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#nydgabwknr thead, #nydgabwknr tbody, #nydgabwknr tfoot, #nydgabwknr tr, #nydgabwknr td, #nydgabwknr th {
+  border-style: none;
+}
+
+#nydgabwknr p {
+  margin: 0;
+  padding: 0;
+}
+
+#nydgabwknr .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#nydgabwknr .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#nydgabwknr .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#nydgabwknr .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#nydgabwknr .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#nydgabwknr .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nydgabwknr .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#nydgabwknr .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#nydgabwknr .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#nydgabwknr .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#nydgabwknr .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#nydgabwknr .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#nydgabwknr .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#nydgabwknr .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#nydgabwknr .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#nydgabwknr .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#nydgabwknr .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#nydgabwknr .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#nydgabwknr .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nydgabwknr .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#nydgabwknr .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#nydgabwknr .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#nydgabwknr .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nydgabwknr .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#nydgabwknr .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#nydgabwknr .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nydgabwknr .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nydgabwknr .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#nydgabwknr .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nydgabwknr .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#nydgabwknr .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nydgabwknr .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#nydgabwknr .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nydgabwknr .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#nydgabwknr .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nydgabwknr .gt_left {
+  text-align: left;
+}
+
+#nydgabwknr .gt_center {
+  text-align: center;
+}
+
+#nydgabwknr .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#nydgabwknr .gt_font_normal {
+  font-weight: normal;
+}
+
+#nydgabwknr .gt_font_bold {
+  font-weight: bold;
+}
+
+#nydgabwknr .gt_font_italic {
+  font-style: italic;
+}
+
+#nydgabwknr .gt_super {
+  font-size: 65%;
+}
+
+#nydgabwknr .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#nydgabwknr .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#nydgabwknr .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#nydgabwknr .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#nydgabwknr .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#nydgabwknr .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#nydgabwknr .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#nydgabwknr .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#nydgabwknr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings gt_spanner_row">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id="label"><span class='gt_from_md'><strong>Metric</strong></span></th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="**Base model**">
+        <div class="gt_column_spanner"><span class='gt_from_md'><strong>Base model</strong></span></div>
+      </th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="**Increased clearance**">
+        <div class="gt_column_spanner"><span class='gt_from_md'><strong>Increased clearance</strong></span></div>
+      </th>
+    </tr>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="stat_1_1"><span class='gt_from_md'><strong>1000 mg QD</strong><br />
+N = 50</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="stat_2_1"><span class='gt_from_md'><strong>2000 mg QD</strong><br />
+N = 50</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="stat_1_2"><span class='gt_from_md'><strong>1000 mg QD</strong><br />
+N = 50</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="stat_2_2"><span class='gt_from_md'><strong>2000 mg QD</strong><br />
+N = 50</span><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="label" class="gt_row gt_left">AUC (ng/mL*h)</td>
+<td headers="stat_1_1" class="gt_row gt_center">190 (149–249)</td>
+<td headers="stat_2_1" class="gt_row gt_center">380 (306–498)</td>
+<td headers="stat_1_2" class="gt_row gt_center">97 (76–126)</td>
+<td headers="stat_2_2" class="gt_row gt_center">198 (154–267)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">C<sub>max</sub> (ng/mL)</td>
+<td headers="stat_1_1" class="gt_row gt_center">13.2 (9.9–15.1)</td>
+<td headers="stat_2_1" class="gt_row gt_center">25.4 (21.6–31.6)</td>
+<td headers="stat_1_2" class="gt_row gt_center">9.6 (7.2–11.2)</td>
+<td headers="stat_2_2" class="gt_row gt_center">18.7 (16.0–23.2)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">t<sub>max</sub> (h)</td>
+<td headers="stat_1_1" class="gt_row gt_center">2.00 (2.00–3.00)</td>
+<td headers="stat_2_1" class="gt_row gt_center">3.00 (2.00–3.00)</td>
+<td headers="stat_1_2" class="gt_row gt_center">2.00 (2.00–3.00)</td>
+<td headers="stat_2_2" class="gt_row gt_center">2.00 (2.00–3.00)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">C<sub>trough</sub> (ng/mL)</td>
+<td headers="stat_1_1" class="gt_row gt_center">4.16 (2.88–5.98)</td>
+<td headers="stat_2_1" class="gt_row gt_center">8.51 (5.82–13.39)</td>
+<td headers="stat_1_2" class="gt_row gt_center">1.05 (0.63–1.98)</td>
+<td headers="stat_2_2" class="gt_row gt_center">2.25 (1.24–4.44)</td></tr>
+  </tbody>
+  
+  <tfoot class="gt_footnotes">
+    <tr>
+      <td class="gt_footnote" colspan="5"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> <span class='gt_from_md'>Median (5% Centile–95% Centile)</span></td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+<p>We invite you to check out how <a
+href="https://www.youtube.com/embed/3YPIeQEdQng?si=PugvJ1oI_Hb5CbPm">e-Campsis</a>
+can help you derive the NCA metrics in a more automated and
+user-friendly way.</p>
 </div>
 
 

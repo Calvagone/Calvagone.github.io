@@ -38,13 +38,15 @@ head(results)
 Plot all simulated profiles using a spaghetti plot:
 
 ```{r get_started_spaguetti_plot, fig.align='center', fig.height=4, fig.width=8}
-spaghettiPlot(results, "CONC")
+spaghettiPlot(results, "CONC") +
+  ggplot2::theme_bw()
 ```
 
 Or use a shaded plot to see the simulated 90% prediction interval:
 
 ```{r get_started_shaded_plot, fig.align='center', fig.height=4, fig.width=8}
-shadedPlot(results, "CONC")
+shadedPlot(results, "CONC") +
+  ggplot2::theme_bw()
 ```
 
 ## Simulate arms
@@ -64,7 +66,8 @@ dataset <- Dataset() %>%
   add(c(arm1, arm2))
 
 results <- model %>% simulate(dataset, seed=1)
-shadedPlot(results, "CONC",  colour="ARM")
+shadedPlot(results, "CONC",  colour="ARM") +
+  ggplot2::theme_bw()
 ```
 
 ## Derive from base model
@@ -77,5 +80,36 @@ scenarios <- Scenarios() %>%
   add(Scenario("Increased clearance", model=~.x %>% replace(Theta(name="CL", value=10))))
 
 results <- model %>% simulate(dataset, scenarios=scenarios, seed=1)
-shadedPlot(results, "CONC", colour=c("ARM"), strat_extra="SCENARIO") + ggplot2::facet_wrap(~SCENARIO)
+shadedPlot(results, "CONC", colour=c("ARM"), strat_extra="SCENARIO") +
+  ggplot2::facet_wrap(~SCENARIO) +
+  ggplot2::theme_bw()
 ```
+
+## Post-process your results
+
+For instance, let's derive some non-compartmental analysis (NCA) metrics at Day 3, for each scenario and arm, with the [`campsisnca`](https://github.com/Calvagone/campsisnca) package:
+
+```{r get_started_post_processing, message=FALSE}
+library(campsisnca)
+library(gtsummary)
+library(gt)
+
+table <- NCAMetricsTable()
+
+for (scenario in c("Base model", "Increased clearance")) {
+  for (arm in c("1000 mg QD", "2000 mg QD")) {
+    data <- results %>% dplyr::filter(SCENARIO==scenario, ARM==arm) %>% timerange(48, 72, rebase=TRUE)
+    
+    nca <- NCAMetrics(x=data, variable="CONC", scenario=c(scenario=scenario, arm=arm)) %>%
+      add(c(AUC(unit="ng/mL*h"), Cmax(unit="ng/mL"), Tmax(unit="h"), Ctrough(unit="ng/mL"))) %>%
+      calculate()
+    
+    table <- table %>%
+      add(nca)
+  }
+}
+table %>%
+  export(dest="gt", subscripts=TRUE, combine_with="tbl_merge")
+```
+
+We invite you to check out how [e-Campsis](https://www.youtube.com/embed/3YPIeQEdQng?si=PugvJ1oI_Hb5CbPm) can help you derive the NCA metrics in a more automated and user-friendly way.
