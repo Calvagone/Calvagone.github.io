@@ -1,6 +1,11 @@
 ---
 title: 'News'
 ---
+
+- **December 1st, 2024**: Release of [Campsisverse](https://github.com/Calvagone/campsisverse), the package manager of the Campsis suite that allows you to install and update all Campsis packages in one go.
+
+- **November 29th, 2024**: Package [campsisqual](https://github.com/Calvagone/campsisqual/) is now open-source on GitHub. Contact [Calvagone](mailto:campsis@calvagone.com) to receive the qualification suite of models and qualify your installation of the Campsis suite. Check out our section on [Quality](./quality.html).
+
 - **September 11th, 2024**: Release of an updated version of e-Campsis pro allowing the generation of forest plots to explore the impact of covariates. 
 
 - **February 2nd, 2024**: Release of an updated version of e-Campsis including a multitude of minor improvements that collectively improve the user-experience and functionality of e-Campsis. 
