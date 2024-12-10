@@ -4,20 +4,25 @@ title: "What is Campsis?"
 
 ## Introduction
 
-Campsis is a open-source PK/PD simulation platform built on top of the open-source simulation packages [`rxode2`](https://github.com/nlmixr2/rxode2) and [`mrgsolve`](https://github.com/metrumresearchgroup/mrgsolve). It provides an abstraction layer over the underlying processes of writing a model, assembling a dataset and running, in the background, a simulation with these packages.   
+Campsis is an open-source PK/PD simulation platform built on top of the simulation packages [`rxode2`](https://github.com/nlmixr2/rxode2) and [`mrgsolve`](https://github.com/metrumresearchgroup/mrgsolve). It provides an abstraction layer over the underlying processes of writing a model, assembling a dataset and running, in the background, a simulation with these packages.   
 
 Campsis is developed by software engineers working at [Calvagone](http://www.calvagone.com/) and designed for pharmacometricians who are looking for an easy and intuitive way to run model-based simulations.
-The packages are developed in R, which makes it possible to integrate your simulation(s) into an R workflow.
+The packages are developed in R, which makes it possible to integrate your simulation into an R workflow.
 
-e-Campsis is a free web-based graphical user interface for Campsis, helping the user to easily setup and run simulations and visualize the results in an interactive manner. It allows the user to download the complete simulation script and execute it offline using `campsis` and `campsismod`.
+More broadly, Campsis is part of a larger ecosystem of packages, called the Campsis suite. The goal of this suite is to provide a comprehensive set of tools to help pharmacometricians to build, run and analyze simulations. A short introduction to these packages is given below.
 
-## Brief overview
+## Campsis family
 
-As shown in the schematic below, Campsis comprises two inter-connected R packages: [`campsismod`](https://github.com/Calvagone/campsismod) and [`campsis`](https://github.com/Calvagone/campsis). The first package allows the user to assemble, read, write or manipulate a PK/PD model. It also provides useful utilities to export the model to rxode2 or mrgsolve. The second package allows the user to assemble the dataset in a very intuitive manner. Once the user's dataset is ready, the package is in charge of preparing the simulation, calling rxode2 or mrgsolve and returning the results, for a given model, dataset and desired simulation settings.
+As shown in the schematic below, Campsis plays a central role in the Campsis suite, as it is the package that orchestrates the simulation process. While the package [`campsismod`](https://github.com/Calvagone/campsismod) takes care of the pharmacometric model and its translation to rxode2 or mrgsolve, the [`campsis`](https://github.com/Calvagone/campsis) package is more focused on the creation of the dataset (study design) and the simulation process.
 
-![](images/overview.png)
+![](images/campsis_family.png)
 
-## A quick example
+In addition to these two interconnected core packages, the Campsis suite includes additional packages for post-processing and analysis. The first package, [`campsisnca`](https://github.com/Calvagone/campsisnca), specializes in non-compartmental analysis (NCA) of simulation results. The second package, [`campsismisc`](https://github.com/Calvagone/campsismisc), provides various utilities tailored for pharmacometricians. Among its key features are forest plots, which visualize the uncertainty of covariate effects on model parameters or NCA metrics, and tornado plots, which illustrate the sensitivity of model parameters to NCA metrics. These additional packages enhance the capabilities of the Campsis suite, making it a versatile set of packages for pharmacometric analysis.
+
+Moreover, Calvagone has developed [e-Campsis](./ecampsis.html), a web-based graphical user interface that builds on the capabilities of the existing Campsis packages. e-Campsis streamlines simulation setup and execution, offering an interactive platform for result visualization. Users can also download complete simulation scripts for offline execution using the open-source Campsis suite.  
+Additionally, e-Campsis features a NONMEM model importer, enabling users to import and simulate NONMEM models seamlessly. This functionality is based on the campsistrans package, as shown in the schematic.
+
+## A quick example of Campsis
 
 Load a 1-compartment model with absorption compartment from the model library.
 
@@ -70,7 +75,14 @@ Well done, you just drew the `A` letter of our Campsis logo.
 
 If you haven't installed Campsis, please visit the [installation](./install.html) section.  
 
-If you are looking for some more examples, please check out our documentation websites:
+If you are looking for some more examples, please check out our documentation websites or READMEs:
 
 - Package [`campsismod`](https://calvagone.github.io/campsismod.doc/)
 - Package [`campsis`](https://calvagone.github.io/campsis.doc/)
+- Package [`campsisnca`](https://github.com/Calvagone/campsisnca)
+- Package [`campsismisc`](https://github.com/Calvagone/campsismisc)
+
+If you want to try out e-Campsis, please visit the [e-Campsis](./ecampsis.html) section.  
+
+If you want to know more about our quality assurance process, please visit the [Quality](./quality.html) section.
+
