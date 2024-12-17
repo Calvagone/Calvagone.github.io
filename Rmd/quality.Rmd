@@ -2,65 +2,73 @@
 title: 'Quality'
 ---
 
-At Calvagone, since we are developing software for scientific research, we are committed to providing high-quality software. We have developed a quality assurance process that is applied to all packages of the Campsis suite. This process is based on the following principles:
+At Calvagone we are committed to developing  high-quality software that meets the rigorous standards of pharmaceutical research and development. Our quality assurance process, applied to all packages in the Campsis suite, is based on the following principles:
 
 ## Fully reproducible workflow
 
 All the simulations performed with e-Campsis are fully reproducible thanks to the open-source suite of packages.  
-In e-Campsis, the users can download the generated R code and run it on their own machine. The exact version of the packages and the dependencies, used by e-Campsis, can be locally restored using the [`campsisverse`](https://github.com/Calvagone/campsisverse) package, the official R package manager for the Campsis suite. This allows the users to reproduce the results obtained with e-Campsis.
+In e-Campsis, the users can download the generated R code and run it on their own machine. The exact version of the packages and the dependencies, used by e-Campsis, can be locally restored using the [`campsisverse`](https://github.com/Calvagone/campsisverse) package, the installation manager for the Campsis suite. This allows the users to reproduce the results obtained with e-Campsis.
 
-Here is a typical example workflow with Campsis/e-Campsis:
+Typical workflow with Campsis/e-Campsis:
 
 1. The user imports his/her model into e-Campsis
 2. The study design is created and the simulations are run
 3. Post-processing is performed (single replicate or multiple replicates)
-4. The user downloads the generated R code and runs it on his/her machine or server
-5. The user restores the exact version of the packages used by e-Campsis (this code is made available in the downloaded R code)
-6. The user reproduces the results obtained with e-Campsis
-7. Optionally, if the user wants to run hundreds of replicates, he/she can increase the number of replicates in the downloaded R code and run it on his/her machine or server
+4. The user downloads the generated R script and runs it on his/her machine or server with his current installation of the Campsis suite
+5. Alternatively: a sandbox environment is automatically created with the exact same versions of the packages used by e-Campsis on the web   
+6. The user reproduces the results obtained with e-Campsis on his computer with a fully reproducible R script that can be appended to a M&S report
+
+Of course, the user is free to edit the R script before execution to, for example, customize plots or increase the number of replicates or individuals. 
 
 ![](images/fully_reproducible_simulations.png){width=90%}
 
 ## Qualification of the Campsis suite
 
-Although the Campsis suite can be installed easily with the [`campsisverse`](https://github.com/Calvagone/campsisverse) package, we have developed a qualification process to ensure that the Campsis suite is working properly on all platforms (local installation or server installation). This process is based on the following steps:
+The Campsis suite can be installed easily with the [`campsisverse`](https://github.com/Calvagone/campsisverse) package, yet in regulated environments it needs to be ensured and documented that everything works as expected. We have developed a qualification packages to ensure that the Campsis suite is installed and operates properly on all platforms (local installation or server installation). This process is based on the following steps:
 
-1. **Installation**: The Campsis suite is installed on a clean R environment.
-2. **Qualification**: The Campsis suite is qualified using the [`campsisqual`](https://github.com/Calvagone/campsisqual) package and our qualification suite of models
-3. **Reporting**: A report is output, signed digitally and serves as the proof of the qualification.
+1. **Installation**: The Campsis suite is installed in your R distribution (see the different options [here](https://github.com/Calvagone/campsisverse)).
+2. **Qualification**: The Campsis suite is qualified using the [`campsisqual`](https://github.com/Calvagone/campsisqual) package and our qualification suite of models; this encompasses tests of proper installation of all packages (i.e. installation qualification or IQ) as well as specific tests of the functions of each package and execution of a large number of PK/PD simulations with models from the library and comparing the results to true expected values. This procedure is called operational qualification (OQ).  In total over 1500 tests are run and more than 100 models are executed.
+3. **Reporting**: A detailed IQ/OQ report is generated, signed digitally and serves as the proof of the qualification.
 
 ![](images/campsis_suite_qualification.png){width=90%}
 
-In order to run the qualification process, the user must contact [Calvagone](mailto:campsis@calvagone.com) to obtain:
+This qualification process is part of a service offering by [Calvagone](mailto:campsis@calvagone.com) and includes: 
 
 - The qualification suite of models
 - The qualification report template
 - The digital certificate and key
+- Personalized support during the installation and qualification process
+- Online introductory training
+- A package of consulting hours that can be used for advanced  training, implementation of models, or further personalized support.
+
+Contact us at [campsis@calvagone.com](mailto:campsis@calvagone.com) if you are interested in this service.
 
 ## Qualification of e-Campsis
 
-Similarly to the qualification of the Campsis suite, our package e-Campsis, hosted on the Calvagone server (previously hosted on shinyapps.io), is qualified at every release as follows:
+Similarly to the qualification of the Campsis suite, e-Campsis the online graphical user interface is qualified at every release as follows*:
 
-1. **Installation**: A [`Docker`](https://www.docker.com/) image of e-Campsis and the Campsis suite is made before every release.
-2. **Qualification**: The image is qualified using the [`campsisqual`](https://github.com/Calvagone/campsisqual) package and our qualification suite of models
+1. **Installation**: A [`Docker`](https://www.docker.com/) image of e-Campsis and the Campsis suite is made before every release
+2. **Qualification**: The image is qualified using the [`campsisqual`](https://github.com/Calvagone/campsisqual) package and our qualification suite of models (see above)
 3. **Reporting**: A report is output for the specific version of e-Campsis. It is signed digitally and it serves as the proof of the qualification.
+
+* for hosting on our own server; on shinyapps.io the procedure differs slightly.
 
 ![](images/ecampsis_qualification.png){width=90%}
 
 ## Package quality assessment
 
-Our report, besides showing the detailed results of the tests, also includes a quality assessment of every Campsis package. This assessment is based on the known [`riskmetric`](https://github.com/pharmaR/riskmetric) package, which provides a set of metrics to assess the quality of an R package. The metrics that were evaluated are listed below:
+Our report, besides showing the detailed results of the tests, also includes a quality assessment of every Campsis package. This assessment is based on the  [`riskmetric`](https://github.com/pharmaR/riskmetric) package suggested by the `R Validation Hub` consortium ([https://www.pharmar.org/riskmetric/](https://www.pharmar.org/riskmetric/) to assess the quality of an R package. 
 
-- **Has NEWS file?**: Has the package a NEWS file? This type of file is important to keep the users informed about the changes in the package.
-- **Has vignettes?**: Does the package have vignettes? Vignettes are important to show the users how to use the package.
-- **Has website?**: Does the package have one or more website(s)? A website is important to provide more information about the package and keep the users informed.
-- **Has maintainer?**: Does the package have a maintainer? The maintainer is important to keep the package up-to-date.
-- **Has license?**: Does the package have a license? A license is important to protect the package and the users. Our Campsis suite is licensed under the GPL-3 license. This basically means that you can use the software for free, you can modify it, and you can distribute it. However, if you distribute the software, you must also distribute the source code.
+- **Has NEWS file?**: This type of file is important to keep the users informed about the changes in the package.
+- **Has vignettes?**: Vignettes are important to show the users how to use the package.
+- **Has website?**: A website is important to provide more information about the package and keep the users informed.
+- **Has maintainer?**: The maintainer is important to keep the package up-to-date.
+- **Has license?**: A license is important to protect the package and the users. Our Campsis suite is licensed under the GPL-3 license. This basically means that you can use the software for free, you can modify it, and you can distribute it. However, if you distribute the software, you must also distribute the source code.
 - **Package version in NEWS**: Is the current version of the packages detailed in the NEWS file? This is important to keep the users informed about the recent changes in the package.
-- **Were tests successful?**: Were the tests successful? This is important to ensure that the package is working properly. This is a prerequisite for a successful qualification of the Campsis suite. All tests must pass.
-- **Online code coverage URL?**: Is the code coverage of the package available online? Code coverage is important to ensure that the package is well tested. The code coverage of the Campsis suite is available online at [codecov.io](https://codecov.io/gh/Calvagone).
-- **Has bug reports URL?**: Does the package have a URL for bug reports? This is important to keep the users informed about the bugs in the package.
-- **Has source control?**: Does the package have source control? Source control is important to track every change made to the package.
+- **Were tests successful?**: This is important to ensure that the package is working properly. This is a prerequisite for a successful qualification of the Campsis suite. All tests must pass.
+- **Online code coverage URL?**: Code coverage is important to ensure that the package is well tested. The code coverage of the Campsis suite is available online at [codecov.io](https://codecov.io/gh/Calvagone).
+- **Has bug reports URL?**: This is important to keep the users informed about the bugs in the package.
+- **Has source control?**: Source control is important to track every change made to the package.
 
 For illustration, the quality assessment of the Campsis suite printed out in the report is shown below:
 
@@ -82,21 +90,19 @@ This online code coverage allows the end users to check, at any time and for eac
 - check the code coverage of every function or script
 - have a better understanding of the quality of the package
 
-Again, if you want to contribute to the Campsis suite or add a few specific tests, please contact [Calvagone](mailto:campsis@calvagone.com).
-
 ## Software development life cycle
 
-The Campsis suite follows a software development life cycle (SDLC) based on the Agile methodology. The Agile methodology is a set of principles for software development in which requirements and solutions evolve through the collaborative effort within our team. It promotes adaptive planning, evolutionary development, early delivery, and continuous improvement, and it encourages rapid and flexible response to change.
+The development of the Campsis suite follows a software development life cycle (SDLC) based on the Agile methodology. The Agile methodology is a set of principles for software development in which requirements and solutions evolve through the collaborative effort within our team. It promotes adaptive planning, evolutionary development, early delivery, and continuous improvement, and it encourages rapid and flexible response to change.
 
 ![](images/agile_methodology.png){width=50%}
 
 1. **Requirements**: Requirements are tracked on GitHub thanks to
-    - Calvagone feedback
+    - Feedback from Calvagone staff
     - Community feedback
 2. **Design**
-    - Design is discussed internally during meetings
+    - Design is discussed internally at Calvagone
     - Code is object-oriented (use of S4 class system in R)
-    - Functional programming using `purrr` is extensively used
+    - Functional programming using `purrr`
 3. **Development**
     - R packages developed in RStudio
     - Use of Git as version control system
@@ -107,7 +113,7 @@ The Campsis suite follows a software development life cycle (SDLC) based on the 
     - Continuous integration using GitHub Actions (R CMD Check, run tests, build vignettes, code coverage)
     - Code is tested on Mac, Linux and Windows
 5. **Deployment**
-    - e-Campsis deployed on the Calvagone server (previously on shinyapps.io)
+    - e-Campsis deployed on our own secure server located in France and shinyapps.io using the AWS infrastructure
     - Packages released on GitHub/CRAN
     - Documentation is updated
     - Qualification reports are issued thanks to [`campsisqual`](https://github.com/Calvagone/campsisqual) and the qualification suite of models
