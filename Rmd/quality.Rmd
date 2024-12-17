@@ -51,7 +51,7 @@ Similarly to the qualification of the Campsis suite, e-Campsis the online graphi
 2. **Qualification**: The image is qualified using the [`campsisqual`](https://github.com/Calvagone/campsisqual) package and our qualification suite of models (see above)
 3. **Reporting**: A report is output for the specific version of e-Campsis. It is signed digitally and it serves as the proof of the qualification.
 
-* for hosting on our own server; on shinyapps.io the procedure differs slightly.
+\* for hosting on our own server; on shinyapps.io the procedure differs slightly.
 
 ![](images/ecampsis_qualification.png){width=90%}
 
