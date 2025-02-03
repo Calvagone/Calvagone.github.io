@@ -1,26 +1,8 @@
-# Free e-Campsis Webinar
-
-On July 9th 2024, we will be hosting a free webinar on e-Campsis. The webinar will be held from 3:00 to 4:30 PM CEST.
-
-You will learn how to:
-
-- Load a model from the vast library and customize it
-- Load a NONMEM model
-- Setup a multi-arm trial design with covariates
-- Run the simulations and customize the graphical output in the online user interface
-- Explore different parameter values as scenarios
-- Derive NCA parameters and summary statistics
-- Make a forest plot in a few simple steps
-- Download the R-code and re-execute offline
-
-Don't miss this opportunity and register today:
-https://events.teams.microsoft.com/event/7124aa6c-7c3b-4ebd-a6ea-4ca131687347@e3b6b9cf-a145-4ed4-9b53-3419f83145c8
-
 --------------------------------------------------------------------------------
 
-# 5th European Course on Pharmacokinetics and Pharmacodynamics of Protein Therapeutics in Barcelona
+# 6th European Course on Pharmacokinetics and Pharmacodynamics of Protein Therapeutics in Barcelona
 
-From September 24th to 27th, we will be hosting the 5th European Course on Pharmacokinetics and Pharmacodynamics of Protein Therapeutics in Barcelona. 
+From October 7th to 10th, we will be hosting the 6th European Course on Pharmacokinetics and Pharmacodynamics of Protein Therapeutics in Barcelona. 
 The course directors are Prof. Bernd Meibohm and Prof. Johan Gabrielsson.
 
 This 4-day course will introduce participants to basic principles in the pharmacokinetics and pharmacodynamics of novel therapeutic proteins and provide opportunities for basic hands-on exercises in the PK/PD evaluation of these compounds. Topics include target-mediated drug disposition, tissue and tumor penetration, first-in-human dose selection, immunogenicity, clinical pharmacology challenges, biosimilars, ADCs, bispecific antibodies and drug-drug interactions.
@@ -32,12 +14,14 @@ Registration fees:
 ```         
 Regular: €2200 
 Academia/Trainee: €800 (excl. VAT)
-Early-bird registration (before June 30th 2024): 10% discount
+Early-bird registration (before May 31st 2025): 10% discount
 ```
 
 The course will be held at the [Hotel Icaria](https://www.hotelicariabarcelona.com/) in Barcelona, Spain.
 
-Click [here](/images/European_PKPDPT_Course_2024_Barcelona.pdf) to download the full course discription and registration form and send it back to [registration\@calvagone.com](mailto:registration@calvagone.com){.email}.
+Click [here](/images/European PKPDPT Course Barcelona 2025.pdf) for more information, including the course schedule.
+To register follow this [link](https://forms.office.com/e/2AiiAne92G) and fill out the form.
 
 --------------------------------------------------------------------------------
+
 
