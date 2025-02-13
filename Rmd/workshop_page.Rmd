@@ -26,3 +26,46 @@ To register follow this [link](https://forms.office.com/e/2AiiAne92G) and fill o
 --------------------------------------------------------------------------------
 
 
+# 1-day workshop on e-Campsis in Thessaloniki
+
+On June 3rd, 2025 Calvagone will be running a 1-day workshop on e-Campsis, an intuitive web application to set-up and run PK/PD & QSP simulations, and to communicate simulation results in an interactive way.
+
+As a participant you will get free access to e-Campsis pro. You will learn how to:
+
+-          Import a model from various sources (Campsis, model library, NONMEM)
+-          Set up a trial design
+-          Bootstrap covariates from an external source (e.g. NHANES)
+-          Explore what-if scenarios thanks to the built-in scenario creator
+-          Stratify and visualize the results with customizable plots
+-          Post-process the results, derive useful metrics and summary statistics and generate HTML tables in a few clicks
+-          Overlay external data on top of simulations
+-          Create forest plots in an intuitive manner to assess the impact of covariates
+-          Make a sensitivity analysis effortlessly and understand the limitations of your model
+
+You will also learn how to reproduce the simulations offline in R thanks to the open-source package campsis.
+
+The following registration fee applies for this 1-day workshop:
+
+                Industry:           € 200 (100*) excl. VAT
+
+                Academic:           € 100 (50*) excl. VAT
+
+                Student:            € 100 (50*) excl. VAT
+
+*Register and pay before April 1st to get a 50% early bird discount!
+
+ 
+
+The fee includes the workshop material, lunch and coffee breaks as well as temporary access to e-Campsis pro for 3 months.
+
+Only limited knowledge of R is required, since all hands-on exercises will be done in the web application. Participants should bring their own laptop.
+
+ 
+
+The course will take place at Hotel Capsis 4* https://capsishotels.gr/en - 400 m from the metro station of Dimokratias.
+
+Please click on the link below to register.
+
+https://forms.office.com/e/tUjcgxChzM
+
+ 
