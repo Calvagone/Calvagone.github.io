@@ -1,13 +1,13 @@
 ---
-title: 'e-Campsis'
+title: 'e-Campsis&reg;'
 editor_options: 
   markdown: 
     wrap: sentence
 ---
 
-## Discover e-Campsis
+## Discover e-Campsis®
 
-[e-Campsis](https://ecampsis.shinyapps.io/free/) is a free web application developed by Calvagone that provides an intuitive and user-friendly interface for setting up population PK/PD simulations.
+[e-Campsis](https://ecampsis.shinyapps.io/free/)&reg; is a free web application developed by Calvagone that provides an intuitive and user-friendly interface for setting up population PK/PD simulations.
 The app is built on the R-package [campsis](https://github.com/Calvagone/campsis), which serves as a powerful frontend for running model-based simulations using mrgsolve or rxode2.
 
 [![e-Campsis free screenshot](images/Screenshot_2.png)](https://ecampsis.shinyapps.io/free/)
@@ -67,7 +67,7 @@ Same features as in free plus:
 
 Click on the link below to send us a pre-filled email and you will get an invitation to register as soon as possible:
 
-<a class="mailtoui" href="mailto:campsis@calvagone.com?subject=e-Campsis%20free%2B&amp;cc=&amp;bcc=&amp;body=Hello%2C%20%0A%0A%20I%27d%20like%20to%20get%20access%20to%20e-Campsis%20free%2B.%20%0A%0A%20Thank%20you%2C%20%0A%0A%20%3CYour%20name%3E%20%0A%0ABy%20sending%20this%20e-mail%20I%20agree%20that%20Calvagone%20gets%20in%20touch%20with%20me%20regarding%20Campsis%20and%20associated%20services.%20I%20understand%20that%20Calvagone%20will%20never%20sell%20or%20distribute%20my%20contact%20information%20to%20a%20third%20party%20and%20promises%20to%20keep%20my%20details%20safe%20and%20secure.%20If%20I%20don%27t%20want%20to%20receive%20e-mails%20from%20Calvagone%20anymore%20or%20have%20questions%20around%20their%20GDPR%20compliance%2C%20I%20will%20contact%20them%20at%20contact%40calvagone.com.">campsis@calvagone.com</a>
+<a class="mailtoui" href="mailto:campsis@calvagone.com?subject=e-Campsis%20free%2B&amp;cc=&amp;bcc=&amp;body=Hello%2C%20%0A%0A%20I%27d%20like%20to%20get%20access%20to%20e-Campsis%20free%2B.%20%0A%0A%20Thank%20you%2C%20%0A%0A%20%3CYour%20name%3E%20%0A%0ABy%20sending%20this%20e-mail%20I%20agree%20that%20Calvagone%20gets%20in%20touch%20with%20me%20regarding%20Campsis%20and%20associated%20services.%20I%20understand%20that%20Calvagone%20will%20never%20sell%20or%20distribute%20my%20contact%20information%20to%20a%20third%20party%20and%20promises%20to%20keep%20my%20details%20safe%20and%20secure.%20If%20I%20don%27t%20want%20to%20receive%20e-mails%20from%20Calvagone%20anymore%20or%20have%20questions%20around%20their%20GDPR%20compliance%2C%20I%20will%20contact%20them%20at%20contact%40calvagone.com.">campsis\@calvagone.com</a>
 :::
 :::::
 
@@ -84,22 +84,21 @@ per year & user\*\*
 Same features as in free+ plus:
 
 -   Save/load e-Campsis projects
--   NONMEM code import
+-   NONMEM&reg; code import
 -   Number of arms, scenarios, subjects, observations only limited by memory
 -   Advanced customization of plots
 -   NCA & summary statistics
 -   Sensitivity analysis
 -   Forest plots
--   Upload of external data for plotting\*
+-   Overlay external data in plots
 -   Bootstrap covariates from NHANES
 -   Replicate simulation with parameter uncertainty
--   Import Monolix simulation code\*
+-   Import Monolix&reg; simulation code\*
 -   Personalized support via email
 
 Subscribe today by filling out this [order form](/images/Order_Form_e-Campsis_v4_250101.pdf) and sending it to:
 
-<a class="mailtoui" href="mailto:campsis@calvagone.com?subject=e-Campsis%20pro&amp;cc=&amp;bcc=&amp;body=Hello%2C%20%0A%0A%20I%27d%20like%20to%20get%20access%20to%20e-Campsis%20Pro.%20%0A%0A%20Thank%20you%2C%20%0A%0A%20%3CYour%20name%3E%20%0A%0ABy%20sending%20this%20e-mail%20I%20agree%20that%20Calvagone%20gets%20in%20touch%20with%20me%20regarding%20Campsis%20and%20associated%20services.%20I%20understand%20that%20Calvagone%20will%20never%20sell%20or%20distribute%20my%20contact%20information%20to%20a%20third%20party%20and%20promises%20to%20keep%20my%20details%20safe%20and%20secure.%20If%20I%20don%27t%20want%20to%20receive%20e-mails%20from%20Calvagone%20anymore%20or%20have%20questions%20around%20their%20GDPR%20compliance%2C%20I%20will%20contact%20them%20at%20contact%40calvagone.com.">campsis@calvagone.com</a>
-​
+<a class="mailtoui" href="mailto:campsis@calvagone.com?subject=e-Campsis%20pro&amp;cc=&amp;bcc=&amp;body=Hello%2C%20%0A%0A%20I%27d%20like%20to%20get%20access%20to%20e-Campsis%20Pro.%20%0A%0A%20Thank%20you%2C%20%0A%0A%20%3CYour%20name%3E%20%0A%0ABy%20sending%20this%20e-mail%20I%20agree%20that%20Calvagone%20gets%20in%20touch%20with%20me%20regarding%20Campsis%20and%20associated%20services.%20I%20understand%20that%20Calvagone%20will%20never%20sell%20or%20distribute%20my%20contact%20information%20to%20a%20third%20party%20and%20promises%20to%20keep%20my%20details%20safe%20and%20secure.%20If%20I%20don%27t%20want%20to%20receive%20e-mails%20from%20Calvagone%20anymore%20or%20have%20questions%20around%20their%20GDPR%20compliance%2C%20I%20will%20contact%20them%20at%20contact%40calvagone.com.">campsis\@calvagone.com</a> ​
 
 or contact us for a live demo or a trial version of e-Campsis pro.
 :::
@@ -107,7 +106,6 @@ or contact us for a live demo or a trial version of e-Campsis pro.
 ::::::::::::
 
 \**Under development. \*\* excl.VAT. Discounts for multiple users available.*
-
 
 ## Examples
 
@@ -214,9 +212,16 @@ In addition, users of e-Campsis pro will have the option to obtain an qualificat
 Read more about our extensive qualification efforts [here](https://calvagone.github.io/quality.html).
 
 ### Is hosting of e-Campsis secure ?
-Yes! We use the shinyapps.io platform by Posit Inc. for hosting e-Campsis. The platform is running on Amazon Web Services (AWS) infrastructure in the us-east-1 region. Access requires authentication of pro and free+ users, with the possibility to use Google or Github credentials including 2FA. The app itself runs in ephemeral containers, which means that no data is stored on the server permanently but only during the length of the session and some short timeout period. Of course, other e-Campsis users have no access to your session data during that time. The pro version allows you to save the state of your session, including the model, parameters and settings, in a project files that you can download to your computer and upload again when you want to continue working on your project. Upload and download is encrypted and secure.
-You can find more information about Posit´s security measures [here](https://docs.posit.co/shinyapps.io/guide/security_and_compliance/) and [here](https://posit.cloud/security?_gl=1*78dtph*_ga*NTg4Njk5NTEyLjE3MTMxMjUzMjI.*_ga_2C0WZ1JHG0*MTcyMTc0OTcwMi4zOS4xLjE3MjE3NTAyMDguMC4wLjA).
 
+Yes!
+We use the shinyapps.io platform by Posit Inc. for hosting e-Campsis.
+The platform is running on Amazon Web Services (AWS) infrastructure in the us-east-1 region.
+Access requires authentication of pro and free+ users, with the possibility to use Google or Github credentials including 2FA.
+The app itself runs in ephemeral containers, which means that no data is stored on the server permanently but only during the length of the session and some short timeout period.
+Of course, other e-Campsis users have no access to your session data during that time.
+The pro version allows you to save the state of your session, including the model, parameters and settings, in a project files that you can download to your computer and upload again when you want to continue working on your project.
+Upload and download is encrypted and secure.
+You can find more information about Posit´s security measures [here](https://docs.posit.co/shinyapps.io/guide/security_and_compliance/) and [here](https://posit.cloud/security?_gl=1*78dtph*_ga*NTg4Njk5NTEyLjE3MTMxMjUzMjI.*_ga_2C0WZ1JHG0*MTcyMTc0OTcwMi4zOS4xLjE3MjE3NTAyMDguMC4wLjA).
 
 ### Is there a discount of the pro version for academia ?
 
@@ -227,7 +232,7 @@ If not let us know.
 
 Download and fill out this [order form](/images/Order_Form_e-Campsis_v3_academic_240911.pdf) and send it to:
 
-<a class="mailtoui" href="mailto:campsis@calvagone.com?subject=e-Campsis%20pro&amp;cc=&amp;bcc=&amp;body=Hello%2C%20%0A%0A%20I%27d%20like%20to%20get%20access%20to%20e-Campsis%20Pro.%20%0A%0A%20Thank%20you%2C%20%0A%0A%20%3CYour%20name%3E%20%0A%0ABy%20sending%20this%20e-mail%20I%20agree%20that%20Calvagone%20gets%20in%20touch%20with%20me%20regarding%20Campsis%20and%20associated%20services.%20I%20understand%20that%20Calvagone%20will%20never%20sell%20or%20distribute%20my%20contact%20information%20to%20a%20third%20party%20and%20promises%20to%20keep%20my%20details%20safe%20and%20secure.%20If%20I%20don%27t%20want%20to%20receive%20e-mails%20from%20Calvagone%20anymore%20or%20have%20questions%20around%20their%20GDPR%20compliance%2C%20I%20will%20contact%20them%20at%20contact%40calvagone.com.">campsis@calvagone.com</a>
+<a class="mailtoui" href="mailto:campsis@calvagone.com?subject=e-Campsis%20pro&amp;cc=&amp;bcc=&amp;body=Hello%2C%20%0A%0A%20I%27d%20like%20to%20get%20access%20to%20e-Campsis%20Pro.%20%0A%0A%20Thank%20you%2C%20%0A%0A%20%3CYour%20name%3E%20%0A%0ABy%20sending%20this%20e-mail%20I%20agree%20that%20Calvagone%20gets%20in%20touch%20with%20me%20regarding%20Campsis%20and%20associated%20services.%20I%20understand%20that%20Calvagone%20will%20never%20sell%20or%20distribute%20my%20contact%20information%20to%20a%20third%20party%20and%20promises%20to%20keep%20my%20details%20safe%20and%20secure.%20If%20I%20don%27t%20want%20to%20receive%20e-mails%20from%20Calvagone%20anymore%20or%20have%20questions%20around%20their%20GDPR%20compliance%2C%20I%20will%20contact%20them%20at%20contact%40calvagone.com.">campsis\@calvagone.com</a>
 
 ### How can I implement more complex dosing regimens including, e.g. a loading dose ?
 
