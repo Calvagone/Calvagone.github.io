@@ -1,9 +1,8 @@
---------------------------------------------------------------------------------
+------------------------------------------------------------------------
 
 # 6th European Course on Pharmacokinetics and Pharmacodynamics of Protein Therapeutics in Barcelona
 
-From October 7th to 10th, we will be hosting the 6th European Course on Pharmacokinetics and Pharmacodynamics of Protein Therapeutics in Barcelona. 
-The course directors are Prof. Bernd Meibohm and Prof. Johan Gabrielsson.
+From October 7th to 10th, we will be hosting the 6th European Course on Pharmacokinetics and Pharmacodynamics of Protein Therapeutics in Barcelona. The course directors are Prof. Bernd Meibohm and Prof. Johan Gabrielsson.
 
 This 4-day course will introduce participants to basic principles in the pharmacokinetics and pharmacodynamics of novel therapeutic proteins and provide opportunities for basic hands-on exercises in the PK/PD evaluation of these compounds. Topics include target-mediated drug disposition, tissue and tumor penetration, first-in-human dose selection, immunogenicity, clinical pharmacology challenges, biosimilars, ADCs, bispecific antibodies and drug-drug interactions.
 
@@ -19,12 +18,11 @@ Early-bird registration (before May 31st 2025): 10% discount
 
 The course will be held at the [Hotel Icaria](https://www.hotelicariabarcelona.com/) in Barcelona, Spain.
 
-Click [here](/images/European PKPDPT Course Barcelona 2025.pdf) for more information, including the course schedule.
+Click [here](/images/European%20PKPDPT%20Course%20Barcelona%202025.pdf) for more information, including the course schedule.
 
 To register follow this [link](https://forms.office.com/e/2AiiAne92G) and fill out the form.
 
---------------------------------------------------------------------------------
-
+------------------------------------------------------------------------
 
 # 1-day workshop on e-Campsis in Thessaloniki
 
@@ -32,40 +30,37 @@ On June 3rd, 2025 Calvagone will be running a 1-day workshop on e-Campsis, an in
 
 As a participant you will get free access to e-Campsis pro. You will learn how to:
 
--          Import a model from various sources (Campsis, model library, NONMEM)
--          Set up a trial design
--          Bootstrap covariates from an external source (e.g. NHANES)
--          Explore what-if scenarios thanks to the built-in scenario creator
--          Stratify and visualize the results with customizable plots
--          Post-process the results, derive useful metrics and summary statistics and generate HTML tables in a few clicks
--          Overlay external data on top of simulations
--          Create forest plots in an intuitive manner to assess the impact of covariates
--          Make a sensitivity analysis effortlessly and understand the limitations of your model
+-   Import a model from various sources (Campsis, model library, NONMEM)
+-   Set up a trial design
+-   Bootstrap covariates from an external source (e.g. NHANES)
+-   Explore what-if scenarios thanks to the built-in scenario creator
+-   Stratify and visualize the results with customizable plots
+-   Post-process the results, derive useful metrics and summary statistics and generate HTML tables in a few clicks
+-   Overlay external data on top of simulations
+-   Create forest plots in an intuitive manner to assess the impact of covariates
+-   Make a sensitivity analysis effortlessly and understand the limitations of your model
+-   Reproduce the simulations offline in R thanks to the open-source package campsis
 
 You will also learn how to reproduce the simulations offline in R thanks to the open-source package campsis.
 
 The following registration fee applies for this 1-day workshop:
 
-                Industry:           € 200 (100*) excl. VAT
+```         
+            Industry:           € 200 (100*) excl. VAT
 
-                Academic:           € 100 (50*) excl. VAT
+            Academic:           € 100 (50*) excl. VAT
 
-                Student:            € 100 (50*) excl. VAT
+            Student:            € 100 (50*) excl. VAT
+```
 
-*Register and pay before April 1st to get a 50% early bird discount!
-
- 
+\*Register and pay before April 1st to get a 50% early bird discount!
 
 The fee includes the workshop material, lunch and coffee breaks as well as temporary access to e-Campsis pro for 3 months.
 
 Only limited knowledge of R is required, since all hands-on exercises will be done in the web application. Participants should bring their own laptop.
 
- 
-
-The course will take place at Hotel Capsis 4* https://capsishotels.gr/en - 400 m from the metro station of Dimokratias.
+The course will take place at Hotel Capsis 4\* <https://capsishotels.gr/en> - 400 m from the metro station of Dimokratias.
 
 Please click on the link below to register.
 
-https://forms.office.com/e/tUjcgxChzM
-
- 
+<https://forms.office.com/e/tUjcgxChzM>
