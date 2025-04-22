@@ -18,9 +18,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
-<script src="site_libs/bs3compat-0.8.0/transition.js"></script>
-<script src="site_libs/bs3compat-0.8.0/tabs.js"></script>
-<script src="site_libs/bs3compat-0.8.0/bs3compat.js"></script>
+<script src="site_libs/bs3compat-0.9.0/transition.js"></script>
+<script src="site_libs/bs3compat-0.9.0/tabs.js"></script>
+<script src="site_libs/bs3compat-0.9.0/bs3compat.js"></script>
 <script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
@@ -473,9 +473,8 @@ give 1000 mg QD for 3 days and observe every hour.</p>
 <div id="simulate" class="section level2">
 <h2>Simulate</h2>
 <p>Simulate this very simple protocol:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(dataset, <span class="at">seed=</span><span class="dv">1</span>)</span></code></pre></div>
-<pre><code>## using C compiler: &#39;gcc.exe (GCC) 13.2.0&#39;</code></pre>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">head</span>(results)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(dataset, <span class="at">seed=</span><span class="dv">1</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="fu">head</span>(results)</span></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["ID"],"name":[1],"type":["int"],"align":["right"]},{"label":["TIME"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["ARM"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["KA"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["CL"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["V2"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["V3"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Q"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["S2"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["F"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["CONC"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["CONC_ERR"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["A_DEPOT"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["A_CENTRAL"],"name":[14],"type":["dbl"],"align":["right"]},{"label":["A_PERIPHERAL"],"name":[15],"type":["dbl"],"align":["right"]},{"label":["A_OUTPUT"],"name":[16],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"0","3":"0","4":"0.974322","5":"6.198232","6":"92.5112","7":"25.40042","8":"3.622786","9":"92.5112","10":"0.000000","11":"0.000000","12":"0.000000","13":"1000.000000","14":"0.0000","15":"0.00000","16":"0.00000"},{"1":"1","2":"1","3":"0","4":"0.974322","5":"6.198232","6":"92.5112","7":"25.40042","8":"3.622786","9":"92.5112","10":"6.337635","11":"6.337635","12":"6.458807","13":"377.448187","14":"586.3022","15":"12.94392","16":"23.30572"},{"1":"1","2":"2","3":"0","4":"0.974322","5":"6.198232","6":"92.5112","7":"25.40042","8":"3.622786","9":"92.5112","10":"8.124811","11":"8.124811","12":"7.473903","13":"142.467135","14":"751.6360","15":"36.43511","16":"69.46178"},{"1":"1","2":"3","3":"0","4":"0.974322","5":"6.198232","6":"92.5112","7":"25.40042","8":"3.622786","9":"92.5112","10":"8.279208","11":"8.279208","12":"8.144126","13":"53.773962","14":"765.9195","15":"59.54270","16":"120.76388"},{"1":"1","2":"4","3":"0","4":"0.974322","5":"6.198232","6":"92.5112","7":"25.40042","8":"3.622786","9":"92.5112","10":"7.887822","11":"7.887822","12":"8.537639","13":"20.296885","14":"729.7119","15":"78.98182","16":"171.00940"},{"1":"1","2":"5","3":"0","4":"0.974322","5":"6.198232","6":"92.5112","7":"25.40042","8":"3.622786","9":"92.5112","10":"7.349210","11":"7.349210","12":"7.500148","13":"7.661023","14":"679.8842","15":"94.19809","16":"218.25664"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
@@ -485,13 +484,13 @@ give 1000 mg QD for 3 days and observe every hour.</p>
 <div id="plot-results" class="section level2">
 <h2>Plot results</h2>
 <p>Plot all simulated profiles using a spaghetti plot:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">spaghettiPlot</span>(results, <span class="st">&quot;CONC&quot;</span>) <span class="sc">+</span></span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_bw</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">spaghettiPlot</span>(results, <span class="st">&quot;CONC&quot;</span>) <span class="sc">+</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_bw</span>()</span></code></pre></div>
 <p><img src="get_started_files/figure-html/get_started_spaguetti_plot-1.png" width="768" style="display: block; margin: auto;" /></p>
 <p>Or use a shaded plot to see the simulated 90% prediction
 interval:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CONC&quot;</span>) <span class="sc">+</span></span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_bw</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CONC&quot;</span>) <span class="sc">+</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_bw</span>()</span></code></pre></div>
 <p><img src="get_started_files/figure-html/get_started_shaded_plot-1.png" width="768" style="display: block; margin: auto;" /></p>
 </div>
 <div id="simulate-arms" class="section level2">
@@ -499,20 +498,20 @@ interval:</p>
 <p>The dataset can contain more than one treatment arm. In the example
 below, we explicitly create two arms. The first arm receives a dose of
 1000 mg QD, while the second arm receives twice this dose amount.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>arm1 <span class="ot">&lt;-</span> <span class="fu">Arm</span>(<span class="at">subjects=</span><span class="dv">50</span>, <span class="at">label=</span><span class="st">&quot;1000 mg QD&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Bolus</span>(<span class="at">time=</span><span class="dv">0</span>, <span class="at">amount=</span><span class="dv">1000</span>, <span class="at">ii=</span><span class="dv">24</span>, <span class="at">addl=</span><span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Observations</span>(<span class="at">times=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">72</span>))</span>
-<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>arm2 <span class="ot">&lt;-</span> <span class="fu">Arm</span>(<span class="at">subjects=</span><span class="dv">50</span>, <span class="at">label=</span><span class="st">&quot;2000 mg QD&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Bolus</span>(<span class="at">time=</span><span class="dv">0</span>, <span class="at">amount=</span><span class="dv">2000</span>, <span class="at">ii=</span><span class="dv">24</span>, <span class="at">addl=</span><span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Observations</span>(<span class="at">times=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">72</span>))</span>
-<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a>dataset <span class="ot">&lt;-</span> <span class="fu">Dataset</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">c</span>(arm1, arm2))</span>
-<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a></span>
-<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(dataset, <span class="at">seed=</span><span class="dv">1</span>)</span>
-<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CONC&quot;</span>,  <span class="at">colour=</span><span class="st">&quot;ARM&quot;</span>) <span class="sc">+</span></span>
-<span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_bw</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>arm1 <span class="ot">&lt;-</span> <span class="fu">Arm</span>(<span class="at">subjects=</span><span class="dv">50</span>, <span class="at">label=</span><span class="st">&quot;1000 mg QD&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Bolus</span>(<span class="at">time=</span><span class="dv">0</span>, <span class="at">amount=</span><span class="dv">1000</span>, <span class="at">ii=</span><span class="dv">24</span>, <span class="at">addl=</span><span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Observations</span>(<span class="at">times=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">72</span>))</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>arm2 <span class="ot">&lt;-</span> <span class="fu">Arm</span>(<span class="at">subjects=</span><span class="dv">50</span>, <span class="at">label=</span><span class="st">&quot;2000 mg QD&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Bolus</span>(<span class="at">time=</span><span class="dv">0</span>, <span class="at">amount=</span><span class="dv">2000</span>, <span class="at">ii=</span><span class="dv">24</span>, <span class="at">addl=</span><span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Observations</span>(<span class="at">times=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">72</span>))</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>dataset <span class="ot">&lt;-</span> <span class="fu">Dataset</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">c</span>(arm1, arm2))</span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(dataset, <span class="at">seed=</span><span class="dv">1</span>)</span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CONC&quot;</span>,  <span class="at">colour=</span><span class="st">&quot;ARM&quot;</span>) <span class="sc">+</span></span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_bw</span>()</span></code></pre></div>
 <p><img src="get_started_files/figure-html/get_started_2arms_plot-1.png" width="768" style="display: block; margin: auto;" /></p>
 </div>
 <div id="derive-from-base-model" class="section level2">
@@ -520,14 +519,14 @@ below, we explicitly create two arms. The first arm receives a dose of
 <p>Scenarios derived from the base model and/or dataset can be easily
 implemented. Below, we’d like to see what happens if the clearance of
 this model is multiplied by two.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>scenarios <span class="ot">&lt;-</span> <span class="fu">Scenarios</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Scenario</span>(<span class="st">&quot;Base model&quot;</span>)) <span class="sc">%&gt;%</span> <span class="co"># Original CL is 5</span></span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Scenario</span>(<span class="st">&quot;Increased clearance&quot;</span>, <span class="at">model=</span><span class="sc">~</span>.x <span class="sc">%&gt;%</span> <span class="fu">replace</span>(<span class="fu">Theta</span>(<span class="at">name=</span><span class="st">&quot;CL&quot;</span>, <span class="at">value=</span><span class="dv">10</span>))))</span>
-<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(dataset, <span class="at">scenarios=</span>scenarios, <span class="at">seed=</span><span class="dv">1</span>)</span>
-<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CONC&quot;</span>, <span class="at">colour=</span><span class="fu">c</span>(<span class="st">&quot;ARM&quot;</span>), <span class="at">strat_extra=</span><span class="st">&quot;SCENARIO&quot;</span>) <span class="sc">+</span></span>
-<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">facet_wrap</span>(<span class="sc">~</span>SCENARIO) <span class="sc">+</span></span>
-<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_bw</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>scenarios <span class="ot">&lt;-</span> <span class="fu">Scenarios</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Scenario</span>(<span class="st">&quot;Base model&quot;</span>)) <span class="sc">%&gt;%</span> <span class="co"># Original CL is 5</span></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Scenario</span>(<span class="st">&quot;Increased clearance&quot;</span>, <span class="at">model=</span><span class="sc">~</span>.x <span class="sc">%&gt;%</span> <span class="fu">replace</span>(<span class="fu">Theta</span>(<span class="at">name=</span><span class="st">&quot;CL&quot;</span>, <span class="at">value=</span><span class="dv">10</span>))))</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(dataset, <span class="at">scenarios=</span>scenarios, <span class="at">seed=</span><span class="dv">1</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CONC&quot;</span>, <span class="at">colour=</span><span class="fu">c</span>(<span class="st">&quot;ARM&quot;</span>), <span class="at">strat_extra=</span><span class="st">&quot;SCENARIO&quot;</span>) <span class="sc">+</span></span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">facet_wrap</span>(<span class="sc">~</span>SCENARIO) <span class="sc">+</span></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_bw</span>()</span></code></pre></div>
 <p><img src="get_started_files/figure-html/get_started_2arms_scenarios_plot-1.png" width="768" style="display: block; margin: auto;" /></p>
 </div>
 <div id="post-process-your-results" class="section level2">
@@ -536,26 +535,26 @@ this model is multiplied by two.</p>
 metrics at Day 3, for each scenario and arm, with the <a
 href="https://github.com/Calvagone/campsisnca"><code>campsisnca</code></a>
 package:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">library</span>(campsisnca)</span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span>
-<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
-<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>table <span class="ot">&lt;-</span> <span class="fu">NCAMetricsTable</span>()</span>
-<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a></span>
-<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a><span class="cf">for</span> (scenario <span class="cf">in</span> <span class="fu">c</span>(<span class="st">&quot;Base model&quot;</span>, <span class="st">&quot;Increased clearance&quot;</span>)) {</span>
-<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a>  <span class="cf">for</span> (arm <span class="cf">in</span> <span class="fu">c</span>(<span class="st">&quot;1000 mg QD&quot;</span>, <span class="st">&quot;2000 mg QD&quot;</span>)) {</span>
-<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a>    data <span class="ot">&lt;-</span> results <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(SCENARIO<span class="sc">==</span>scenario, ARM<span class="sc">==</span>arm) <span class="sc">%&gt;%</span> <span class="fu">timerange</span>(<span class="dv">48</span>, <span class="dv">72</span>, <span class="at">rebase=</span><span class="cn">TRUE</span>)</span>
-<span id="cb11-10"><a href="#cb11-10" tabindex="-1"></a>    </span>
-<span id="cb11-11"><a href="#cb11-11" tabindex="-1"></a>    nca <span class="ot">&lt;-</span> <span class="fu">NCAMetrics</span>(<span class="at">x=</span>data, <span class="at">variable=</span><span class="st">&quot;CONC&quot;</span>, <span class="at">scenario=</span><span class="fu">c</span>(<span class="at">scenario=</span>scenario, <span class="at">arm=</span>arm)) <span class="sc">%&gt;%</span></span>
-<span id="cb11-12"><a href="#cb11-12" tabindex="-1"></a>      <span class="fu">add</span>(<span class="fu">c</span>(<span class="fu">AUC</span>(<span class="at">unit=</span><span class="st">&quot;ng/mL*h&quot;</span>), <span class="fu">Cmax</span>(<span class="at">unit=</span><span class="st">&quot;ng/mL&quot;</span>), <span class="fu">Tmax</span>(<span class="at">unit=</span><span class="st">&quot;h&quot;</span>), <span class="fu">Ctrough</span>(<span class="at">unit=</span><span class="st">&quot;ng/mL&quot;</span>))) <span class="sc">%&gt;%</span></span>
-<span id="cb11-13"><a href="#cb11-13" tabindex="-1"></a>      <span class="fu">calculate</span>()</span>
-<span id="cb11-14"><a href="#cb11-14" tabindex="-1"></a>    </span>
-<span id="cb11-15"><a href="#cb11-15" tabindex="-1"></a>    table <span class="ot">&lt;-</span> table <span class="sc">%&gt;%</span></span>
-<span id="cb11-16"><a href="#cb11-16" tabindex="-1"></a>      <span class="fu">add</span>(nca)</span>
-<span id="cb11-17"><a href="#cb11-17" tabindex="-1"></a>  }</span>
-<span id="cb11-18"><a href="#cb11-18" tabindex="-1"></a>}</span>
-<span id="cb11-19"><a href="#cb11-19" tabindex="-1"></a>table <span class="sc">%&gt;%</span></span>
-<span id="cb11-20"><a href="#cb11-20" tabindex="-1"></a>  <span class="fu">export</span>(<span class="at">dest=</span><span class="st">&quot;gt&quot;</span>, <span class="at">subscripts=</span><span class="cn">TRUE</span>, <span class="at">combine_with=</span><span class="st">&quot;tbl_merge&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="fu">library</span>(campsisnca)</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>table <span class="ot">&lt;-</span> <span class="fu">NCAMetricsTable</span>()</span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a><span class="cf">for</span> (scenario <span class="cf">in</span> <span class="fu">c</span>(<span class="st">&quot;Base model&quot;</span>, <span class="st">&quot;Increased clearance&quot;</span>)) {</span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a>  <span class="cf">for</span> (arm <span class="cf">in</span> <span class="fu">c</span>(<span class="st">&quot;1000 mg QD&quot;</span>, <span class="st">&quot;2000 mg QD&quot;</span>)) {</span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a>    data <span class="ot">&lt;-</span> results <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(SCENARIO<span class="sc">==</span>scenario, ARM<span class="sc">==</span>arm) <span class="sc">%&gt;%</span> <span class="fu">timerange</span>(<span class="dv">48</span>, <span class="dv">72</span>, <span class="at">rebase=</span><span class="cn">TRUE</span>)</span>
+<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a>    </span>
+<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a>    nca <span class="ot">&lt;-</span> <span class="fu">NCAMetrics</span>(<span class="at">x=</span>data, <span class="at">variable=</span><span class="st">&quot;CONC&quot;</span>, <span class="at">scenario=</span><span class="fu">c</span>(<span class="at">scenario=</span>scenario, <span class="at">arm=</span>arm)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a>      <span class="fu">add</span>(<span class="fu">c</span>(<span class="fu">AUC</span>(<span class="at">unit=</span><span class="st">&quot;ng/mL*h&quot;</span>), <span class="fu">Cmax</span>(<span class="at">unit=</span><span class="st">&quot;ng/mL&quot;</span>), <span class="fu">Tmax</span>(<span class="at">unit=</span><span class="st">&quot;h&quot;</span>), <span class="fu">Ctrough</span>(<span class="at">unit=</span><span class="st">&quot;ng/mL&quot;</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a>      <span class="fu">calculate</span>()</span>
+<span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a>    </span>
+<span id="cb9-15"><a href="#cb9-15" tabindex="-1"></a>    table <span class="ot">&lt;-</span> table <span class="sc">%&gt;%</span></span>
+<span id="cb9-16"><a href="#cb9-16" tabindex="-1"></a>      <span class="fu">add</span>(nca)</span>
+<span id="cb9-17"><a href="#cb9-17" tabindex="-1"></a>  }</span>
+<span id="cb9-18"><a href="#cb9-18" tabindex="-1"></a>}</span>
+<span id="cb9-19"><a href="#cb9-19" tabindex="-1"></a>table <span class="sc">%&gt;%</span></span>
+<span id="cb9-20"><a href="#cb9-20" tabindex="-1"></a>  <span class="fu">export</span>(<span class="at">dest=</span><span class="st">&quot;gt&quot;</span>, <span class="at">subscripts=</span><span class="cn">TRUE</span>, <span class="at">combine_with=</span><span class="st">&quot;tbl_merge&quot;</span>)</span></code></pre></div>
 <div id="nydgabwknr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#nydgabwknr table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -1009,10 +1008,10 @@ package:</p>
   <thead>
     <tr class="gt_col_headings gt_spanner_row">
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" scope="col" id="label"><span class='gt_from_md'><strong>Metric</strong></span></th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="**Base model**">
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="level 1; stat_1_1">
         <div class="gt_column_spanner"><span class='gt_from_md'><strong>Base model</strong></span></div>
       </th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="**Increased clearance**">
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="level 1; stat_1_2">
         <div class="gt_column_spanner"><span class='gt_from_md'><strong>Increased clearance</strong></span></div>
       </th>
     </tr>

@@ -115,7 +115,7 @@ Please check out the [README](https://github.com/Calvagone/campsisqual) or conta
 
 #### [e-Campsis](./ecampsis.html)
 
-e-Campsis is a web application that provides an intuitive and user-friendly interface for setting up population PK/PD simulations. Discover [e-Campsis](./ecampsis.html) here.
+e-Campsis is a web application that provides an intuitive and user-friendly interface for setting up population PK/PD simulations. Discover [e-Campsis](./ecampsis.html) here or check out our [documentation](https://calvagone.github.io/ecampsis.doc/).
 
 </div>
 </div>
