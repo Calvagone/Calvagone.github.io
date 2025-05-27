@@ -7,13 +7,13 @@ editor_options:
 
 ## Discover e-Campsis®
 
-[e-Campsis](https://ecampsis.shinyapps.io/free/)&reg; is a free web application developed by Calvagone that provides an intuitive and user-friendly interface for setting up population PK/PD simulations.
+[e-Campsis](https://webapp.e-campsis.com/)® is a free web application developed by Calvagone that provides an intuitive and user-friendly interface for setting up population PK/PD simulations.
 The app is built on the R-package [campsis](https://github.com/Calvagone/campsis), which serves as a powerful frontend for running model-based simulations using mrgsolve or rxode2.
 
-[![e-Campsis free screenshot](images/Screenshot_2.png)](https://ecampsis.shinyapps.io/free/)
+[![e-Campsis free screenshot](images/Screenshot_2.png)](https://webapp.e-campsis.com/)
 
 Want to try out?
-Click [**here**](https://ecampsis.shinyapps.io/free/) or click on the screenshot above to test the free version and enjoy the power of e-Campsis.
+Click [**here**](https://webapp.e-campsis.com/) or click on the screenshot above to test the free version and enjoy the power of e-Campsis.
 
 The app consists of 4 main sections:
 
@@ -26,14 +26,16 @@ Click [**here**](https://youtu.be/uypETm6aoNc) for a short video explaining how 
 
 ## Plans
 
-:::::::::::: card-group
+::::::::: card-group
 ::::: card
 ::: card-header
 ### free
 
 ### **0,- €**
 
-​
+\
+
+​​
 :::
 
 ::: card-body
@@ -41,33 +43,11 @@ Click [**here**](https://youtu.be/uypETm6aoNc) for a short video explaining how 
 -   Easy set-up of scenarios
 -   Customizable trial designs
 -   Basic customization options for plots
--   Simulate 50 subjects and 100 observations per arm
--   Up to 4 arms or scenarios (combined)
+-   Simulate 100 subjects and 250 observations per arm
+-   Up to 8 arms or scenarios (combined)
 -   Download of campsis simulation code for offline execution
 -   Support via github *issues*
--   Free to everyone without registration
-:::
-:::::
-
-::::: card
-::: card-header
-### free+
-
-### **0,- €**
-
-​
-:::
-
-::: card-body
-Same features as in free plus:
-
--   16 arms or scenarios (combined)
--   100 subjects/arm and 250 observations/arm
--   Free for registered users
-
-Click on the link below to send us a pre-filled email and you will get an invitation to register as soon as possible:
-
-<a class="mailtoui" href="mailto:campsis@calvagone.com?subject=e-Campsis%20free%2B&amp;cc=&amp;bcc=&amp;body=Hello%2C%20%0A%0A%20I%27d%20like%20to%20get%20access%20to%20e-Campsis%20free%2B.%20%0A%0A%20Thank%20you%2C%20%0A%0A%20%3CYour%20name%3E%20%0A%0ABy%20sending%20this%20e-mail%20I%20agree%20that%20Calvagone%20gets%20in%20touch%20with%20me%20regarding%20Campsis%20and%20associated%20services.%20I%20understand%20that%20Calvagone%20will%20never%20sell%20or%20distribute%20my%20contact%20information%20to%20a%20third%20party%20and%20promises%20to%20keep%20my%20details%20safe%20and%20secure.%20If%20I%20don%27t%20want%20to%20receive%20e-mails%20from%20Calvagone%20anymore%20or%20have%20questions%20around%20their%20GDPR%20compliance%2C%20I%20will%20contact%20them%20at%20contact%40calvagone.com.">campsis\@calvagone.com</a>
+-   Free to everyone after [registration](https://webapp.e-campsis.com/)
 :::
 :::::
 
@@ -75,16 +55,18 @@ Click on the link below to send us a pre-filled email and you will get an invita
 ::: card-header
 ### pro
 
-### **990,- €**
+### **445 ~~990~~,- €**
 
-per year & user\*\*
+per year & user\*
+
+**Special offer for new subscriptions until June 30!**
 :::
 
 ::: card-body
-Same features as in free+ plus:
+Same features as in free, plus:
 
 -   Save/load e-Campsis projects
--   NONMEM&reg; code import
+-   NONMEM®, Monolix&reg and rxode2 code import
 -   Number of arms, scenarios, subjects, observations only limited by memory
 -   Advanced customization of plots
 -   NCA & summary statistics
@@ -93,19 +75,19 @@ Same features as in free+ plus:
 -   Overlay external data in plots
 -   Bootstrap covariates from NHANES
 -   Replicate simulation with parameter uncertainty
--   Import Monolix&reg; simulation code\*
 -   Personalized support via email
 
-Subscribe today by filling out this [order form](/images/Order_Form_e-Campsis_v4_250101.pdf) and sending it to:
+Subscribe today by filling out this [order form](/images/Order_Form_e-Campsis_v4_250526_discount.pdf) and sending it to:
 
 <a class="mailtoui" href="mailto:campsis@calvagone.com?subject=e-Campsis%20pro&amp;cc=&amp;bcc=&amp;body=Hello%2C%20%0A%0A%20I%27d%20like%20to%20get%20access%20to%20e-Campsis%20Pro.%20%0A%0A%20Thank%20you%2C%20%0A%0A%20%3CYour%20name%3E%20%0A%0ABy%20sending%20this%20e-mail%20I%20agree%20that%20Calvagone%20gets%20in%20touch%20with%20me%20regarding%20Campsis%20and%20associated%20services.%20I%20understand%20that%20Calvagone%20will%20never%20sell%20or%20distribute%20my%20contact%20information%20to%20a%20third%20party%20and%20promises%20to%20keep%20my%20details%20safe%20and%20secure.%20If%20I%20don%27t%20want%20to%20receive%20e-mails%20from%20Calvagone%20anymore%20or%20have%20questions%20around%20their%20GDPR%20compliance%2C%20I%20will%20contact%20them%20at%20contact%40calvagone.com.">campsis\@calvagone.com</a> ​
 
 or contact us for a live demo or a trial version of e-Campsis pro.
 :::
 :::::
-::::::::::::
+:::::::::
 
-\**Under development. \*\* excl.VAT. Discounts for multiple users available.*
+\* excl.VAT.
+Discounts for multiple users available.
 
 ## Examples
 
@@ -214,14 +196,13 @@ Read more about our extensive qualification efforts [here](https://calvagone.git
 ### Is hosting of e-Campsis secure ?
 
 Yes!
-We use the shinyapps.io platform by Posit Inc. for hosting e-Campsis.
-The platform is running on Amazon Web Services (AWS) infrastructure in the us-east-1 region.
-Access requires authentication of pro and free+ users, with the possibility to use Google or Github credentials including 2FA.
-The app itself runs in ephemeral containers, which means that no data is stored on the server permanently but only during the length of the session and some short timeout period.
-Of course, other e-Campsis users have no access to your session data during that time.
+We host e-Campsis on high-performance servers in a certified and secure datacenter in France.
+Access requires user authentication, with the possibility to use your Google or Microsoft credentials (SSO).
+The app itself runs in separate ephemeral containers, which means that no data is stored on the server permanently but only during the length of the session and some short timeout period.
+And of course, other e-Campsis users have no access to your session data.
 The pro version allows you to save the state of your session, including the model, parameters and settings, in a project files that you can download to your computer and upload again when you want to continue working on your project.
 Upload and download is encrypted and secure.
-You can find more information about Posit´s security measures [here](https://docs.posit.co/shinyapps.io/guide/security_and_compliance/) and [here](https://posit.cloud/security?_gl=1*78dtph*_ga*NTg4Njk5NTEyLjE3MTMxMjUzMjI.*_ga_2C0WZ1JHG0*MTcyMTc0OTcwMi4zOS4xLjE3MjE3NTAyMDguMC4wLjA).
+Here you can find more information about our [Terms of Service](https://calvagone.github.io/ecampsis.doc/terms-of-service.html) and [Privacy Policy](https://calvagone.github.io/ecampsis.doc/privacy-policy.html).
 
 ### Is there a discount of the pro version for academia ?
 
