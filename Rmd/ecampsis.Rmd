@@ -7,13 +7,13 @@ editor_options:
 
 ## Discover e-Campsis®
 
-[e-Campsis](https://webapp.e-campsis.com/)® is a free web application developed by Calvagone that provides an intuitive and user-friendly interface for setting up population PK/PD simulations.
+[e-Campsis](https://ecampsis.shinyapps.io/free/)® is a free web application developed by Calvagone that provides an intuitive and user-friendly interface for setting up population PK/PD simulations.
 The app is built on the R-package [campsis](https://github.com/Calvagone/campsis), which serves as a powerful frontend for running model-based simulations using mrgsolve or rxode2.
 
-[![e-Campsis free screenshot](images/Screenshot_2.png)](https://webapp.e-campsis.com/)
+[![e-Campsis free screenshot](images/Screenshot_2.png)](https://ecampsis.shinyapps.io/free/)
 
 Want to try out?
-Click [**here**](https://webapp.e-campsis.com/) or click on the screenshot above to test the free version and enjoy the power of e-Campsis.
+Click [**here**](https://ecampsis.shinyapps.io/free/) or click on the screenshot above to test the free version and enjoy the power of e-Campsis.
 
 The app consists of 4 main sections:
 
@@ -47,7 +47,7 @@ Click [**here**](https://youtu.be/uypETm6aoNc) for a short video explaining how 
 -   Up to 8 arms or scenarios (combined)
 -   Download of campsis simulation code for offline execution
 -   Support via github *issues*
--   Free to everyone after [registration](https://webapp.e-campsis.com/)
+-   Free to everyone [click here](https://ecampsis.shinyapps.io/free/)
 :::
 :::::
 
@@ -195,14 +195,7 @@ Read more about our extensive qualification efforts [here](https://calvagone.git
 
 ### Is hosting of e-Campsis secure ?
 
-Yes!
-We host e-Campsis on high-performance servers in a certified and secure datacenter in France.
-Access requires user authentication, with the possibility to use your Google or Microsoft credentials (SSO).
-The app itself runs in separate ephemeral containers, which means that no data is stored on the server permanently but only during the length of the session and some short timeout period.
-And of course, other e-Campsis users have no access to your session data.
-The pro version allows you to save the state of your session, including the model, parameters and settings, in a project files that you can download to your computer and upload again when you want to continue working on your project.
-Upload and download is encrypted and secure.
-Here you can find more information about our [Terms of Service](https://calvagone.github.io/ecampsis.doc/terms-of-service.html) and [Privacy Policy](https://calvagone.github.io/ecampsis.doc/privacy-policy.html).
+Yes! We use the shinyapps.io platform by Posit Inc. for hosting e-Campsis. The platform is running on Amazon Web Services (AWS) infrastructure in the us-east-1 region. Access requires authentication of pro and free+ users, with the possibility to use Google or Github credentials including 2FA. The app itself runs in ephemeral containers, which means that no data is stored on the server permanently but only during the length of the session and some short timeout period. Of course, other e-Campsis users have no access to your session data during that time. The pro version allows you to save the state of your session, including the model, parameters and settings, in a project files that you can download to your computer and upload again when you want to continue working on your project. Upload and download is encrypted and secure. You can find more information about Posit´s security measures [here](https://docs.posit.co/shinyapps.io/guide/security_and_compliance/) and [here](https://posit.cloud/security?_gl=1*78dtph*_ga*NTg4Njk5NTEyLjE3MTMxMjUzMjI.*_ga_2C0WZ1JHG0*MTcyMTc0OTcwMi4zOS4xLjE3MjE3NTAyMDguMC4wLjA).
 
 ### Is there a discount of the pro version for academia ?
 
