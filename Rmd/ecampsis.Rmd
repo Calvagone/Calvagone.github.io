@@ -66,7 +66,7 @@ per year & user\*
 Same features as in free, plus:
 
 -   Save/load e-Campsis projects
--   NONMEM®, Monolix&reg and rxode2 code import
+-   NONMEM®, Monolix® and rxode2 code import
 -   Number of arms, scenarios, subjects, observations only limited by memory
 -   Advanced customization of plots
 -   NCA & summary statistics
