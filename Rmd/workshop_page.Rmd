@@ -1,3 +1,10 @@
+---
+
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
 ------------------------------------------------------------------------
 
 # 7th European Course on Pharmacokinetics and Pharmacodynamics of Protein Therapeutics in Barcelona
@@ -6,7 +13,7 @@ From September 15th to 18th 2026, we will be hosting the 7th European Course on 
 
 This 4-day course will introduce participants to basic principles in the pharmacokinetics and pharmacodynamics of novel therapeutic proteins and provide opportunities for basic hands-on exercises in the PK/PD evaluation of these compounds. Topics include target-mediated drug disposition, tissue and tumor penetration, first-in-human dose selection, immunogenicity, clinical pharmacology challenges, biosimilars, ADCs, bispecific antibodies and drug-drug interactions.
 
-On the 4th day, Calvagone will give a hands-on introduction to e-Campsis, the free online PK/PD simulator, with examples focused on protein PK.
+On the 4th day, Calvagone will give a hands-on introduction to e-Campsis, our PK/PD simulator, with examples focused on protein PK.
 
 Registration fees:
 
@@ -24,6 +31,24 @@ To register follow this [link](https://forms.office.com/e/SVKhAs7zY0rm) and fill
 
 # Workshop on e-Campsis at PAGE in Dubrovnik
 
-On June 2nd, 2026 Calvagone will be running a workshop on e-Campsis, an intuitive web application to set-up and run PK/PD & QSP simulations, and to communicate simulation results in an interactive way.
+On June 2nd, 2026 Calvagone will be running a **free** workshop on e-Campsis, an intuitive web application to set-up and run PK/PD & QSP simulations, and to communicate simulation results in an interactive way.
 
-Details will follow soon...
+During this hands-on workshop, participants will get access to the standalone e-Campsis desktop application and learn how to:
+
+- Import a model from various sources (Campsis, model library, rxode, mlxtran, NONMEM)
+
+- Set up a trial design in the interface or using the embedded trial design AI assistant (preview)
+
+- Bootstrap covariates from an external source (e.g. NHANES)
+
+- Explore what-if scenarios thanks to the built-in scenario creator
+
+- Stratify and visualize the results with customizable plots
+
+- Post-process results, derive key metrics and summary statistics, and generate report-ready tables in just a few clicks
+
+- Overlay external data on top of simulations.
+
+Participants will get a 1-month trial license of e-Campsis Desktop and should bring their own laptop, with the tool and R-4.5.2 installed (instructions will be sent to registered participants 1 week before the course).
+
+To register follow this [link](https://forms.office.com/e/dGrLJzdAb4) and fill out the form.
