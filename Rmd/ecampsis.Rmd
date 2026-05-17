@@ -5,9 +5,9 @@ editor_options:
     wrap: sentence
 ---
 
-[e-Campsis](https://www.e-campsis.com)® is a free web application developed by Calvagone that provides an intuitive and user-friendly interface for setting up population PK/PD simulations.
+[e-Campsis](https://www.e-campsis.com)® is an application developed by Calvagone that provides an intuitive and user-friendly interface for setting up population PK/PD simulations.
 The app is built on the R-package [campsis](https://github.com/Calvagone/campsis), which serves as a powerful frontend for running model-based simulations using mrgsolve or rxode2.
 
 [![e-Campsis free screenshot](images/Screenshot_2.png)](https://www.e-campsis.com)
 
-Go to [**e-campsis.com**](https://www.e-campsis.com) for more information and try the free version today!
+Go to [**e-campsis.com**](https://www.e-campsis.com) for more information!
