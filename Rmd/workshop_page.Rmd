@@ -1,5 +1,5 @@
 ---
-
+title: 'Workshops'
 editor_options: 
   markdown: 
     wrap: 72
@@ -31,7 +31,7 @@ To register follow this [link](https://forms.office.com/e/SVKhAs7zY0rm) and fill
 
 # Workshop on e-Campsis at PAGE in Dubrovnik
 
-On June 2nd, 2026 Calvagone will be running a **free** workshop on e-Campsis, an intuitive web application to set-up and run PK/PD & QSP simulations, and to communicate simulation results in an interactive way.
+On June 2nd, 2026 Calvagone will be running a **free** workshop on e-Campsis, an intuitive desktop application to set-up and run PK/PD & QSP simulations, and to communicate simulation results in an interactive way.
 
 During this hands-on workshop, participants will get access to the standalone e-Campsis desktop application and learn how to:
 
@@ -49,6 +49,6 @@ During this hands-on workshop, participants will get access to the standalone e-
 
 - Overlay external data on top of simulations.
 
-Participants will get a 1-month trial license of e-Campsis Desktop and should bring their own laptop, with the tool and R-4.5.2 installed (instructions will be sent to registered participants 1 week before the course).
+Participants will get a 1-month trial license of e-Campsis and should bring their own laptop, with the tool and R-4.5.2 installed (instructions will be sent to registered participants 1 week before the course).
 
 To register follow this [link](https://forms.office.com/e/dGrLJzdAb4) and fill out the form.
