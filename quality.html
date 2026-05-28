@@ -13,7 +13,7 @@
 
 <title>Quality</title>
 
-<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
@@ -362,7 +362,7 @@ the Campsis suite, is based on the following principles:</p>
 <h2>Fully reproducible workflow</h2>
 <p>All the simulations performed with e-Campsis are fully reproducible
 thanks to the open-source suite of packages.<br />
-In e-Campsis, the users can download the generated R code and run it on
+In e-Campsis, the users can export the generated R code and run it on
 their own machine. The exact version of the packages and the
 dependencies, used by e-Campsis, can be locally restored using the <a
 href="https://github.com/Calvagone/campsisverse"><code>campsisverse</code></a>
@@ -374,16 +374,14 @@ users to reproduce the results obtained with e-Campsis.</p>
 <li>The study design is created and the simulations are run</li>
 <li>Post-processing is performed (single replicate or multiple
 replicates)</li>
-<li>The user downloads the generated R script and runs it on his/her
+<li>The user exports the generated R script and runs it on his/her
 machine or server with his current installation of the Campsis
 suite</li>
 <li>Alternatively: a sandbox environment is automatically created with
-the exact same versions of the packages used by e-Campsis on the
-web<br />
+the exact same versions of the packages used by e-Campsis<br />
 </li>
-<li>The user reproduces the results obtained with e-Campsis on his
-computer with a fully reproducible R script that can be appended to a
-M&amp;S report</li>
+<li>The user reproduces the results obtained with e-Campsis with a fully
+reproducible R script that can be appended to a M&amp;S report</li>
 </ol>
 <p>Of course, the user is free to edit the R script before execution to,
 for example, customize plots or increase the number of replicates or
@@ -435,27 +433,6 @@ support.</li>
 <p>Contact us at <a
 href="mailto:campsis@calvagone.com">campsis@calvagone.com</a> if you are
 interested in this service.</p>
-</div>
-<div id="qualification-of-e-campsis" class="section level2">
-<h2>Qualification of e-Campsis</h2>
-<p>Similarly to the qualification of the Campsis suite, e-Campsis the
-online graphical user interface is qualified at every release as
-follows*:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Installation</strong>: A <a
-href="https://www.docker.com/"><code>Docker</code></a> image of
-e-Campsis and the Campsis suite is made before every release</li>
-<li><strong>Qualification</strong>: The image is qualified using the <a
-href="https://github.com/Calvagone/campsisqual"><code>campsisqual</code></a>
-package and our qualification suite of models (see above)</li>
-<li><strong>Reporting</strong>: A report is output for the specific
-version of e-Campsis. It is signed digitally and it serves as the proof
-of the qualification.</li>
-</ol>
-<p>* for hosting on our own server; on shinyapps.io the procedure
-differs slightly.</p>
-<p><img src="images/ecampsis_qualification.png"
-style="width:90.0%" /></p>
 </div>
 <div id="package-quality-assessment" class="section level2">
 <h2>Package quality assessment</h2>

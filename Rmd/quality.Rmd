@@ -7,16 +7,16 @@ At Calvagone we are committed to developing  high-quality software that meets th
 ## Fully reproducible workflow
 
 All the simulations performed with e-Campsis are fully reproducible thanks to the open-source suite of packages.  
-In e-Campsis, the users can download the generated R code and run it on their own machine. The exact version of the packages and the dependencies, used by e-Campsis, can be locally restored using the [`campsisverse`](https://github.com/Calvagone/campsisverse) package, the installation manager for the Campsis suite. This allows the users to reproduce the results obtained with e-Campsis.
+In e-Campsis, the users can export the generated R code and run it on their own machine. The exact version of the packages and the dependencies, used by e-Campsis, can be locally restored using the [`campsisverse`](https://github.com/Calvagone/campsisverse) package, the installation manager for the Campsis suite. This allows the users to reproduce the results obtained with e-Campsis.
 
 Typical workflow with Campsis/e-Campsis:
 
 1. The user imports his/her model into e-Campsis
 2. The study design is created and the simulations are run
 3. Post-processing is performed (single replicate or multiple replicates)
-4. The user downloads the generated R script and runs it on his/her machine or server with his current installation of the Campsis suite
-5. Alternatively: a sandbox environment is automatically created with the exact same versions of the packages used by e-Campsis on the web   
-6. The user reproduces the results obtained with e-Campsis on his computer with a fully reproducible R script that can be appended to a M&S report
+4. The user exports the generated R script and runs it on his/her machine or server with his current installation of the Campsis suite
+5. Alternatively: a sandbox environment is automatically created with the exact same versions of the packages used by e-Campsis   
+6. The user reproduces the results obtained with e-Campsis with a fully reproducible R script that can be appended to a M&S report
 
 Of course, the user is free to edit the R script before execution to, for example, customize plots or increase the number of replicates or individuals. 
 
@@ -43,17 +43,6 @@ This qualification process is part of a service offering by [Calvagone](mailto:c
 
 Contact us at [campsis@calvagone.com](mailto:campsis@calvagone.com) if you are interested in this service.
 
-## Qualification of e-Campsis
-
-Similarly to the qualification of the Campsis suite, e-Campsis the online graphical user interface is qualified at every release as follows*:
-
-1. **Installation**: A [`Docker`](https://www.docker.com/) image of e-Campsis and the Campsis suite is made before every release
-2. **Qualification**: The image is qualified using the [`campsisqual`](https://github.com/Calvagone/campsisqual) package and our qualification suite of models (see above)
-3. **Reporting**: A report is output for the specific version of e-Campsis. It is signed digitally and it serves as the proof of the qualification.
-
-\* for hosting on our own server; on shinyapps.io the procedure differs slightly.
-
-![](images/ecampsis_qualification.png){width=90%}
 
 ## Package quality assessment
 
