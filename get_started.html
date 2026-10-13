@@ -13,14 +13,14 @@
 
 <title>Get started</title>
 
-<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.31/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
-<script src="site_libs/bs3compat-0.9.0/transition.js"></script>
-<script src="site_libs/bs3compat-0.9.0/tabs.js"></script>
-<script src="site_libs/bs3compat-0.9.0/bs3compat.js"></script>
+<script src="site_libs/bs3compat-0.12.0/transition.js"></script>
+<script src="site_libs/bs3compat-0.12.0/tabs.js"></script>
+<script src="site_libs/bs3compat-0.12.0/bs3compat.js"></script>
 <script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
@@ -55,8 +55,9 @@
   }
 </style>
 <style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -67,7 +68,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -467,52 +468,52 @@ one.</p>
 <p>Create a dataset of 10 individuals in Campsis For instance, let’s
 give 1000 mg QD for 3 days and observe every hour.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>dataset <span class="ot">&lt;-</span> <span class="fu">Dataset</span>(<span class="dv">10</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Bolus</span>(<span class="at">time=</span><span class="dv">0</span>, <span class="at">amount=</span><span class="dv">1000</span>, <span class="at">ii=</span><span class="dv">24</span>, <span class="at">addl=</span><span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Observations</span>(<span class="at">times=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">72</span>))</span></code></pre></div>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Bolus</span>(<span class="at">time =</span> <span class="dv">0</span>, <span class="at">amount =</span> <span class="dv">1000</span>, <span class="at">ii =</span> <span class="dv">24</span>, <span class="at">addl =</span> <span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Observations</span>(<span class="at">times =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">72</span>))</span></code></pre></div>
 </div>
 <div id="simulate" class="section level2">
 <h2>Simulate</h2>
 <p>Simulate this very simple protocol:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(dataset, <span class="at">seed=</span><span class="dv">1</span>)</span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(dataset, <span class="at">seed =</span> <span class="dv">1</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="fu">head</span>(results)</span></code></pre></div>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["ID"],"name":[1],"type":["int"],"align":["right"]},{"label":["TIME"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["ARM"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["KA"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["CL"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["V2"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["V3"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Q"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["S2"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["F"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["CONC"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["CONC_ERR"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["A_DEPOT"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["A_CENTRAL"],"name":[14],"type":["dbl"],"align":["right"]},{"label":["A_PERIPHERAL"],"name":[15],"type":["dbl"],"align":["right"]},{"label":["A_OUTPUT"],"name":[16],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"0","3":"0","4":"0.974322","5":"6.198232","6":"92.5112","7":"25.40042","8":"3.622786","9":"92.5112","10":"0.000000","11":"0.000000","12":"0.000000","13":"1000.000000","14":"0.0000","15":"0.00000","16":"0.00000"},{"1":"1","2":"1","3":"0","4":"0.974322","5":"6.198232","6":"92.5112","7":"25.40042","8":"3.622786","9":"92.5112","10":"6.337635","11":"6.337635","12":"6.458807","13":"377.448187","14":"586.3022","15":"12.94392","16":"23.30572"},{"1":"1","2":"2","3":"0","4":"0.974322","5":"6.198232","6":"92.5112","7":"25.40042","8":"3.622786","9":"92.5112","10":"8.124811","11":"8.124811","12":"7.473903","13":"142.467135","14":"751.6360","15":"36.43511","16":"69.46178"},{"1":"1","2":"3","3":"0","4":"0.974322","5":"6.198232","6":"92.5112","7":"25.40042","8":"3.622786","9":"92.5112","10":"8.279208","11":"8.279208","12":"8.144126","13":"53.773962","14":"765.9195","15":"59.54270","16":"120.76388"},{"1":"1","2":"4","3":"0","4":"0.974322","5":"6.198232","6":"92.5112","7":"25.40042","8":"3.622786","9":"92.5112","10":"7.887822","11":"7.887822","12":"8.537639","13":"20.296885","14":"729.7119","15":"78.98182","16":"171.00940"},{"1":"1","2":"5","3":"0","4":"0.974322","5":"6.198232","6":"92.5112","7":"25.40042","8":"3.622786","9":"92.5112","10":"7.349210","11":"7.349210","12":"7.500148","13":"7.661023","14":"679.8842","15":"94.19809","16":"218.25664"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["ID"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["TIME"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["ARM"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["A_DEPOT"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["A_CENTRAL"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["A_PERIPHERAL"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["A_OUTPUT"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["CONC"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["CONC_ERR"],"name":[9],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"0","3":"0","4":"0.000000","5":"0.0000","6":"0.00000","7":"0.00000","8":"0.000000","9":"0.000000"},{"1":"1","2":"1","3":"0","4":"377.448187","5":"586.3022","6":"12.94392","7":"23.30572","8":"6.337635","9":"5.064380"},{"1":"1","2":"2","3":"0","4":"142.467135","5":"751.6360","6":"36.43511","7":"69.46178","8":"8.124811","9":"8.858406"},{"1":"1","2":"3","3":"0","4":"53.773962","5":"765.9195","6":"59.54270","7":"120.76388","8":"8.279208","9":"6.673231"},{"1":"1","2":"4","3":"0","4":"20.296885","5":"729.7119","6":"78.98182","7":"171.00940","8":"7.887822","9":"6.529292"},{"1":"1","2":"5","3":"0","4":"7.661023","5":"679.8842","6":"94.19809","7":"218.25664","8":"7.349210","9":"7.274479"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
 <div id="plot-results" class="section level2">
 <h2>Plot results</h2>
 <p>Plot all simulated profiles using a spaghetti plot:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">spaghettiPlot</span>(results, <span class="st">&quot;CONC&quot;</span>) <span class="sc">+</span></span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">spaghetti_plot</span>(results, <span class="st">&quot;CONC&quot;</span>) <span class="sc">+</span></span>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_bw</span>()</span></code></pre></div>
-<p><img src="get_started_files/figure-html/get_started_spaguetti_plot-1.png" width="768" style="display: block; margin: auto;" /></p>
+<p><img src="get_started_files/figure-html/get_started_spaguetti_plot-1.png" alt="" width="100%" style="display: block; margin: auto;" /></p>
 <p>Or use a shaded plot to see the simulated 90% prediction
 interval:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CONC&quot;</span>) <span class="sc">+</span></span>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">shaded_plot</span>(results, <span class="st">&quot;CONC&quot;</span>) <span class="sc">+</span></span>
 <span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_bw</span>()</span></code></pre></div>
-<p><img src="get_started_files/figure-html/get_started_shaded_plot-1.png" width="768" style="display: block; margin: auto;" /></p>
+<p><img src="get_started_files/figure-html/get_started_shaded_plot-1.png" alt="" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="simulate-arms" class="section level2">
 <h2>Simulate arms</h2>
 <p>The dataset can contain more than one treatment arm. In the example
 below, we explicitly create two arms. The first arm receives a dose of
 1000 mg QD, while the second arm receives twice this dose amount.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>arm1 <span class="ot">&lt;-</span> <span class="fu">Arm</span>(<span class="at">subjects=</span><span class="dv">50</span>, <span class="at">label=</span><span class="st">&quot;1000 mg QD&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Bolus</span>(<span class="at">time=</span><span class="dv">0</span>, <span class="at">amount=</span><span class="dv">1000</span>, <span class="at">ii=</span><span class="dv">24</span>, <span class="at">addl=</span><span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Observations</span>(<span class="at">times=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">72</span>))</span>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>arm1 <span class="ot">&lt;-</span> <span class="fu">Arm</span>(<span class="at">subjects =</span> <span class="dv">50</span>, <span class="at">label =</span> <span class="st">&quot;1000 mg QD&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Bolus</span>(<span class="at">time =</span> <span class="dv">0</span>, <span class="at">amount =</span> <span class="dv">1000</span>, <span class="at">ii =</span> <span class="dv">24</span>, <span class="at">addl =</span> <span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Observations</span>(<span class="at">times =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">72</span>))</span>
 <span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>arm2 <span class="ot">&lt;-</span> <span class="fu">Arm</span>(<span class="at">subjects=</span><span class="dv">50</span>, <span class="at">label=</span><span class="st">&quot;2000 mg QD&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Bolus</span>(<span class="at">time=</span><span class="dv">0</span>, <span class="at">amount=</span><span class="dv">2000</span>, <span class="at">ii=</span><span class="dv">24</span>, <span class="at">addl=</span><span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Observations</span>(<span class="at">times=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">72</span>))</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>arm2 <span class="ot">&lt;-</span> <span class="fu">Arm</span>(<span class="at">subjects =</span> <span class="dv">50</span>, <span class="at">label =</span> <span class="st">&quot;2000 mg QD&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Bolus</span>(<span class="at">time =</span> <span class="dv">0</span>, <span class="at">amount =</span> <span class="dv">2000</span>, <span class="at">ii =</span> <span class="dv">24</span>, <span class="at">addl =</span> <span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Observations</span>(<span class="at">times =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">72</span>))</span>
 <span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a></span>
 <span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>dataset <span class="ot">&lt;-</span> <span class="fu">Dataset</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">c</span>(arm1, arm2))</span>
 <span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a></span>
-<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(dataset, <span class="at">seed=</span><span class="dv">1</span>)</span>
-<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CONC&quot;</span>,  <span class="at">colour=</span><span class="st">&quot;ARM&quot;</span>) <span class="sc">+</span></span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(dataset, <span class="at">seed =</span> <span class="dv">1</span>)</span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a><span class="fu">shaded_plot</span>(results, <span class="st">&quot;CONC&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;ARM&quot;</span>) <span class="sc">+</span></span>
 <span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_bw</span>()</span></code></pre></div>
-<p><img src="get_started_files/figure-html/get_started_2arms_plot-1.png" width="768" style="display: block; margin: auto;" /></p>
+<p><img src="get_started_files/figure-html/get_started_2arms_plot-1.png" alt="" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="derive-from-base-model" class="section level2">
 <h2>Derive from base model</h2>
@@ -521,13 +522,16 @@ implemented. Below, we’d like to see what happens if the clearance of
 this model is multiplied by two.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>scenarios <span class="ot">&lt;-</span> <span class="fu">Scenarios</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Scenario</span>(<span class="st">&quot;Base model&quot;</span>)) <span class="sc">%&gt;%</span> <span class="co"># Original CL is 5</span></span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Scenario</span>(<span class="st">&quot;Increased clearance&quot;</span>, <span class="at">model=</span><span class="sc">~</span>.x <span class="sc">%&gt;%</span> <span class="fu">replace</span>(<span class="fu">Theta</span>(<span class="at">name=</span><span class="st">&quot;CL&quot;</span>, <span class="at">value=</span><span class="dv">10</span>))))</span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(dataset, <span class="at">scenarios=</span>scenarios, <span class="at">seed=</span><span class="dv">1</span>)</span>
-<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="fu">shadedPlot</span>(results, <span class="st">&quot;CONC&quot;</span>, <span class="at">colour=</span><span class="fu">c</span>(<span class="st">&quot;ARM&quot;</span>), <span class="at">strat_extra=</span><span class="st">&quot;SCENARIO&quot;</span>) <span class="sc">+</span></span>
-<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">facet_wrap</span>(<span class="sc">~</span>SCENARIO) <span class="sc">+</span></span>
-<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_bw</span>()</span></code></pre></div>
-<p><img src="get_started_files/figure-html/get_started_2arms_scenarios_plot-1.png" width="768" style="display: block; margin: auto;" /></p>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Scenario</span>(</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>    <span class="st">&quot;Increased clearance&quot;</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>    <span class="at">model =</span> <span class="sc">~</span> .x <span class="sc">%&gt;%</span> <span class="fu">replace</span>(<span class="fu">Theta</span>(<span class="at">name =</span> <span class="st">&quot;CL&quot;</span>, <span class="at">value =</span> <span class="dv">10</span>))</span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>  ))</span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(dataset, <span class="at">scenarios =</span> scenarios, <span class="at">seed =</span> <span class="dv">1</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a><span class="fu">shaded_plot</span>(results, <span class="st">&quot;CONC&quot;</span>, <span class="at">colour =</span> <span class="fu">c</span>(<span class="st">&quot;ARM&quot;</span>), <span class="at">strat_extra =</span> <span class="st">&quot;SCENARIO&quot;</span>) <span class="sc">+</span></span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">facet_wrap</span>(<span class="sc">~</span>SCENARIO) <span class="sc">+</span></span>
+<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_bw</span>()</span></code></pre></div>
+<p><img src="get_started_files/figure-html/get_started_2arms_scenarios_plot-1.png" alt="" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="post-process-your-results" class="section level2">
 <h2>Post-process your results</h2>
@@ -539,39 +543,35 @@ package:</p>
 <span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span>
 <span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
 <span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>table <span class="ot">&lt;-</span> <span class="fu">NCAMetricsTable</span>()</span>
-<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a></span>
-<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a><span class="cf">for</span> (scenario <span class="cf">in</span> <span class="fu">c</span>(<span class="st">&quot;Base model&quot;</span>, <span class="st">&quot;Increased clearance&quot;</span>)) {</span>
-<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a>  <span class="cf">for</span> (arm <span class="cf">in</span> <span class="fu">c</span>(<span class="st">&quot;1000 mg QD&quot;</span>, <span class="st">&quot;2000 mg QD&quot;</span>)) {</span>
-<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a>    data <span class="ot">&lt;-</span> results <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(SCENARIO<span class="sc">==</span>scenario, ARM<span class="sc">==</span>arm) <span class="sc">%&gt;%</span> <span class="fu">timerange</span>(<span class="dv">48</span>, <span class="dv">72</span>, <span class="at">rebase=</span><span class="cn">TRUE</span>)</span>
-<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a>    </span>
-<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a>    nca <span class="ot">&lt;-</span> <span class="fu">NCAMetrics</span>(<span class="at">x=</span>data, <span class="at">variable=</span><span class="st">&quot;CONC&quot;</span>, <span class="at">scenario=</span><span class="fu">c</span>(<span class="at">scenario=</span>scenario, <span class="at">arm=</span>arm)) <span class="sc">%&gt;%</span></span>
-<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a>      <span class="fu">add</span>(<span class="fu">c</span>(<span class="fu">AUC</span>(<span class="at">unit=</span><span class="st">&quot;ng/mL*h&quot;</span>), <span class="fu">Cmax</span>(<span class="at">unit=</span><span class="st">&quot;ng/mL&quot;</span>), <span class="fu">Tmax</span>(<span class="at">unit=</span><span class="st">&quot;h&quot;</span>), <span class="fu">Ctrough</span>(<span class="at">unit=</span><span class="st">&quot;ng/mL&quot;</span>))) <span class="sc">%&gt;%</span></span>
-<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a>      <span class="fu">calculate</span>()</span>
-<span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a>    </span>
-<span id="cb9-15"><a href="#cb9-15" tabindex="-1"></a>    table <span class="ot">&lt;-</span> table <span class="sc">%&gt;%</span></span>
-<span id="cb9-16"><a href="#cb9-16" tabindex="-1"></a>      <span class="fu">add</span>(nca)</span>
-<span id="cb9-17"><a href="#cb9-17" tabindex="-1"></a>  }</span>
-<span id="cb9-18"><a href="#cb9-18" tabindex="-1"></a>}</span>
-<span id="cb9-19"><a href="#cb9-19" tabindex="-1"></a>table <span class="sc">%&gt;%</span></span>
-<span id="cb9-20"><a href="#cb9-20" tabindex="-1"></a>  <span class="fu">export</span>(<span class="at">dest=</span><span class="st">&quot;gt&quot;</span>, <span class="at">subscripts=</span><span class="cn">TRUE</span>, <span class="at">combine_with=</span><span class="st">&quot;tbl_merge&quot;</span>)</span></code></pre></div>
-<div id="nydgabwknr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#nydgabwknr table {
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>analysis <span class="ot">&lt;-</span> <span class="fu">NCAAnalysis</span>(<span class="at">variable =</span> <span class="st">&quot;CONC&quot;</span>, <span class="at">window =</span> <span class="fu">TimeWindow</span>(<span class="dv">48</span>, <span class="dv">72</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">AUC</span>(<span class="at">unit =</span> <span class="st">&quot;ng/mL*h&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Cmax</span>(<span class="at">unit =</span> <span class="st">&quot;ng/mL&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Tmax</span>(<span class="at">unit =</span> <span class="st">&quot;h&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a>  <span class="fu">add</span>(<span class="fu">Ctrough</span>(<span class="at">unit =</span> <span class="st">&quot;ng/mL&quot;</span>))</span>
+<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a>table <span class="ot">&lt;-</span> <span class="fu">NCATable</span>(<span class="at">combine_with =</span> <span class="st">&quot;tbl_merge&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a>  <span class="fu">add</span>(analysis) <span class="sc">%&gt;%</span></span>
+<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a>  <span class="fu">calculate</span>(results)</span>
+<span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a></span>
+<span id="cb9-15"><a href="#cb9-15" tabindex="-1"></a>table <span class="sc">%&gt;%</span></span>
+<span id="cb9-16"><a href="#cb9-16" tabindex="-1"></a>  <span class="fu">export</span>(<span class="at">dest =</span> <span class="st">&quot;gt&quot;</span>)</span></code></pre></div>
+<div id="uoffhqqlir" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#uoffhqqlir table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#nydgabwknr thead, #nydgabwknr tbody, #nydgabwknr tfoot, #nydgabwknr tr, #nydgabwknr td, #nydgabwknr th {
+#uoffhqqlir thead, #uoffhqqlir tbody, #uoffhqqlir tfoot, #uoffhqqlir tr, #uoffhqqlir td, #uoffhqqlir th {
   border-style: none;
 }
 
-#nydgabwknr p {
+#uoffhqqlir p {
   margin: 0;
   padding: 0;
 }
 
-#nydgabwknr .gt_table {
+#uoffhqqlir .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -597,12 +597,12 @@ package:</p>
   border-left-color: #D3D3D3;
 }
 
-#nydgabwknr .gt_caption {
+#uoffhqqlir .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#nydgabwknr .gt_title {
+#uoffhqqlir .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -614,7 +614,7 @@ package:</p>
   border-bottom-width: 0;
 }
 
-#nydgabwknr .gt_subtitle {
+#uoffhqqlir .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -626,7 +626,7 @@ package:</p>
   border-top-width: 0;
 }
 
-#nydgabwknr .gt_heading {
+#uoffhqqlir .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -638,13 +638,13 @@ package:</p>
   border-right-color: #D3D3D3;
 }
 
-#nydgabwknr .gt_bottom_border {
+#uoffhqqlir .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#nydgabwknr .gt_col_headings {
+#uoffhqqlir .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -659,7 +659,7 @@ package:</p>
   border-right-color: #D3D3D3;
 }
 
-#nydgabwknr .gt_col_heading {
+#uoffhqqlir .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -679,7 +679,7 @@ package:</p>
   overflow-x: hidden;
 }
 
-#nydgabwknr .gt_column_spanner_outer {
+#uoffhqqlir .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -691,15 +691,15 @@ package:</p>
   padding-right: 4px;
 }
 
-#nydgabwknr .gt_column_spanner_outer:first-child {
+#uoffhqqlir .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#nydgabwknr .gt_column_spanner_outer:last-child {
+#uoffhqqlir .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#nydgabwknr .gt_column_spanner {
+#uoffhqqlir .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -711,11 +711,11 @@ package:</p>
   width: 100%;
 }
 
-#nydgabwknr .gt_spanner_row {
+#uoffhqqlir .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#nydgabwknr .gt_group_heading {
+#uoffhqqlir .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -741,7 +741,7 @@ package:</p>
   text-align: left;
 }
 
-#nydgabwknr .gt_empty_group_heading {
+#uoffhqqlir .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -756,15 +756,15 @@ package:</p>
   vertical-align: middle;
 }
 
-#nydgabwknr .gt_from_md > :first-child {
+#uoffhqqlir .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#nydgabwknr .gt_from_md > :last-child {
+#uoffhqqlir .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#nydgabwknr .gt_row {
+#uoffhqqlir .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -783,7 +783,7 @@ package:</p>
   overflow-x: hidden;
 }
 
-#nydgabwknr .gt_stub {
+#uoffhqqlir .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -796,7 +796,7 @@ package:</p>
   padding-right: 5px;
 }
 
-#nydgabwknr .gt_stub_row_group {
+#uoffhqqlir .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -810,15 +810,15 @@ package:</p>
   vertical-align: top;
 }
 
-#nydgabwknr .gt_row_group_first td {
+#uoffhqqlir .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#nydgabwknr .gt_row_group_first th {
+#uoffhqqlir .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#nydgabwknr .gt_summary_row {
+#uoffhqqlir .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -828,16 +828,16 @@ package:</p>
   padding-right: 5px;
 }
 
-#nydgabwknr .gt_first_summary_row {
+#uoffhqqlir .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#nydgabwknr .gt_first_summary_row.thick {
+#uoffhqqlir .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#nydgabwknr .gt_last_summary_row {
+#uoffhqqlir .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -847,7 +847,7 @@ package:</p>
   border-bottom-color: #D3D3D3;
 }
 
-#nydgabwknr .gt_grand_summary_row {
+#uoffhqqlir .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -857,7 +857,7 @@ package:</p>
   padding-right: 5px;
 }
 
-#nydgabwknr .gt_first_grand_summary_row {
+#uoffhqqlir .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -867,7 +867,7 @@ package:</p>
   border-top-color: #D3D3D3;
 }
 
-#nydgabwknr .gt_last_grand_summary_row_top {
+#uoffhqqlir .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -877,11 +877,11 @@ package:</p>
   border-bottom-color: #D3D3D3;
 }
 
-#nydgabwknr .gt_striped {
+#uoffhqqlir .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#nydgabwknr .gt_table_body {
+#uoffhqqlir .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -890,7 +890,7 @@ package:</p>
   border-bottom-color: #D3D3D3;
 }
 
-#nydgabwknr .gt_footnotes {
+#uoffhqqlir .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -904,7 +904,7 @@ package:</p>
   border-right-color: #D3D3D3;
 }
 
-#nydgabwknr .gt_footnote {
+#uoffhqqlir .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -913,7 +913,7 @@ package:</p>
   padding-right: 5px;
 }
 
-#nydgabwknr .gt_sourcenotes {
+#uoffhqqlir .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -927,7 +927,7 @@ package:</p>
   border-right-color: #D3D3D3;
 }
 
-#nydgabwknr .gt_sourcenote {
+#uoffhqqlir .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -935,72 +935,72 @@ package:</p>
   padding-right: 5px;
 }
 
-#nydgabwknr .gt_left {
+#uoffhqqlir .gt_left {
   text-align: left;
 }
 
-#nydgabwknr .gt_center {
+#uoffhqqlir .gt_center {
   text-align: center;
 }
 
-#nydgabwknr .gt_right {
+#uoffhqqlir .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#nydgabwknr .gt_font_normal {
+#uoffhqqlir .gt_font_normal {
   font-weight: normal;
 }
 
-#nydgabwknr .gt_font_bold {
+#uoffhqqlir .gt_font_bold {
   font-weight: bold;
 }
 
-#nydgabwknr .gt_font_italic {
+#uoffhqqlir .gt_font_italic {
   font-style: italic;
 }
 
-#nydgabwknr .gt_super {
+#uoffhqqlir .gt_super {
   font-size: 65%;
 }
 
-#nydgabwknr .gt_footnote_marks {
+#uoffhqqlir .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#nydgabwknr .gt_asterisk {
+#uoffhqqlir .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#nydgabwknr .gt_indent_1 {
+#uoffhqqlir .gt_indent_1 {
   text-indent: 5px;
 }
 
-#nydgabwknr .gt_indent_2 {
+#uoffhqqlir .gt_indent_2 {
   text-indent: 10px;
 }
 
-#nydgabwknr .gt_indent_3 {
+#uoffhqqlir .gt_indent_3 {
   text-indent: 15px;
 }
 
-#nydgabwknr .gt_indent_4 {
+#uoffhqqlir .gt_indent_4 {
   text-indent: 20px;
 }
 
-#nydgabwknr .gt_indent_5 {
+#uoffhqqlir .gt_indent_5 {
   text-indent: 25px;
 }
 
-#nydgabwknr .katex-display {
+#uoffhqqlir .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#nydgabwknr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#uoffhqqlir div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1048,18 +1048,16 @@ N = 50</span><span class="gt_footnote_marks" style="white-space:nowrap;font-styl
 <td headers="stat_1_2" class="gt_row gt_center">1.05 (0.63–1.98)</td>
 <td headers="stat_2_2" class="gt_row gt_center">2.25 (1.24–4.44)</td></tr>
   </tbody>
-  
-  <tfoot class="gt_footnotes">
-    <tr>
+  <tfoot>
+    <tr class="gt_footnotes">
       <td class="gt_footnote" colspan="5"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> <span class='gt_from_md'>Median (5% Centile–95% Centile)</span></td>
     </tr>
   </tfoot>
 </table>
 </div>
 <p>We invite you to check out how <a
-href="https://www.youtube.com/embed/3YPIeQEdQng?si=PugvJ1oI_Hb5CbPm">e-Campsis</a>
-can help you derive the NCA metrics in a more automated and
-user-friendly way.</p>
+href="https://www.e-campsis.com/">e-Campsis</a> can help you derive the
+NCA metrics in a more automated and user-friendly way.</p>
 </div>
 
 

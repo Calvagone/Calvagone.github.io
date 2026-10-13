@@ -35,38 +35,42 @@ model <- model_suite$nonmem$advan2_trans2
 For instance, let's adapt the population estimate for clearance.
 
 ```{r}
-model <- model %>% replace(Theta(name="CL", value=10))
+model <- model %>% replace(Theta(name = "CL", value = 10))
 ```
 
 Assume some drug is already present in the central compartment (e.g. 0.1 ng/mL with 20% CV across individuals).
 
 ```{r}
 model <- model %>%
-  add(Theta(name="CENTRAL_INIT", value=0.1)) %>%
-  add(Omega(name="CENTRAL_INIT", value=20, type="cv%")) %>%
-  add(InitialCondition(compartment=2, rhs="THETA_CENTRAL_INIT*exp(ETA_CENTRAL_INIT)*V"))
+  add(Theta(name = "CENTRAL_INIT", value = 0.1)) %>%
+  add(Omega(name = "CENTRAL_INIT", value = 20, type = "cv%")) %>%
+  add(InitialCondition(
+    compartment = 2,
+    rhs = "THETA_CENTRAL_INIT*exp(ETA_CENTRAL_INIT)*V"
+  ))
 ```
 
 Let's now create a small dataset of 10 individuals and let's infuse 100 mg at time 0, for a duration of 10 hours.
 
 ```{r}
-dataset <- Dataset(10) %>% 
-  add(Infusion(time=0, amount=100, compartment=1, duration=10)) %>%
+dataset <- Dataset(10) %>%
+  add(Infusion(time = 0, amount = 100, compartment = 1, duration = 10)) %>%
   add(Observations(0:24))
 ```
 
 We can now simulate this very simple model and dataset.
 
 ```{r, warning=FALSE, message=FALSE}
-results <- model %>% simulate(dataset=dataset, seed=0)
+results <- simulate(model = model, dataset = dataset, seed = 0)
 ```
 
 Finally, we can use `ggplot2` to plot these results.
 
 ```{r campsis_a_letter_plot, fig.height=4, fig.width=6}
 library(ggplot2)
-ggplot(results, aes(x=TIME, y=CONC, group=ID)) +
-  geom_line(colour="gray39", linewidth=1) + theme_bw()
+ggplot(results, aes(x = TIME, y = CONC, group = ID)) +
+  geom_line(colour = "gray39", linewidth = 1) +
+  theme_bw()
 ```
 
 Well done, you just drew the `A` letter of our Campsis logo.

@@ -20,8 +20,8 @@ Create a dataset of 10 individuals in Campsis For instance, let's give 1000 mg Q
 
 ```{r}
 dataset <- Dataset(10) %>%
-  add(Bolus(time=0, amount=1000, ii=24, addl=2)) %>%
-  add(Observations(times=0:72))
+  add(Bolus(time = 0, amount = 1000, ii = 24, addl = 2)) %>%
+  add(Observations(times = 0:72))
 ```
 
 ## Simulate
@@ -29,7 +29,7 @@ dataset <- Dataset(10) %>%
 Simulate this very simple protocol:
 
 ```{r}
-results <- model %>% simulate(dataset, seed=1)
+results <- model %>% simulate(dataset, seed = 1)
 head(results)
 ```
 
@@ -38,14 +38,14 @@ head(results)
 Plot all simulated profiles using a spaghetti plot:
 
 ```{r get_started_spaguetti_plot, fig.align='center', fig.height=4, fig.width=8}
-spaghettiPlot(results, "CONC") +
+spaghetti_plot(results, "CONC") +
   ggplot2::theme_bw()
 ```
 
 Or use a shaded plot to see the simulated 90% prediction interval:
 
 ```{r get_started_shaded_plot, fig.align='center', fig.height=4, fig.width=8}
-shadedPlot(results, "CONC") +
+shaded_plot(results, "CONC") +
   ggplot2::theme_bw()
 ```
 
@@ -54,19 +54,19 @@ shadedPlot(results, "CONC") +
 The dataset can contain more than one treatment arm. In the example below, we explicitly create two arms. The first arm receives a dose of 1000 mg QD, while the second arm receives twice this dose amount.
 
 ```{r get_started_2arms_plot, fig.align='center', fig.height=4, fig.width=8, results='hide', message=FALSE}
-arm1 <- Arm(subjects=50, label="1000 mg QD") %>%
-  add(Bolus(time=0, amount=1000, ii=24, addl=2)) %>%
-  add(Observations(times=0:72))
+arm1 <- Arm(subjects = 50, label = "1000 mg QD") %>%
+  add(Bolus(time = 0, amount = 1000, ii = 24, addl = 2)) %>%
+  add(Observations(times = 0:72))
 
-arm2 <- Arm(subjects=50, label="2000 mg QD") %>%
-  add(Bolus(time=0, amount=2000, ii=24, addl=2)) %>%
-  add(Observations(times=0:72))
+arm2 <- Arm(subjects = 50, label = "2000 mg QD") %>%
+  add(Bolus(time = 0, amount = 2000, ii = 24, addl = 2)) %>%
+  add(Observations(times = 0:72))
 
 dataset <- Dataset() %>%
   add(c(arm1, arm2))
 
-results <- model %>% simulate(dataset, seed=1)
-shadedPlot(results, "CONC",  colour="ARM") +
+results <- model %>% simulate(dataset, seed = 1)
+shaded_plot(results, "CONC", colour = "ARM") +
   ggplot2::theme_bw()
 ```
 
@@ -77,10 +77,13 @@ Scenarios derived from the base model and/or dataset can be easily implemented. 
 ```{r get_started_2arms_scenarios_plot, fig.align='center', fig.height=4, fig.width=8, results='hide', message=FALSE}
 scenarios <- Scenarios() %>%
   add(Scenario("Base model")) %>% # Original CL is 5
-  add(Scenario("Increased clearance", model=~.x %>% replace(Theta(name="CL", value=10))))
+  add(Scenario(
+    "Increased clearance",
+    model = ~ .x %>% replace(Theta(name = "CL", value = 10))
+  ))
 
-results <- model %>% simulate(dataset, scenarios=scenarios, seed=1)
-shadedPlot(results, "CONC", colour=c("ARM"), strat_extra="SCENARIO") +
+results <- model %>% simulate(dataset, scenarios = scenarios, seed = 1)
+shaded_plot(results, "CONC", colour = c("ARM"), strat_extra = "SCENARIO") +
   ggplot2::facet_wrap(~SCENARIO) +
   ggplot2::theme_bw()
 ```
@@ -94,22 +97,18 @@ library(campsisnca)
 library(gtsummary)
 library(gt)
 
-table <- NCAMetricsTable()
+analysis <- NCAAnalysis(variable = "CONC", window = TimeWindow(48, 72)) %>%
+  add(AUC(unit = "ng/mL*h")) %>%
+  add(Cmax(unit = "ng/mL")) %>%
+  add(Tmax(unit = "h")) %>%
+  add(Ctrough(unit = "ng/mL"))
 
-for (scenario in c("Base model", "Increased clearance")) {
-  for (arm in c("1000 mg QD", "2000 mg QD")) {
-    data <- results %>% dplyr::filter(SCENARIO==scenario, ARM==arm) %>% timerange(48, 72, rebase=TRUE)
-    
-    nca <- NCAMetrics(x=data, variable="CONC", scenario=c(scenario=scenario, arm=arm)) %>%
-      add(c(AUC(unit="ng/mL*h"), Cmax(unit="ng/mL"), Tmax(unit="h"), Ctrough(unit="ng/mL"))) %>%
-      calculate()
-    
-    table <- table %>%
-      add(nca)
-  }
-}
+table <- NCATable(combine_with = "tbl_merge") %>%
+  add(analysis) %>%
+  calculate(results)
+
 table %>%
-  export(dest="gt", subscripts=TRUE, combine_with="tbl_merge")
+  export(dest = "gt")
 ```
 
-We invite you to check out how [e-Campsis](https://www.youtube.com/embed/3YPIeQEdQng?si=PugvJ1oI_Hb5CbPm) can help you derive the NCA metrics in a more automated and user-friendly way.
+We invite you to check out how [e-Campsis](https://www.e-campsis.com/) can help you derive the NCA metrics in a more automated and user-friendly way.

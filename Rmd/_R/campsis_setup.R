@@ -1,4 +1,3 @@
-library(tidyverse)
 
 # default knitr options
 knitr::opts_chunk$set(
@@ -15,7 +14,7 @@ knitr::opts_chunk$set(
 #file.create('docs/.nojekyll')
 
 ## set global theme options for figures
-theme_set(theme_bw())
+ggplot2::theme_set(ggplot2::theme_bw())
 
 ## set class for a chunk using class="className"
 knitr::knit_hooks$set(class = function(before, options, envir) {
