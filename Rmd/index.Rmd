@@ -129,9 +129,9 @@ e-Campsis is an application that provides an intuitive and user-friendly interfa
 
 <div class="column-right" style="padding-left: 30px;">
 
-#### [campsistrans](./ecampsis.html)
+#### [campsistrans](https://github.com/Calvagone/campsistrans)
 
-Campsistrans is dedicated to importing models from a variety of sources. Currently, it imports your models from NONMEM control files (including parameter estimates and variance-covariance matrix), Monolix, and rxode2.
+Campsistrans is dedicated to importing models from a variety of sources. Currently, it imports your models from NONMEM control files (including parameter estimates and variance-covariance matrix), Monolix, and rxode2. Check out the [README](https://github.com/Calvagone/campsistrans?tab=readme-ov-file) on GitHub!
 
 </div>
 </div>
@@ -147,7 +147,7 @@ Campsistrans is dedicated to importing models from a variety of sources. Current
 
 #### [campsisverse](https://github.com/Calvagone/campsisverse)
 
-Last but not least, Campsisverse is our package manager. It allows you to install the Campsis suite and its dependencies in one go. Based on `renv`, it ensures reproducibility of your simulation environment in R.
+Last but not least, Campsisverse is our package manager. It allows you to install the Campsis suite and its dependencies in one go. Based on `renv`, it ensures reproducibility of your simulation environment in R. Check out the [README](https://github.com/Calvagone/campsisverse?tab=readme-ov-file) on GitHub!
 
 </div>
 </div>

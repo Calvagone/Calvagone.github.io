@@ -487,12 +487,12 @@ give 1000 mg QD for 3 days and observe every hour.</p>
 <p>Plot all simulated profiles using a spaghetti plot:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">spaghetti_plot</span>(results, <span class="st">&quot;CONC&quot;</span>) <span class="sc">+</span></span>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_bw</span>()</span></code></pre></div>
-<p><img src="get_started_files/figure-html/get_started_spaguetti_plot-1.png" alt="" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="get_started_files/figure-html/get_started_spaguetti_plot-1.png" alt="" width="768" style="display: block; margin: auto;" /></p>
 <p>Or use a shaded plot to see the simulated 90% prediction
 interval:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">shaded_plot</span>(results, <span class="st">&quot;CONC&quot;</span>) <span class="sc">+</span></span>
 <span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_bw</span>()</span></code></pre></div>
-<p><img src="get_started_files/figure-html/get_started_shaded_plot-1.png" alt="" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="get_started_files/figure-html/get_started_shaded_plot-1.png" alt="" width="768" style="display: block; margin: auto;" /></p>
 </div>
 <div id="simulate-arms" class="section level2">
 <h2>Simulate arms</h2>
@@ -513,7 +513,7 @@ below, we explicitly create two arms. The first arm receives a dose of
 <span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>results <span class="ot">&lt;-</span> model <span class="sc">%&gt;%</span> <span class="fu">simulate</span>(dataset, <span class="at">seed =</span> <span class="dv">1</span>)</span>
 <span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a><span class="fu">shaded_plot</span>(results, <span class="st">&quot;CONC&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;ARM&quot;</span>) <span class="sc">+</span></span>
 <span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_bw</span>()</span></code></pre></div>
-<p><img src="get_started_files/figure-html/get_started_2arms_plot-1.png" alt="" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="get_started_files/figure-html/get_started_2arms_plot-1.png" alt="" width="768" style="display: block; margin: auto;" /></p>
 </div>
 <div id="derive-from-base-model" class="section level2">
 <h2>Derive from base model</h2>
@@ -531,7 +531,7 @@ this model is multiplied by two.</p>
 <span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a><span class="fu">shaded_plot</span>(results, <span class="st">&quot;CONC&quot;</span>, <span class="at">colour =</span> <span class="fu">c</span>(<span class="st">&quot;ARM&quot;</span>), <span class="at">strat_extra =</span> <span class="st">&quot;SCENARIO&quot;</span>) <span class="sc">+</span></span>
 <span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">facet_wrap</span>(<span class="sc">~</span>SCENARIO) <span class="sc">+</span></span>
 <span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a>  ggplot2<span class="sc">::</span><span class="fu">theme_bw</span>()</span></code></pre></div>
-<p><img src="get_started_files/figure-html/get_started_2arms_scenarios_plot-1.png" alt="" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="get_started_files/figure-html/get_started_2arms_scenarios_plot-1.png" alt="" width="768" style="display: block; margin: auto;" /></p>
 </div>
 <div id="post-process-your-results" class="section level2">
 <h2>Post-process your results</h2>
