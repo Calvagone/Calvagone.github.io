@@ -1,465 +1,145 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campsis Has Moved</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<meta charset="utf-8" />
-<meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-
-
-
-
-<title>Welcome to Campsis</title>
-
-<script src="site_libs/header-attrs-2.31/header-attrs.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
-<script src="site_libs/bs3compat-0.12.0/transition.js"></script>
-<script src="site_libs/bs3compat-0.12.0/tabs.js"></script>
-<script src="site_libs/bs3compat-0.12.0/bs3compat.js"></script>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
-<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
-<meta property="og:title" content="Campsis">
-<meta property="og:description" content="An open-source PK/PD simulation platform">
-<meta property="og:image" content="https://calvagone.github.io/images/campsis_og_image.png">
-<meta property="og:url" content="https://calvagone.github.io/">
-<meta property="twitter:card" content="summary_large_image">
-
-<style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        #progress-bar {
+            transition: width 1s linear;
+        }
     </style>
-
-
-
-
-
-
-
-
-
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-img {
-  max-width:100%;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-summary {
-  display: list-item;
-}
-details > summary > p:only-child {
-  display: inline;
-}
-pre code {
-  padding: 0;
-}
-</style>
-
-
-<style type="text/css">
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #adb5bd;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
-</style>
-
-<script type="text/javascript">
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
-
-  // Navbar adjustments
-  var navHeight = $(".navbar").first().height() + 15;
-  var style = document.createElement('style');
-  var pt = "padding-top: " + navHeight + "px; ";
-  var mt = "margin-top: -" + navHeight + "px; ";
-  var css = "";
-  // offset scroll position for anchor links (for fixed navbar)
-  for (var i = 1; i <= 6; i++) {
-    css += ".section h" + i + "{ " + pt + mt + "}\n";
-  }
-  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
-  document.head.appendChild(style);
-});
-</script>
-
-<!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "\e259";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "\e258";
-  font-family: 'Glyphicons Halflings';
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-</style>
-
-<!-- code folding -->
-
-
-
-
 </head>
+<body class="bg-zinc-50 text-zinc-800 min-h-screen flex flex-col justify-between font-sans antialiased selection:bg-zinc-900 selection:text-white">
 
-<body>
+    <!-- Header -->
+    <header class="w-full border-b border-zinc-200 bg-white/80 backdrop-blur-sm">
+        <div class="max-w-3xl mx-auto px-6 py-4 flex justify-between items-center text-xs tracking-wide">
+            <span class="font-medium text-zinc-900 uppercase tracking-widest">Campsis Suite</span>
+            <span class="text-zinc-400">Documentation Relocation</span>
+        </div>
+    </header>
 
+    <!-- Main Content -->
+    <main class="my-auto px-6 py-12 flex items-center justify-center">
+        <div class="max-w-md w-full bg-white border border-zinc-200 rounded-xl p-8 sm:p-10 shadow-sm space-y-8">
+            
+            <!-- Message Header -->
+            <div class="space-y-3">
+                <div class="inline-flex items-center text-xs font-mono uppercase tracking-wider text-zinc-500 bg-zinc-100 px-2.5 py-1 rounded">
+                    Notice
+                </div>
+                <h1 class="text-2xl font-semibold text-zinc-900 tracking-tight">
+                    We've moved
+                </h1>
+                <p class="text-sm text-zinc-600 leading-relaxed">
+                    The official Campsis suite documentation and project website have relocated to a new home.
+                </p>
+            </div>
 
-<div class="container-fluid main-container">
+            <!-- New URL Box -->
+            <div class="p-4 rounded-lg bg-zinc-50 border border-zinc-200 space-y-1">
+                <span class="text-xs text-zinc-400 uppercase font-mono tracking-wider block">New Address</span>
+                <a href="https://campsisverse.github.io/" class="text-sm font-mono font-medium text-zinc-900 hover:text-zinc-600 transition-colors break-all flex items-center justify-between group">
+                    <span>https://campsisverse.github.io/</span>
+                    <span class="text-xs text-zinc-400 group-hover:text-zinc-900 transition-colors ml-2">→</span>
+                </a>
+            </div>
 
+            <!-- Auto Redirect Tracker -->
+            <div class="space-y-2 pt-2">
+                <div class="flex justify-between items-center text-xs text-zinc-500">
+                    <span id="redirect-status">Redirecting in <span id="countdown-text" class="font-mono text-zinc-900 font-medium">5s</span></span>
+                    <button id="cancel-btn" onclick="cancelRedirect()" class="text-zinc-400 hover:text-zinc-900 underline transition-colors">
+                        Cancel
+                    </button>
+                </div>
+                <div class="w-full bg-zinc-100 h-1 rounded-full overflow-hidden">
+                    <div id="progress-bar" class="bg-zinc-900 h-full w-full"></div>
+                </div>
+            </div>
 
+            <!-- CTA Button -->
+            <div>
+                <a href="https://campsisverse.github.io/" class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-white text-sm font-medium transition-all">
+                    <span>Go to new site</span>
+                    <span class="text-xs text-zinc-400">↵</span>
+                </a>
+            </div>
 
+        </div>
+    </main>
 
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html"></a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li>
-  <a href="./intro.html">What is Campsis</a>
-</li>
-<li>
-  <a href="./install.html">Installation</a>
-</li>
-<li>
-  <a href="./get_started.html">Get started</a>
-</li>
-<li>
-  <a href="./ecampsis.html">e-Campsis</a>
-</li>
-<li>
-  <a href="./quality.html">Quality</a>
-</li>
-<li>
-  <a href="./news.html">News</a>
-</li>
-<li>
-  <a href="./workshop_page.html">Workshops</a>
-</li>
-<li>
-  <a href="./contact.html">Contact us</a>
-</li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="./index.html">
-    <span class="fa fa-home"></span>
-     
-    Campsis
-  </a>
-</li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
+    <!-- Footer -->
+    <footer class="w-full py-6 text-center text-xs text-zinc-400 border-t border-zinc-100">
+        <p>Campsis Open-Source Project &middot; calvagone.github.io</p>
+    </footer>
 
-<div id="header">
+    <!-- Script Logic -->
+    <script>
+        const targetUrl = "https://campsisverse.github.io/";
+        let secondsLeft = 5;
+        const totalDuration = 5;
+        let redirectTimer = null;
 
+        const countdownElement = document.getElementById('countdown-text');
+        const progressBar = document.getElementById('progress-bar');
+        const redirectStatus = document.getElementById('redirect-status');
+        const cancelBtn = document.getElementById('cancel-btn');
 
+        function startCountdown() {
+            progressBar.style.width = '100%';
 
+            redirectTimer = setInterval(() => {
+                secondsLeft--;
+                if (secondsLeft >= 0) {
+                    countdownElement.innerText = secondsLeft + 's';
+                    const percentage = (secondsLeft / totalDuration) * 100;
+                    progressBar.style.width = percentage + '%';
+                }
 
-</div>
+                if (secondsLeft <= 0) {
+                    clearInterval(redirectTimer);
+                    window.location.href = targetUrl;
+                }
+            }, 1000);
+        }
 
+        function cancelRedirect() {
+            if (redirectTimer) {
+                clearInterval(redirectTimer);
+                redirectTimer = null;
+            }
+            
+            progressBar.style.width = '0%';
+            progressBar.classList.remove('bg-zinc-900');
+            progressBar.classList.add('bg-zinc-300');
+            
+            redirectStatus.innerText = 'Automatic redirect cancelled';
+            cancelBtn.style.display = 'none';
+        }
 
-<p><img src="images/campsis_banner_small.png" /></p>
-<p>Welcome to the official website of the Campsis suite.</p>
-<p>Campsis is a PK/PD simulation platform developed by <a
-href="http://www.calvagone.com">Calvagone</a>. Most packages of the
-suite are open-source and can be downloaded from GitHub.</p>
-<p>Want to learn more? Please visit our section <a
-href="./intro.html">What is Campsis</a>.<br />
-Want to give it a try? Please follow the <a
-href="./install.html">Installation</a> instructions and have a look at
-the documentation below.</p>
-<div id="our-suite-of-packages" class="section level2">
-<h2>Our suite of packages</h2>
-<div class="level">
-<div class="column-left">
-<p><a href="https://github.com/Calvagone/campsis"><img src="images/r_package_campsis.png"></a></p>
-</div>
-<div id="campsis" class="section level4 column-right"
-style="padding-left: 30px;">
-<h4><a href="https://github.com/Calvagone/campsis">campsis</a></h4>
-<p>A generic PK/PD simulation platform based on rxode2 and mrgsolve
-engines.<br />
-Please check out our <a
-href="https://calvagone.github.io/campsis.doc/">documentation</a>.</p>
-</div>
-</div>
-<!-- Separator -->
-<div class="level">
-<div class="column-left">
-<p><a href="https://github.com/Calvagone/campsismod"><img src="images/r_package_campsismod.png"></a></p>
-</div>
-<div id="campsismod" class="section level4 column-right"
-style="padding-left: 30px;">
-<h4><a
-href="https://github.com/Calvagone/campsismod">campsismod</a></h4>
-<p>Generic implementation of a drug model in pharmacometrics.<br />
-Please check out our <a
-href="https://calvagone.github.io/campsismod.doc/">documentation</a>.</p>
-</div>
-</div>
-<!-- Separator -->
-<div class="level">
-<div class="column-left">
-<p><a href="https://github.com/Calvagone/campsisnca"><img src="images/r_package_campsisnca.png"></a></p>
-</div>
-<div id="campsisnca" class="section level4 column-right"
-style="padding-left: 30px;">
-<h4><a
-href="https://github.com/Calvagone/campsisnca">campsisnca</a></h4>
-<p>Analyse your simulation output using non-compartmental analysis
-(NCA).<br />
-Please check out the <a
-href="https://github.com/Calvagone/campsisnca?tab=readme-ov-file">README</a>
-on GitHub. It contains many useful examples.</p>
-</div>
-</div>
-<!-- Separator -->
-<div class="level">
-<div class="column-left">
-<p><a href="https://github.com/Calvagone/campsismisc"><img src="images/r_package_campsismisc.png"></a></p>
-</div>
-<div id="campsismisc" class="section level4 column-right"
-style="padding-left: 30px;">
-<h4><a
-href="https://github.com/Calvagone/campsismisc">campsismisc</a></h4>
-<p>Easily perform forest plots and sensitivity analyses using
-Campsis.<br />
-Please check out the <a
-href="https://github.com/Calvagone/campsismisc?tab=readme-ov-file">README</a>
-on GitHub. It contains many useful examples.</p>
-</div>
-</div>
-<!-- Separator -->
-<div class="level">
-<div class="column-left">
-<p><a href="https://github.com/Calvagone/campsisqual"><img src="images/r_package_campsisqual.png"></a></p>
-</div>
-<div id="campsisqual" class="section level4 column-right"
-style="padding-left: 30px;">
-<h4><a
-href="https://github.com/Calvagone/campsisqual">campsisqual</a></h4>
-<p>Qualify your installation of the Campsis suite and generate an IQ/OQ
-report.<br />
-Please check out the <a
-href="https://github.com/Calvagone/campsisqual">README</a> or contact <a
-href="mailto:campsis@calvagone.com">Calvagone</a> for more
-information.</p>
-</div>
-</div>
-<!-- Separator -->
-<div class="level">
-<div class="column-left">
-<p><a href="./ecampsis"><img src="images/r_package_ecampsis.png"></a></p>
-</div>
-<div id="e-campsis" class="section level4 column-right"
-style="padding-left: 30px;">
-<h4><a href="./ecampsis.html">e-Campsis</a></h4>
-<p>e-Campsis is an application that provides an intuitive and
-user-friendly interface for setting up population PK/PD simulations.
-Discover <a href="./ecampsis.html">e-Campsis</a> here or check out our
-<a
-href="https://calvagone.github.io/ecampsis.doc/">documentation</a>.</p>
-</div>
-</div>
-<!-- Separator -->
-<div class="level">
-<div class="column-left">
-<p><img src="images/r_package_campsistrans.png"></p>
-</div>
-<div id="campsistrans" class="section level4 column-right"
-style="padding-left: 30px;">
-<h4><a
-href="https://github.com/Calvagone/campsistrans">campsistrans</a></h4>
-<p>Campsistrans is dedicated to importing models from a variety of
-sources. Currently, it imports your models from NONMEM control files
-(including parameter estimates and variance-covariance matrix), Monolix,
-and rxode2. Check out the <a
-href="https://github.com/Calvagone/campsistrans?tab=readme-ov-file">README</a>
-on GitHub!</p>
-</div>
-</div>
-<!-- Separator -->
-<div class="level">
-<div class="column-left">
-<p><img src="images/r_package_campsisverse.png"></p>
-</div>
-<div id="campsisverse" class="section level4 column-right"
-style="padding-left: 30px;">
-<h4><a
-href="https://github.com/Calvagone/campsisverse">campsisverse</a></h4>
-<p>Last but not least, Campsisverse is our package manager. It allows
-you to install the Campsis suite and its dependencies in one go. Based
-on <code>renv</code>, it ensures reproducibility of your simulation
-environment in R. Check out the <a
-href="https://github.com/Calvagone/campsisverse?tab=readme-ov-file">README</a>
-on GitHub!</p>
-</div>
-</div>
-</div>
-
-
-
-
-</div>
-
-<script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open');
-  });
-});
-</script>
-
-<!-- code folding -->
-
-
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
-
+        window.onload = function() {
+            startCountdown();
+        };
+    </script>
 </body>
 </html>
